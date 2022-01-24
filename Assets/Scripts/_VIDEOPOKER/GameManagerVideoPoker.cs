@@ -10,39 +10,73 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] KartVideoPoker[] _karts;
     [SerializeField] KartDestesi _desteKartOrg;
     [SerializeField] GameObject _isikKazanc;
+    [SerializeField] GameObject _isikKazanTablo;
     [SerializeField] Vector3[] _trfIsikKazanc;
     [SerializeField] Vector3[] _trfIsikKazancTablo;
     [SerializeField] GameObject _sptRenSonuc;
     [SerializeField] GameObject _sptRenGameOver;
     [SerializeField] Button _btnDeal, _btnBetOne, btnReklam, btnMenu;
-    [SerializeField] TMP_Text _txtWin, _txtBet, _txtCredits, _txtNameOfKazanc,_txtBtnDealDrew;
+    [SerializeField] TMP_Text _txtWin, _txtBet, _txtCredits, _txtNameOfKazanc, _txtBtnDealDrew;
     [SerializeField] string[] _nameOfKazanc;
 
 
     bool isAdim2 = false;
-    float _bahis = 1, _anaPara = 50;
+
     List<int> _kartSayisi = new List<int>();
 
 
     [SerializeField] float _sureKartAcilma = 0.2f;
+
 
     private void Start()
     {
         _isikKazanc.SetActive(false);
         _sptRenSonuc.SetActive(false);
         _txtWin.text = "WIN " + 0;
-        _txtBet.text = "" + _bahis;
+       
         _txtBtnDealDrew.text = "DEAL";
-        //_txtCredits.text = AnaPara.GetAnaPara().ToString();
-        _txtCredits.text =""+ _anaPara;
+        WriteCreditAndBet();
+
         SetActiveCardHold(false);
         CloseAllHold();
-        WriteTablo(((int)_bahis));
-        btnMenu.onClick.AddListener(() =>StartCoroutine( HandleAnaMenu())) ;
+        SetSeciliBahisOnTable(KAYIT.GetSeciliBahis());
+        CheckBetAndCredit();
+        btnMenu.onClick.AddListener(() => StartCoroutine(HandleAnaMenu()));
+        _btnBetOne.onClick.AddListener(() => HandleBetOne());
+        btnReklam.onClick.AddListener(() => HandleReklam());
         AtaKartArkasi();
         _btnDeal.onClick.AddListener(HandleOyna);
     }
 
+    void HandleReklam()
+    {
+        SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
+        KAYIT.AddToAnaBakiye(10);
+        WriteCreditAndBet();
+        CheckBetAndCredit();
+    }
+
+    void WriteCreditAndBet()
+    {
+        _txtBet.text = "" + KAYIT.GetSeciliBahis() + "$";
+        _txtCredits.text = "" + KAYIT.GetAnaBakiye();
+    }
+    void HandleBetOne()
+    {
+        SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
+        KAYIT.SetSeciliBahisiBirArttir();
+        int bahis = KAYIT.GetSeciliBahis();
+        SetSeciliBahisOnTable(bahis);
+        _txtBet.text = "" + bahis + "$";
+
+        CheckBetAndCredit();
+    }
+
+    void CheckBetAndCredit()
+    {
+        if (KAYIT.GetSeciliBahis() <= KAYIT.GetAnaBakiye()) { _btnDeal.interactable = true; }
+        else { _btnDeal.interactable = false; }
+    }
     private void HandleOyna()
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
@@ -52,23 +86,24 @@ public class GameManagerVideoPoker : MonoBehaviour
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         yield return new WaitForSeconds(0.6f);
-  
+        Application.Quit();
+
     }
 
     void StartGame()
     {
         if (!isAdim2)
         {
-          
-            _txtBtnDealDrew.text = "DREW";
 
+            _txtBtnDealDrew.text = "DREW";
+            _btnBetOne.interactable = false;
             _sptRenGameOver.SetActive(false);
-            _anaPara -= _bahis;
-            _txtCredits.text = "" + _anaPara;
+            KAYIT.AddToAnaBakiye(-KAYIT.GetSeciliBahis());
+            _txtCredits.text = "" + KAYIT.GetAnaBakiye();
             CloseCards();
             DesteOlustur();
             KartDagit();
-         
+
 
 
         }
@@ -101,7 +136,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     void KazancYeriGoster(int carpan)
     {
         _isikKazanc.SetActive(false);
-        if (isAdim2) WriteWin(carpan, 1);
+        if (isAdim2) WriteWin(carpan, KAYIT.GetSeciliBahis());
         switch (carpan)
         {
             case 250:
@@ -157,16 +192,20 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     }
 
-    void WriteWin(int carpan,int bahis)
+    void WriteWin(int carpan, int bahis)
     {
         int kazanc = bahis * carpan;
-        _anaPara += kazanc;
+
+
+        KAYIT.AddToAnaBakiye(kazanc);
         _txtWin.text = "WIN " + kazanc;
-        _txtCredits.text = "" + _anaPara;
+        _txtCredits.text = "" + KAYIT.GetAnaBakiye();
     }
 
-    void WriteTablo(int bahis)
+    void SetSeciliBahisOnTable(int bahis)
     {
+        _isikKazanTablo.transform.localPosition = _trfIsikKazancTablo[bahis - 1];
+
     }
     void SetSpriteSonuc(string textSonuc)
     {
@@ -178,7 +217,7 @@ public class GameManagerVideoPoker : MonoBehaviour
         {
             _txtNameOfKazanc.text = textSonuc;
             _sptRenSonuc.SetActive(true);
-            
+
         }
     }
     void DesteOlustur()
@@ -281,12 +320,16 @@ public class GameManagerVideoPoker : MonoBehaviour
             _sptRenGameOver.SetActive(true);
             CloseAllHold();
             SetActiveCardHold(false);
+           
         }
         isAdim2 = isAdim2 ? false : true;
         yield return new WaitForSeconds(_sureKartAcilma);
-        if (_anaPara!=0 )_btnDeal.interactable = true;
+        if(!isAdim2) _btnBetOne.interactable = true;
+        if (KAYIT.GetAnaBakiye() >= KAYIT.GetSeciliBahis()||isAdim2) _btnDeal.interactable = true;
 
     }
+
+
 
     void CloseCards()
     {
