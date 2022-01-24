@@ -160,6 +160,7 @@ MonoBehaviour:
   - {fileID: 4599675}
   _desteKartOrg: {fileID: 100056636}
   _isikKazanc: {fileID: 94077713}
+  _isikKazanTablo: {fileID: 29934152}
   _trfIsikKazanc:
   - {x: 0, y: 4.7, z: 0}
   - {x: 0, y: 4.292, z: 0}
@@ -1401,7 +1402,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 204492979}
   m_OnClick:
     m_PersistentCalls:
@@ -1733,13 +1734,13 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1753,7 +1754,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 373508459}
   m_OnClick:
     m_PersistentCalls:
@@ -1974,7 +1975,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 453719780}
   m_OnClick:
     m_PersistentCalls:
@@ -3508,7 +3509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MAX BET
+  m_text: +CREDITS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 767d4fb9f17f94694ba630ea176644c9, type: 2}
   m_sharedMaterial: {fileID: 3879356504762043800, guid: 767d4fb9f17f94694ba630ea176644c9, type: 2}
