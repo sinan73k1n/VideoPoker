@@ -16,7 +16,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] Vector3[] _trfIsikKazancTablo;
     [SerializeField] GameObject _sptRenSonuc;
     [SerializeField] GameObject _sptRenGameOver;
-    [SerializeField] Button _btnDeal, _btnBetOne, btnReklam, btnMenu;
+    [SerializeField] Button _btnDeal, _btnBetOne, _btnReklam, _btnMenu,_btnGorev;
     [SerializeField] TMP_Text _txtWin, _txtBet, _txtCredits, _txtNameOfKazanc, _txtBtnDealDrew;
     [SerializeField] string[] _nameOfKazanc;
 
@@ -28,7 +28,8 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     [SerializeField] float _sureKartAcilma = 0.2f;
 
-    bool banner = false;
+    [Header("UI")] [SerializeField] GameObject _goUI_MENU;
+    [SerializeField] GameObject _goUI_GOREV;
     private void Awake()
     {
         instance = this;
@@ -47,9 +48,10 @@ public class GameManagerVideoPoker : MonoBehaviour
         CloseAllHold();
         SetSeciliBahisOnTable(KAYIT.GetSeciliBahis());
         CheckBetAndCredit();
-        btnMenu.onClick.AddListener(() => StartCoroutine(HandleAnaMenu()));
+        _btnMenu.onClick.AddListener(() => HandleOpenUI(_goUI_MENU));
         _btnBetOne.onClick.AddListener(() => HandleBetOne());
-        btnReklam.onClick.AddListener(() => HandleReklam());
+        _btnReklam.onClick.AddListener(() => HandleReklam());
+        _btnGorev.onClick.AddListener(() => HandleOpenUI(_goUI_GOREV));
         AtaKartArkasi();
         _btnDeal.onClick.AddListener(HandleOyna);
     }
@@ -59,7 +61,7 @@ public class GameManagerVideoPoker : MonoBehaviour
         _UI2.SetActive(true);
         AdControl.instance.ShowBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-       
+
     }
 
     void WriteCreditAndBet()
@@ -88,11 +90,10 @@ public class GameManagerVideoPoker : MonoBehaviour
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         StartGame();
     }
-    IEnumerator HandleAnaMenu()
+    void HandleOpenUI(GameObject gameObject)
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-        yield return new WaitForSeconds(0.6f);
-        Application.Quit();
+        Instantiate(gameObject);
 
     }
 
@@ -327,6 +328,7 @@ public class GameManagerVideoPoker : MonoBehaviour
             _karts[4].OpenCard();
             yield return new WaitForSeconds(_sureKartAcilma);
         }
+
         KazancYeriGoster(CheckCardsKazanc());
 
 
@@ -432,7 +434,7 @@ public class GameManagerVideoPoker : MonoBehaviour
         sayi = 1;
         for (var i = 2; i < 5; i++)
         {
-            if (_karts[0]._index == _karts[i]._index) sayi++;
+            if (_karts[1]._index == _karts[i]._index) sayi++;
         }
         if (sayi == 4) return true; else return false;
     }
@@ -440,7 +442,8 @@ public class GameManagerVideoPoker : MonoBehaviour
     {
         bool have3Card = false;
         bool have2Card = false;
-        int sayi = 0;
+        int indexFirstCard = 0;
+        int sayi = 1;
         for (int i = 0; i < 3; i++)
         {
             for (var j = i + 1; j < 5; j++)
@@ -449,16 +452,19 @@ public class GameManagerVideoPoker : MonoBehaviour
             }
             if (sayi == 3)
             {
+                indexFirstCard = _karts[i]._index;
                 have3Card = true;
                 break;
             }
-            sayi = 0;
+            sayi = 1;
         }
-
+        if (!have3Card) return false;
+        sayi = 1;
         for (int i = 0; i < 5; i++)
         {
             for (var j = i + 1; j < 5; j++)
             {
+                if (_karts[i]._index == indexFirstCard) break;
                 if (_karts[i]._index == _karts[j]._index) sayi++;
             }
             if (sayi == 2)
@@ -466,7 +472,7 @@ public class GameManagerVideoPoker : MonoBehaviour
                 have2Card = true;
                 break;
             }
-            sayi = 0;
+            sayi = 1;
         }
 
         return (have3Card && have2Card) ? true : false;
@@ -548,19 +554,19 @@ public class GameManagerVideoPoker : MonoBehaviour
     bool ThreeOfKind()
     {
 
-        int sayi = 0;
+        int sayi = 1;
         for (int i = 0; i < 3; i++)
         {
             for (var j = i + 1; j < 5; j++)
             {
                 if (_karts[i]._index == _karts[j]._index) sayi++;
             }
-            if (sayi == 2)
+            if (sayi == 3)
             {
 
                 return true;
             }
-            sayi = 0;
+            sayi = 1;
         }
         return false;
     }
