@@ -595,7 +595,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8934391553556507413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,8 +642,8 @@ MonoBehaviour:
   _btnAyar: {fileID: 5860344578657455568}
   _btnBack: {fileID: 4057078039905417773}
   _btnExit: {fileID: 3837825022828287085}
-  _goHow: {fileID: 0}
-  _goIstatistic: {fileID: 0}
+  _goHow: {fileID: 8731718538407460347, guid: 4da365c1691154fe5bedfea1c408e37b, type: 3}
+  _goIstatistic: {fileID: 3318039449772101822, guid: 81e6f3ff75bce48ca887511040c8978c, type: 3}
   _goAyar: {fileID: 0}
 --- !u!1 &5456738224493163171
 GameObject:

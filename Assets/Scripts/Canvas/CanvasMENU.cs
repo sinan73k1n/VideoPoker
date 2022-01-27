@@ -9,7 +9,10 @@ public class CanvasMENU : MonoBehaviour
 {
     [SerializeField] Button _btnHow, _btnIstatistic, _btnAyar, _btnBack, _btnExit;
     [SerializeField] GameObject _goHow, _goIstatistic, _goAyar;
-
+    private void Awake()
+    {
+        GetComponent<Canvas>().sortingOrder = 10;
+    }
     void Start()
     {
 
@@ -22,13 +25,13 @@ public class CanvasMENU : MonoBehaviour
         _btnIstatistic.onClick.AddListener(() => HandleOpen(_goIstatistic));
         _btnAyar.onClick.AddListener(() => HandleOpen(_goAyar));
         _btnBack.onClick.AddListener(HandleBack);
-        _btnExit.onClick.AddListener(()=> StartCoroutine(HandleExit()));
+        _btnExit.onClick.AddListener(() => StartCoroutine(HandleExit()));
     }
 
     void HandleOpen(GameObject hangi)
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-       // hangi.SetActive(true);
+        Instantiate(hangi);
     }
 
     void HandleBack()

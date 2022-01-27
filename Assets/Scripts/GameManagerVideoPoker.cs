@@ -16,7 +16,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] Vector3[] _trfIsikKazancTablo;
     [SerializeField] GameObject _sptRenSonuc;
     [SerializeField] GameObject _sptRenGameOver;
-    [SerializeField] Button _btnDeal, _btnBetOne, _btnReklam, _btnMenu,_btnGorev;
+    [SerializeField] Button _btnDeal, _btnBetOne, _btnReklam, _btnMenu, _btnGorev;
     [SerializeField] TMP_Text _txtWin, _txtBet, _txtCredits, _txtNameOfKazanc, _txtBtnDealDrew;
     [SerializeField] string[] _nameOfKazanc;
 
@@ -102,7 +102,7 @@ public class GameManagerVideoPoker : MonoBehaviour
         if (!isAdim2)
         {
 
-            _txtBtnDealDrew.text = "DREW";
+            _txtBtnDealDrew.text = "DRAW";
             _btnBetOne.interactable = false;
             _sptRenGameOver.SetActive(false);
             KAYIT.AddToAnaBakiye(-KAYIT.GetSeciliBahis());
@@ -110,7 +110,7 @@ public class GameManagerVideoPoker : MonoBehaviour
             CloseCards();
             DesteOlustur();
             KartDagit();
-
+            KAYIT.AddOneMore_GAME();
 
 
         }
@@ -143,42 +143,55 @@ public class GameManagerVideoPoker : MonoBehaviour
     void KazancYeriGoster(int carpan)
     {
         _isikKazanc.SetActive(false);
-        if (isAdim2) WriteWin(carpan, KAYIT.GetSeciliBahis());
+        if (isAdim2)
+        {
+            WriteWin(carpan, KAYIT.GetSeciliBahis());
+            if (carpan > 0) { KAYIT.AddOneMore_WIN(); }
+        }
+ 
         switch (carpan)
         {
             case 250:
+                if (isAdim2) CountEl(TypeOfPokerHand.RoyalFlush);
                 SetIsik(0);
-                SetSpriteSonuc(_nameOfKazanc[0]);
-                break;
+                SetSpriteSonuc(_nameOfKazanc[0]);break;
             case 50:
+                if (isAdim2) CountEl(TypeOfPokerHand.StraightFlush);
                 SetIsik(1);
                 SetSpriteSonuc(_nameOfKazanc[1]);
                 break;
             case 25:
+                if (isAdim2) CountEl(TypeOfPokerHand.FourOfAKind);
                 SetIsik(2);
                 SetSpriteSonuc(_nameOfKazanc[2]);
                 break;
             case 9:
                 SetIsik(3);
                 SetSpriteSonuc(_nameOfKazanc[3]);
+                if (isAdim2) CountEl(TypeOfPokerHand.FullHouse);
                 break;
             case 6:
+                if (isAdim2) CountEl(TypeOfPokerHand.Flush);
                 SetIsik(4);
                 SetSpriteSonuc(_nameOfKazanc[4]);
                 break;
             case 4:
                 SetIsik(5);
                 SetSpriteSonuc(_nameOfKazanc[5]);
+                if (isAdim2) CountEl(TypeOfPokerHand.Straight);
                 break;
             case 3:
+                if (isAdim2) CountEl(TypeOfPokerHand.ThreeOfAKind);
                 SetIsik(6);
                 SetSpriteSonuc(_nameOfKazanc[6]);
                 break;
             case 2:
+                if (isAdim2) CountEl(TypeOfPokerHand.TwoPair);
                 SetIsik(7);
                 SetSpriteSonuc(_nameOfKazanc[7]);
                 break;
             case 1:
+                if (isAdim2) CountEl(TypeOfPokerHand.JackOrBetter);
                 SetIsik(8);
                 SetSpriteSonuc(_nameOfKazanc[8]);
                 break;
@@ -227,6 +240,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     }
     void SetSpriteSonuc(string textSonuc)
     {
+
         if (!isAdim2)
         {
             _sptRenSonuc.SetActive(false);
@@ -237,6 +251,10 @@ public class GameManagerVideoPoker : MonoBehaviour
             _sptRenSonuc.SetActive(true);
 
         }
+    }
+    void CountEl(TypeOfPokerHand type)
+    {
+        { KAYIT.AddOneHand(type); }
     }
     void DesteOlustur()
     {

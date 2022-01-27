@@ -8,7 +8,10 @@ using UnityEngine.UI;
 public class CanvasMenuHOWTOPLAY : MonoBehaviour
 {
     [SerializeField] Button _btnClose;
-
+    private void Awake()
+    {
+        GetComponent<Canvas>().sortingOrder = 20;
+    }
 
     void Start()
     {
@@ -18,6 +21,6 @@ public class CanvasMenuHOWTOPLAY : MonoBehaviour
     void HandleExit()
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
