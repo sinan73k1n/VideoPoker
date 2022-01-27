@@ -10,9 +10,11 @@ public class SesKutusu : MonoBehaviour
     {
         instance = this;
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = KAYIT.GetSesSeviyesi();
     }
     public void Play(NameOfAudioClip name) { audioSource.PlayOneShot(GetASoundClip.Hangi(name)); }
     public void PlayIfDontPlay(NameOfAudioClip name) { if(!audioSource.isPlaying) audioSource.PlayOneShot(GetASoundClip.Hangi(name)); }
     public void Stop() { audioSource.Stop(); }
+    public void SetVolume (float volume) { audioSource.volume = volume; }
 }
 
