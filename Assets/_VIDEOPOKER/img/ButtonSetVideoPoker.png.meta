@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: b272aed7cb3f34a03a30487b4b8c38fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3489573479793869590
+    second: imgBahis
+  - first:
+      213: -2578278897647730792
+    second: btnMavi_.0
+  - first:
+      213: 2132910723605546387
+    second: btnMavi_.1
+  - first:
+      213: 2503285352424872267
+    second: btnMavi_.2
+  - first:
+      213: -8580344876419378126
+    second: btnMavi.0
+  - first:
+      213: 6810701690496044734
+    second: btnMavi.1
+  - first:
+      213: -9119059691018349164
+    second: btnMavi.2
+  - first:
+      213: -5030660665673531659
+    second: btnSari.0
+  - first:
+      213: -7558865138099223516
+    second: btnSari.1
+  - first:
+      213: -763154268947809355
+    second: btnSari.2
+  - first:
+      213: 3665092019333274746
+    second: btnKirmizi_.0
+  - first:
+      213: 8481264264687883539
+    second: btnKirmizi_.1
+  - first:
+      213: 2625334430670619811
+    second: btnKirmizi_.2
+  - first:
+      213: 2258332206690528061
+    second: btnSari_.0
+  - first:
+      213: -801781696840906461
+    second: btnSari_.1
+  - first:
+      213: -7027270905797946126
+    second: btnSari_.2
+  - first:
+      213: -7128065726027147869
+    second: btnKirmizi.0
+  - first:
+      213: -5952494881379712405
+    second: btnKirmizi.1
+  - first:
+      213: -741728239229050205
+    second: btnKirmizi.2
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: imgBahis
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 400
+        width: 285
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec334f986b829fc0800000000000000
+      internalID: -3489573479793869590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnMavi_.0
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 425
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f32ddb00d183cd0800000000000000
+      internalID: -2578278897647730792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnMavi_.1
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 435
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3954122a00f999d10800000000000000
+      internalID: 2132910723605546387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnMavi_.2
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 435
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4919bad3c47db220800000000000000
+      internalID: 2503285352424872267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnMavi.0
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 290
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2341ea6abcd7ce880800000000000000
+      internalID: -8580344876419378126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnMavi.1
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 300
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe4b255a19748e50800000000000000
+      internalID: 6810701690496044734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnMavi.2
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 300
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495944f9687927180800000000000000
+      internalID: -9119059691018349164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnSari.0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 160
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5febff437c08f2ab0800000000000000
+      internalID: -5030660665673531659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnSari.1
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 160
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424038a9434891790800000000000000
+      internalID: -7558865138099223516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnSari.2
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 160
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbfa8a5c3bb865f0800000000000000
+      internalID: -763154268947809355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnKirmizi_.0
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 155
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c9a79e5c50dd230800000000000000
+      internalID: 3665092019333274746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnKirmizi_.1
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 165
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3159feeb9e083b570800000000000000
+      internalID: 8481264264687883539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnKirmizi_.2
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 165
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a489bc41cf0f6420800000000000000
+      internalID: 2625334430670619811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnSari_.0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 15
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3bec944d25375f10800000000000000
+      internalID: 2258332206690528061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnSari_.1
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 15
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32943647bcf7fd4f0800000000000000
+      internalID: -801781696840906461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnSari_.2
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 15
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4d97fd75e1a7e90800000000000000
+      internalID: -7027270905797946126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnKirmizi.0
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 25
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5d3800df5041d90800000000000000
+      internalID: -7128065726027147869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnKirmizi.1
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 35
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62080c617d746da0800000000000000
+      internalID: -5952494881379712405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: btnKirmizi.2
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 35
+        width: 275
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a260e4a81ad4b5f0800000000000000
+      internalID: -741728239229050205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,208 +1,229 @@
 fileFormatVersion: 2
-guid: 27c835981468248c289ab4873dbac975
+guid: 5f54c6f3369254d529c8c70e775e2449
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9142911383444816689
-    second: Cards2_0
+      213: -4838543185104267206
+    second: CardPack3_0
   - first:
-      213: 8795375803159228384
-    second: Cards2_1
+      213: -3449965858479848701
+    second: CardPack3_1
   - first:
-      213: -8519430492323224278
-    second: Cards2_2
+      213: -7065072626373998134
+    second: CardPack3_2
   - first:
-      213: -4024202970243653604
-    second: Cards2_3
+      213: -3040289140905350981
+    second: CardPack3_3
   - first:
-      213: -3529447212291136730
-    second: Cards2_4
+      213: -1985103393871200002
+    second: CardPack3_4
   - first:
-      213: 5165741730191716226
-    second: Cards2_5
+      213: 2723328432420628670
+    second: CardPack3_5
   - first:
-      213: 1394016735762594711
-    second: Cards2_6
+      213: -3616968844971570760
+    second: CardPack3_6
   - first:
-      213: 669932457679987651
-    second: Cards2_7
+      213: 8621284408570590876
+    second: CardPack3_7
   - first:
-      213: -5128010277032178742
-    second: Cards2_8
+      213: -1582971679246508172
+    second: CardPack3_8
   - first:
-      213: -1840610600029081574
-    second: Cards2_9
+      213: -8368487140787199156
+    second: CardPack3_9
   - first:
-      213: -9099695243325738052
-    second: Cards2_10
+      213: 8472818985417856801
+    second: CardPack3_10
   - first:
-      213: -993618537945868933
-    second: Cards2_11
+      213: 8802711880859293388
+    second: CardPack3_11
   - first:
-      213: -2767415804227917773
-    second: Cards2_12
+      213: 9122970306451455960
+    second: CardPack3_12
   - first:
-      213: -8911862672329988201
-    second: Cards2_13
+      213: 1319411927210434657
+    second: CardPack3_13
   - first:
-      213: -6030593744297782418
-    second: Cards2_14
+      213: 1365420250481621226
+    second: CardPack3_14
   - first:
-      213: -7621329694641468323
-    second: Cards2_15
+      213: -2428220249693851109
+    second: CardPack3_15
   - first:
-      213: -7973414589651048676
-    second: Cards2_16
+      213: -7800910932666547067
+    second: CardPack3_16
   - first:
-      213: -2250913352856632644
-    second: Cards2_17
+      213: -9141337073350454691
+    second: CardPack3_17
   - first:
-      213: 5786309563179840839
-    second: Cards2_18
+      213: 4602716539900275044
+    second: CardPack3_18
   - first:
-      213: 2498938590760247259
-    second: Cards2_19
+      213: -1273474611186921176
+    second: CardPack3_19
   - first:
-      213: -5092385108610681130
-    second: Cards2_20
+      213: 8667472036664513615
+    second: CardPack3_20
   - first:
-      213: -1186141104602875790
-    second: Cards2_21
+      213: -6570644644713442234
+    second: CardPack3_21
   - first:
-      213: 6500680028331587516
-    second: Cards2_22
+      213: -2370887495407751347
+    second: CardPack3_22
   - first:
-      213: 1217515908701728849
-    second: Cards2_23
+      213: -6953852353207794888
+    second: CardPack3_23
   - first:
-      213: -172007486274776714
-    second: Cards2_24
+      213: -131767639307997966
+    second: CardPack3_24
   - first:
-      213: -7943989116450842268
-    second: Cards2_25
+      213: 6487082188316192992
+    second: CardPack3_25
   - first:
-      213: -4044581072169852039
-    second: Cards2_26
+      213: 7740023452999736321
+    second: CardPack3_26
   - first:
-      213: -5528149956367707835
-    second: Cards2_27
+      213: -5890687899605611939
+    second: CardPack3_27
   - first:
-      213: -8433509631660898931
-    second: Cards2_28
+      213: -5258707401734555472
+    second: CardPack3_28
   - first:
-      213: 7923681015205378738
-    second: Cards2_29
+      213: -5938889595506229962
+    second: CardPack3_29
   - first:
-      213: -3743054695021046789
-    second: Cards2_30
+      213: -7439609544723183088
+    second: CardPack3_30
   - first:
-      213: -5463355197265574704
-    second: Cards2_31
+      213: 8072877494708553201
+    second: CardPack3_31
   - first:
-      213: 1521331147178260183
-    second: Cards2_32
+      213: -373428020919853554
+    second: CardPack3_32
   - first:
-      213: -455625834246995685
-    second: Cards2_33
+      213: 2259685859579896160
+    second: CardPack3_33
   - first:
-      213: -8531782458383054276
-    second: Cards2_34
+      213: -5422755007950565632
+    second: CardPack3_34
   - first:
-      213: -2771229113852181052
-    second: Cards2_35
+      213: -960470999435257547
+    second: CardPack3_35
   - first:
-      213: -7797886070681890005
-    second: Cards2_36
+      213: -1201341079950342873
+    second: CardPack3_36
   - first:
-      213: -3587598819301914271
-    second: Cards2_37
+      213: 3972654147903974162
+    second: CardPack3_37
   - first:
-      213: -4686802942027333984
-    second: Cards2_38
+      213: 2297895122181752899
+    second: CardPack3_38
   - first:
-      213: 8145894314860041304
-    second: Cards2_39
+      213: 3596540944834888672
+    second: CardPack3_39
   - first:
-      213: -5007861146055783911
-    second: Cards2_40
+      213: -6759493544500192144
+    second: CardPack3_40
   - first:
-      213: -4698369044725074907
-    second: Cards2_41
+      213: 4646947199150940009
+    second: CardPack3_41
   - first:
-      213: 5476336994435071220
-    second: Cards2_42
+      213: 7414329123553005649
+    second: CardPack3_42
   - first:
-      213: -8559369648845500986
-    second: Cards2_43
+      213: 5879750602416710196
+    second: CardPack3_43
   - first:
-      213: -1234972298412489348
-    second: Cards2_44
+      213: 8976985642390054254
+    second: CardPack3_44
   - first:
-      213: -5498332957000663722
-    second: Cards2_45
+      213: -8195490932388722091
+    second: CardPack3_45
   - first:
-      213: -7953993208315311344
-    second: Cards2_46
+      213: 878099182103949779
+    second: CardPack3_46
   - first:
-      213: 2422301093143633668
-    second: Cards2_47
+      213: 5697569532488632360
+    second: CardPack3_47
   - first:
-      213: 4032097577901601891
-    second: Cards2_48
+      213: -7056210948655893503
+    second: CardPack3_48
   - first:
-      213: 8418027407112589394
-    second: Cards2_49
+      213: -3974848538888808903
+    second: CardPack3_49
   - first:
-      213: 2934526209273131251
-    second: Cards2_50
+      213: 8748147485384592717
+    second: CardPack3_50
   - first:
-      213: -402950652352654927
-    second: Cards2_51
+      213: 665702403439919203
+    second: CardPack3_51
   - first:
-      213: -8679420614166680024
-    second: Cards2_52
+      213: -9108648586860490184
+    second: CardPack3_52
   - first:
-      213: 3245414406772259288
-    second: Cards2_53
+      213: -2494100595461242791
+    second: CardPack3_53
   - first:
-      213: -7945262897002940191
-    second: Cards2_54
+      213: -1488283152630225616
+    second: CardPack3_54
   - first:
-      213: 6294134504844260430
-    second: Cards2_55
+      213: 2478253370084390110
+    second: CardPack3_55
   - first:
-      213: 9039231693472927994
-    second: Cards2_56
+      213: -1877241667555943728
+    second: CardPack3_56
   - first:
-      213: 1161125429402992350
-    second: Cards2_57
+      213: 611561281068289931
+    second: CardPack3_57
   - first:
-      213: 4812072381963957487
-    second: Cards2_58
+      213: 6785707911351498325
+    second: CardPack3_58
   - first:
-      213: 9152727853987702902
-    second: Cards2_59
+      213: -7608393166706003270
+    second: CardPack3_59
   - first:
-      213: 6309495549425055144
-    second: Cards2_60
+      213: 7023098639361394459
+    second: CardPack3_60
   - first:
-      213: -8341726320942274721
-    second: Cards2_61
+      213: 1823475663873098348
+    second: CardPack3_61
   - first:
-      213: -3435280000153526342
-    second: Cards2_62
+      213: 4082458165555510384
+    second: CardPack3_62
   - first:
-      213: -4185163188163098821
-    second: Cards2_63
+      213: 240173297403508756
+    second: CardPack3_63
   - first:
-      213: -1313317989087902476
-    second: Cards2_64
+      213: -5030209250527805644
+    second: CardPack3_64
   - first:
-      213: 2166522952936319126
-    second: Cards2_65
+      213: -1280817070378823175
+    second: CardPack3_65
   - first:
-      213: -8038073730778374821
-    second: Cards2_66
+      213: 7186025379738626401
+    second: CardPack3_66
+  - first:
+      213: -672698867829429871
+    second: CardPack3_67
+  - first:
+      213: -9193934565778587160
+    second: CardPack3_68
+  - first:
+      213: -8408788429449530887
+    second: CardPack3_69
+  - first:
+      213: 2533570889222183804
+    second: CardPack3_70
+  - first:
+      213: -7618958796486816665
+    second: CardPack3_71
+  - first:
+      213: 5478886772470948845
+    second: CardPack3_72
+  - first:
+      213: -5414594423363026703
+    second: CardPack3_73
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -304,10 +325,220 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cards2_0
+      name: CardPack3_0
       rect:
         serializedVersion: 2
-        x: 480
+        x: 70
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38197ddb9a0adcb0800000000000000
+      internalID: -4838543185104267206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303451694524f10d0800000000000000
+      internalID: -3449965858479848701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac944a0f0e1d3fd90800000000000000
+      internalID: -7065072626373998134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_3
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8ebdd6229bec5d0800000000000000
+      internalID: -3040289140905350981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_4
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef082e51bfe7374e0800000000000000
+      internalID: -1985103393871200002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_5
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8272dc7c43bc520800000000000000
+      internalID: 2723328432420628670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b980dfbff1fdcdc0800000000000000
+      internalID: -3616968844971570760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_7
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96b678fd74f4a770800000000000000
+      internalID: 8621284408570590876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_8
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f120905a7280ae0800000000000000
+      internalID: -1582971679246508172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_9
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1255
+        width: 175
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4364f998492ddb80800000000000000
+      internalID: -8368487140787199156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CardPack3_10
+      rect:
+        serializedVersion: 2
+        x: 440
         y: 975
         width: 175
         height: 255
@@ -318,17 +549,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcc75e8b98add1180800000000000000
-      internalID: -9142911383444816689
+      spriteID: 1275400f9ff759570800000000000000
+      internalID: 8472818985417856801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_1
+      name: CardPack3_11
       rect:
         serializedVersion: 2
-        x: 685
+        x: 625
         y: 975
         width: 175
         height: 255
@@ -339,17 +570,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ef2f5d61b37f0a70800000000000000
-      internalID: 8795375803159228384
+      spriteID: cc69abe11d3892a70800000000000000
+      internalID: 8802711880859293388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_2
+      name: CardPack3_12
       rect:
         serializedVersion: 2
-        x: 880
+        x: 820
         y: 975
         width: 175
         height: 255
@@ -360,17 +591,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a256178ea17e4c980800000000000000
-      internalID: -8519430492323224278
+      spriteID: 8dfb97c782d4b9e70800000000000000
+      internalID: 9122970306451455960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_3
+      name: CardPack3_13
       rect:
         serializedVersion: 2
-        x: 1070
+        x: 1010
         y: 975
         width: 175
         height: 255
@@ -381,17 +612,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c102e8e38b82728c0800000000000000
-      internalID: -4024202970243653604
+      spriteID: 160aac1482e7f4210800000000000000
+      internalID: 1319411927210434657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_4
+      name: CardPack3_14
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1201
         y: 975
         width: 175
         height: 255
@@ -402,17 +633,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 623e4e1d572e40fc0800000000000000
-      internalID: -3529447212291136730
+      spriteID: ae8f417cb72f2f210800000000000000
+      internalID: 1365420250481621226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_5
+      name: CardPack3_15
       rect:
         serializedVersion: 2
-        x: 1445
+        x: 1385
         y: 975
         width: 175
         height: 255
@@ -423,17 +654,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28f2d7dfbb660b740800000000000000
-      internalID: 5165741730191716226
+      spriteID: b1276945c8a3d4ed0800000000000000
+      internalID: -2428220249693851109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_6
+      name: CardPack3_16
       rect:
         serializedVersion: 2
-        x: 1630
+        x: 1570
         y: 975
         width: 175
         height: 255
@@ -444,17 +675,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79b341ad5da885310800000000000000
-      internalID: 1394016735762594711
+      spriteID: 58403f576d89db390800000000000000
+      internalID: -7800910932666547067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_7
+      name: CardPack3_17
       rect:
         serializedVersion: 2
-        x: 1815
+        x: 1755
         y: 975
         width: 175
         height: 255
@@ -465,17 +696,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c3258355041c4900800000000000000
-      internalID: 669932457679987651
+      spriteID: d5256da5d52732180800000000000000
+      internalID: -9141337073350454691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_8
+      name: CardPack3_18
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 1940
         y: 975
         width: 175
         height: 255
@@ -486,17 +717,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acbc1f882d5a5d8b0800000000000000
-      internalID: -5128010277032178742
+      spriteID: 469229a8e4220ef30800000000000000
+      internalID: 4602716539900275044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_9
+      name: CardPack3_19
       rect:
         serializedVersion: 2
-        x: 2185
+        x: 2125
         y: 975
         width: 175
         height: 255
@@ -507,17 +738,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a10b2774966d476e0800000000000000
-      internalID: -1840610600029081574
+      spriteID: 82199b99695b35ee0800000000000000
+      internalID: -1273474611186921176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_10
+      name: CardPack3_20
       rect:
         serializedVersion: 2
-        x: 2370
+        x: 2310
         y: 975
         width: 175
         height: 255
@@ -528,17 +759,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb3f141736367b180800000000000000
-      internalID: -9099695243325738052
+      spriteID: f44150625eb094870800000000000000
+      internalID: 8667472036664513615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_11
+      name: CardPack3_21
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 2500
         y: 975
         width: 175
         height: 255
@@ -549,17 +780,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b755e734435f532f0800000000000000
-      internalID: -993618537945868933
+      spriteID: 6445886228160d4a0800000000000000
+      internalID: -6570644644713442234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_12
+      name: CardPack3_22
       rect:
         serializedVersion: 2
-        x: 2745
+        x: 2685
         y: 975
         width: 175
         height: 255
@@ -570,17 +801,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 338613b0df92899d0800000000000000
-      internalID: -2767415804227917773
+      spriteID: d4f2ec9626ae81fd0800000000000000
+      internalID: -2370887495407751347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_13
+      name: CardPack3_23
       rect:
         serializedVersion: 2
-        x: 2930
+        x: 2870
         y: 975
         width: 175
         height: 255
@@ -591,17 +822,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79725b8dd14b25480800000000000000
-      internalID: -8911862672329988201
+      spriteID: 833098ab024fe7f90800000000000000
+      internalID: -6953852353207794888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_14
+      name: CardPack3_24
       rect:
         serializedVersion: 2
-        x: 3115
+        x: 3055
         y: 975
         width: 175
         height: 255
@@ -612,38 +843,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e631076e0f60f4ca0800000000000000
-      internalID: -6030593744297782418
+      spriteID: 2fca72ab70edb2ef0800000000000000
+      internalID: -131767639307997966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_15
+      name: CardPack3_25
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 935
-        width: 1960
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5c42c2b5099b3690800000000000000
-      internalID: -7621329694641468323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cards2_16
-      rect:
-        serializedVersion: 2
-        x: 305
+        x: 70
         y: 650
         width: 175
         height: 255
@@ -654,17 +864,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c17aee8fcadb85190800000000000000
-      internalID: -7973414589651048676
+      spriteID: 0e0b95751eeb60a50800000000000000
+      internalID: 6487082188316192992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_17
+      name: CardPack3_26
       rect:
         serializedVersion: 2
-        x: 495
+        x: 255
         y: 650
         width: 175
         height: 255
@@ -675,17 +885,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb20cce3b3623c0e0800000000000000
-      internalID: -2250913352856632644
+      spriteID: 10cdd3572561a6b60800000000000000
+      internalID: 7740023452999736321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_18
+      name: CardPack3_27
       rect:
         serializedVersion: 2
-        x: 690
+        x: 440
         y: 650
         width: 175
         height: 255
@@ -696,17 +906,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 745b7c9f3e91d4050800000000000000
-      internalID: 5786309563179840839
+      spriteID: d5ac055c092104ea0800000000000000
+      internalID: -5890687899605611939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_19
+      name: CardPack3_28
       rect:
         serializedVersion: 2
-        x: 880
+        x: 625
         y: 650
         width: 175
         height: 255
@@ -717,17 +927,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdf97c988630ea220800000000000000
-      internalID: 2498938590760247259
+      spriteID: 0b8f4edda715507b0800000000000000
+      internalID: -5258707401734555472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_20
+      name: CardPack3_29
       rect:
         serializedVersion: 2
-        x: 1070
+        x: 820
         y: 650
         width: 175
         height: 255
@@ -738,17 +948,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d675cd69b63459b0800000000000000
-      internalID: -5092385108610681130
+      spriteID: 63d7693e063d49da0800000000000000
+      internalID: -5938889595506229962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_21
+      name: CardPack3_30
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1010
         y: 650
         width: 175
         height: 255
@@ -759,17 +969,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 278f7a623faf98fe0800000000000000
-      internalID: -1186141104602875790
+      spriteID: 01a4b2b298231c890800000000000000
+      internalID: -7439609544723183088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_22
+      name: CardPack3_31
       rect:
         serializedVersion: 2
-        x: 1445
+        x: 1200
         y: 650
         width: 175
         height: 255
@@ -780,17 +990,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb73e2f2b0e073a50800000000000000
-      internalID: 6500680028331587516
+      spriteID: 1f5495b3f4f980070800000000000000
+      internalID: 8072877494708553201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_23
+      name: CardPack3_32
       rect:
         serializedVersion: 2
-        x: 1630
+        x: 1385
         y: 650
         width: 175
         height: 255
@@ -801,17 +1011,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 150bd8ea44c75e010800000000000000
-      internalID: 1217515908701728849
+      spriteID: e0e15e7813151daf0800000000000000
+      internalID: -373428020919853554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_24
+      name: CardPack3_33
       rect:
         serializedVersion: 2
-        x: 1815
+        x: 1570
         y: 650
         width: 175
         height: 255
@@ -822,17 +1032,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67152e14a18ec9df0800000000000000
-      internalID: -172007486274776714
+      spriteID: 061ab3421540c5f10800000000000000
+      internalID: 2259685859579896160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_25
+      name: CardPack3_34
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 1755
         y: 650
         width: 175
         height: 255
@@ -843,17 +1053,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 469d066dcf741c190800000000000000
-      internalID: -7943989116450842268
+      spriteID: 00fc22f1d018eb4b0800000000000000
+      internalID: -5422755007950565632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_26
+      name: CardPack3_35
       rect:
         serializedVersion: 2
-        x: 2185
+        x: 1940
         y: 650
         width: 175
         height: 255
@@ -864,17 +1074,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9732c08a1f2ced7c0800000000000000
-      internalID: -4044581072169852039
+      spriteID: 539d89df6b8bba2f0800000000000000
+      internalID: -960470999435257547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_27
+      name: CardPack3_36
       rect:
         serializedVersion: 2
-        x: 2370
+        x: 2125
         y: 650
         width: 175
         height: 255
@@ -885,17 +1095,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5419c9177e01843b0800000000000000
-      internalID: -5528149956367707835
+      spriteID: 725c97b17aaf35fe0800000000000000
+      internalID: -1201341079950342873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_28
+      name: CardPack3_37
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 2310
         y: 650
         width: 175
         height: 255
@@ -906,17 +1116,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8544033ca726fa80800000000000000
-      internalID: -8433509631660898931
+      spriteID: 21b6c4546e3b12730800000000000000
+      internalID: 3972654147903974162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_29
+      name: CardPack3_38
       rect:
         serializedVersion: 2
-        x: 2745
+        x: 2500
         y: 650
         width: 175
         height: 255
@@ -927,17 +1137,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bab2d0e6e196fd60800000000000000
-      internalID: 7923681015205378738
+      spriteID: 3480fb85073c3ef10800000000000000
+      internalID: 2297895122181752899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_30
+      name: CardPack3_39
       rect:
         serializedVersion: 2
-        x: 2930
+        x: 2685
         y: 650
         width: 175
         height: 255
@@ -948,17 +1158,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf39960269ffd0cc0800000000000000
-      internalID: -3743054695021046789
+      spriteID: 0e3080d1fea79e130800000000000000
+      internalID: 3596540944834888672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_31
+      name: CardPack3_40
       rect:
         serializedVersion: 2
-        x: 3115
+        x: 2870
         y: 650
         width: 175
         height: 255
@@ -969,20 +1179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d48339e4634e24b0800000000000000
-      internalID: -5463355197265574704
+      spriteID: 07c15824f647132a0800000000000000
+      internalID: -6759493544500192144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_32
+      name: CardPack3_41
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 610
-        width: 1960
-        height: 5
+        x: 3055
+        y: 650
+        width: 175
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -990,17 +1200,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d63c453e9adc1510800000000000000
-      internalID: 1521331147178260183
+      spriteID: 96f53676bd54d7040800000000000000
+      internalID: 4646947199150940009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_33
+      name: CardPack3_42
       rect:
         serializedVersion: 2
-        x: 115
+        x: 70
         y: 325
         width: 175
         height: 255
@@ -1011,17 +1221,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b11873fb7ba4da9f0800000000000000
-      internalID: -455625834246995685
+      spriteID: 150d5391e0df4e660800000000000000
+      internalID: 7414329123553005649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_34
+      name: CardPack3_43
       rect:
         serializedVersion: 2
-        x: 305
+        x: 255
         y: 325
         width: 175
         height: 255
@@ -1032,17 +1242,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a4b23be05099980800000000000000
-      internalID: -8531782458383054276
+      spriteID: 432efe84502199150800000000000000
+      internalID: 5879750602416710196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_35
+      name: CardPack3_44
       rect:
         serializedVersion: 2
-        x: 495
+        x: 440
         y: 325
         width: 175
         height: 255
@@ -1053,17 +1263,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c5ce95bdcd9a89d0800000000000000
-      internalID: -2771229113852181052
+      spriteID: e65e07031e8a49c70800000000000000
+      internalID: 8976985642390054254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_36
+      name: CardPack3_45
       rect:
         serializedVersion: 2
-        x: 690
+        x: 625
         y: 325
         width: 175
         height: 255
@@ -1074,17 +1284,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b231a060fe758c390800000000000000
-      internalID: -7797886070681890005
+      spriteID: 55a09072b64c34e80800000000000000
+      internalID: -8195490932388722091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_37
+      name: CardPack3_46
       rect:
         serializedVersion: 2
-        x: 880
+        x: 820
         y: 325
         width: 175
         height: 255
@@ -1095,17 +1305,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16906eab1e9463ec0800000000000000
-      internalID: -3587598819301914271
+      spriteID: 3d1fdd2cd82af2c00800000000000000
+      internalID: 878099182103949779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_38
+      name: CardPack3_47
       rect:
         serializedVersion: 2
-        x: 1070
+        x: 1010
         y: 325
         width: 175
         height: 255
@@ -1116,17 +1326,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae74345e8125feb0800000000000000
-      internalID: -4686802942027333984
+      spriteID: 828c2138d45d11f40800000000000000
+      internalID: 5697569532488632360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_39
+      name: CardPack3_48
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1200
         y: 325
         width: 175
         height: 255
@@ -1137,17 +1347,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8545b1778b70c0170800000000000000
-      internalID: 8145894314860041304
+      spriteID: 104b421178d431e90800000000000000
+      internalID: -7056210948655893503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_40
+      name: CardPack3_49
       rect:
         serializedVersion: 2
-        x: 1445
+        x: 1385
         y: 325
         width: 175
         height: 255
@@ -1158,17 +1368,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91a4dd802d0808ab0800000000000000
-      internalID: -5007861146055783911
+      spriteID: 9365d83405086d8c0800000000000000
+      internalID: -3974848538888808903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_41
+      name: CardPack3_50
       rect:
         serializedVersion: 2
-        x: 1630
+        x: 1570
         y: 325
         width: 175
         height: 255
@@ -1179,17 +1389,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52478713f3a0cceb0800000000000000
-      internalID: -4698369044725074907
+      spriteID: d4d431dc9c9a76970800000000000000
+      internalID: 8748147485384592717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_42
+      name: CardPack3_51
       rect:
         serializedVersion: 2
-        x: 1815
+        x: 1755
         y: 325
         width: 175
         height: 255
@@ -1200,17 +1410,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fcf1a74b7bdffb40800000000000000
-      internalID: 5476336994435071220
+      spriteID: 36009231fcc0d3900800000000000000
+      internalID: 665702403439919203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_43
+      name: CardPack3_52
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 1940
         y: 325
         width: 175
         height: 255
@@ -1221,17 +1431,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cdcd4367a2073980800000000000000
-      internalID: -8559369648845500986
+      spriteID: 8321154be54979180800000000000000
+      internalID: -9108648586860490184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_44
+      name: CardPack3_53
       rect:
         serializedVersion: 2
-        x: 2185
+        x: 2125
         y: 325
         width: 175
         height: 255
@@ -1242,17 +1452,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c750daddc3f7cdee0800000000000000
-      internalID: -1234972298412489348
+      spriteID: 950417509bc236dd0800000000000000
+      internalID: -2494100595461242791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_45
+      name: CardPack3_54
       rect:
         serializedVersion: 2
-        x: 2370
+        x: 2310
         y: 325
         width: 175
         height: 255
@@ -1263,17 +1473,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65df6299e4ff1b3b0800000000000000
-      internalID: -5498332957000663722
+      spriteID: 035e642ab5e885be0800000000000000
+      internalID: -1488283152630225616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_46
+      name: CardPack3_55
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 2500
         y: 325
         width: 175
         height: 255
@@ -1284,17 +1494,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01b0f70b15dbd9190800000000000000
-      internalID: -7953993208315311344
+      spriteID: ed47b4b4f46846220800000000000000
+      internalID: 2478253370084390110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_47
+      name: CardPack3_56
       rect:
         serializedVersion: 2
-        x: 2745
+        x: 2685
         y: 325
         width: 175
         height: 255
@@ -1305,17 +1515,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40fddd3a20ebd9120800000000000000
-      internalID: 2422301093143633668
+      spriteID: 0da14cf36a2b2f5e0800000000000000
+      internalID: -1877241667555943728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_48
+      name: CardPack3_57
       rect:
         serializedVersion: 2
-        x: 2930
+        x: 2870
         y: 325
         width: 175
         height: 255
@@ -1326,17 +1536,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364b9865263e4f730800000000000000
-      internalID: 4032097577901601891
+      spriteID: b8f4574beb3bc7800800000000000000
+      internalID: 611561281068289931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_49
+      name: CardPack3_58
       rect:
         serializedVersion: 2
-        x: 3115
+        x: 3055
         y: 325
         width: 175
         height: 255
@@ -1347,38 +1557,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 250d27e7357d2d470800000000000000
-      internalID: 8418027407112589394
+      spriteID: 556f9a5a46dab2e50800000000000000
+      internalID: 6785707911351498325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_50
+      name: CardPack3_59
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 285
-        width: 1960
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f07ccf1a0889b820800000000000000
-      internalID: 2934526209273131251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cards2_51
-      rect:
-        serializedVersion: 2
-        x: 305
+        x: 440
         y: 10
         width: 175
         height: 255
@@ -1389,17 +1578,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b11280448e686af0800000000000000
-      internalID: -402950652352654927
+      spriteID: ab2baf2d9be896690800000000000000
+      internalID: -7608393166706003270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_52
+      name: CardPack3_60
       rect:
         serializedVersion: 2
-        x: 495
+        x: 625
         y: 10
         width: 175
         height: 255
@@ -1410,17 +1599,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82e646cdfe08c8780800000000000000
-      internalID: -8679420614166680024
+      spriteID: b174aa5a00f077160800000000000000
+      internalID: 7023098639361394459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_53
+      name: CardPack3_61
       rect:
         serializedVersion: 2
-        x: 690
+        x: 820
         y: 10
         width: 175
         height: 255
@@ -1431,17 +1620,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d9789045370a0d20800000000000000
-      internalID: 3245414406772259288
+      spriteID: c62c9b184794e4910800000000000000
+      internalID: 1823475663873098348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_54
+      name: CardPack3_62
       rect:
         serializedVersion: 2
-        x: 880
+        x: 1010
         y: 10
         width: 175
         height: 255
@@ -1452,17 +1641,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e87c01bd71ccb190800000000000000
-      internalID: -7945262897002940191
+      spriteID: 07c3450621ec7a830800000000000000
+      internalID: 4082458165555510384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_55
+      name: CardPack3_63
       rect:
         serializedVersion: 2
-        x: 1070
+        x: 1200
         y: 10
         width: 175
         height: 255
@@ -1473,17 +1662,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4475c10cf1495750800000000000000
-      internalID: 6294134504844260430
+      spriteID: 418354c6754455300800000000000000
+      internalID: 240173297403508756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_56
+      name: CardPack3_64
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1385
         y: 10
         width: 175
         height: 255
@@ -1494,17 +1683,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af018e3555dc17d70800000000000000
-      internalID: 9039231693472927994
+      spriteID: 43ff76c765b113ab0800000000000000
+      internalID: -5030209250527805644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_57
+      name: CardPack3_65
       rect:
         serializedVersion: 2
-        x: 1445
+        x: 1570
         y: 10
         width: 175
         height: 255
@@ -1515,17 +1704,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edefc371d652d1010800000000000000
-      internalID: 1161125429402992350
+      spriteID: 9f150d919af993ee0800000000000000
+      internalID: -1280817070378823175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_58
+      name: CardPack3_66
       rect:
         serializedVersion: 2
-        x: 1630
+        x: 1755
         y: 10
         width: 175
         height: 255
@@ -1536,17 +1725,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe4fd60065ae7c240800000000000000
-      internalID: 4812072381963957487
+      spriteID: 169234a7204e9b360800000000000000
+      internalID: 7186025379738626401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_59
+      name: CardPack3_67
       rect:
         serializedVersion: 2
-        x: 1815
+        x: 1940
         y: 10
         width: 175
         height: 255
@@ -1557,17 +1746,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 678a2ce6d75050f70800000000000000
-      internalID: 9152727853987702902
+      spriteID: 199283e91f71aa6f0800000000000000
+      internalID: -672698867829429871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_60
+      name: CardPack3_68
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 2125
         y: 10
         width: 175
         height: 255
@@ -1578,17 +1767,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a57367e5c4df8750800000000000000
-      internalID: 6309495549425055144
+      spriteID: 8e105965935986080800000000000000
+      internalID: -9193934565778587160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_61
+      name: CardPack3_69
       rect:
         serializedVersion: 2
-        x: 2185
+        x: 2310
         y: 10
         width: 175
         height: 255
@@ -1599,17 +1788,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f57a5b28b1c3c3c80800000000000000
-      internalID: -8341726320942274721
+      spriteID: 9f1fe3f997bfd4b80800000000000000
+      internalID: -8408788429449530887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_62
+      name: CardPack3_70
       rect:
         serializedVersion: 2
-        x: 2370
+        x: 2500
         y: 10
         width: 175
         height: 255
@@ -1620,17 +1809,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abf58de6a0f6350d0800000000000000
-      internalID: -3435280000153526342
+      spriteID: c7bdb51ec4d092320800000000000000
+      internalID: 2533570889222183804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_63
+      name: CardPack3_71
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 2685
         y: 10
         width: 175
         height: 255
@@ -1641,17 +1830,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b374f7a11405be5c0800000000000000
-      internalID: -4185163188163098821
+      spriteID: 76cc0117755044690800000000000000
+      internalID: -7618958796486816665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_64
+      name: CardPack3_72
       rect:
         serializedVersion: 2
-        x: 2745
+        x: 2870
         y: 10
         width: 175
         height: 255
@@ -1662,17 +1851,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f409474f3826cde0800000000000000
-      internalID: -1313317989087902476
+      spriteID: de3a7bdbd7ae80c40800000000000000
+      internalID: 5478886772470948845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cards2_65
+      name: CardPack3_73
       rect:
         serializedVersion: 2
-        x: 2930
+        x: 3055
         y: 10
         width: 175
         height: 255
@@ -1683,29 +1872,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 698ef7f9529011e10800000000000000
-      internalID: 2166522952936319126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cards2_66
-      rect:
-        serializedVersion: 2
-        x: 3115
-        y: 10
-        width: 175
-        height: 255
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5d5e868786037090800000000000000
-      internalID: -8038073730778374821
+      spriteID: 1f0c2a84f0f7bd4b0800000000000000
+      internalID: -5414594423363026703
       vertices: []
       indices: 
       edges: []

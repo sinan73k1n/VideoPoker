@@ -28,6 +28,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
 
     void HandleExit()
     {
+        AdControl.instance.CloseBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         Destroy(gameObject);
     }

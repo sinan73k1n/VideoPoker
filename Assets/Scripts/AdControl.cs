@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.UI;
 
 public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsLoadListener, IUnityAdsShowListener
 {
@@ -38,41 +39,50 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
 
     IEnumerator ShowBannerWhenReady()
     {
-        Debug.Log("Advertisement.Banner.isLoaded: " + Advertisement.Banner.isLoaded);
+       
         Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
         yield return new WaitForSeconds(0.0f);
-
+        
         Advertisement.Banner.Show(placementIdBanner);
+        Advertisement.Banner.Show(placementIdBanner);
+     
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text = $"Advertisement.Banner.isLoaded: {Advertisement.Banner.isLoaded}";
     }
 
     public void OnInitializationComplete()
     {
-        Debug.Log("OnInitializationComplete: ");
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text=
+        ("OnInitializationComplete: ");
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
     {
-        Debug.Log("OnInitializationFailed: " + " " + error + " message: " + message);
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
+("OnInitializationFailed: " + " " + error + " message: " + message);
     }
 
     public void OnUnityAdsAdLoaded(string placementId)
     {
-        Debug.Log("OnUnityAdsAdLoaded: " + placementId);
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
+"OnUnityAdsAdLoaded: " + placementId;
     }
 
     public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)
     {
-        Debug.Log("OnUnityAdsFailedToLoad: " + placementId + " " + error + " message: " + message);
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
+("OnUnityAdsFailedToLoad: " + placementId + " " + error + " message: " + message);
     }
 
     public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
     {
-        Debug.Log("OnUnityAdsShowFailure: " + placementId + " " + error + " message: " + message);
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
+("OnUnityAdsShowFailure: " + placementId + " " + error + " message: " + message);
     }
 
     public void OnUnityAdsShowStart(string placementId)
     {
-        Debug.Log("OnUnityAdsShowStart: " + placementId);
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
+("OnUnityAdsShowStart: " + placementId);
     }
 
     public void OnUnityAdsShowClick(string placementId)
@@ -82,7 +92,8 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
 
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
-        Debug.Log("OnUnityAdsShowComplete: " + placementId+showCompletionState);
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
+("OnUnityAdsShowComplete: " + placementId+showCompletionState);
         switch (showCompletionState)
         {
             case UnityAdsShowCompletionState.SKIPPED:
