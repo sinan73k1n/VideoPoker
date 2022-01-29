@@ -22,7 +22,7 @@ public class CanvasCredits : MonoBehaviour
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         AdControl.instance.CloseBanner();
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     private void HandleAds()

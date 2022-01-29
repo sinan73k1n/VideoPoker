@@ -36,11 +36,13 @@ public class CanvasMENU : MonoBehaviour
 
     void HandleBack()
     {
+        AdControl.instance.CloseBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         gameObject.SetActive(false);
     }
     IEnumerator HandleExit()
     {
+
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         yield return new WaitForSeconds(0.5f);
         Application.Quit();

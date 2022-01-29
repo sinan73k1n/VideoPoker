@@ -20,7 +20,6 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] TMP_Text _txtWin, _txtBet, _txtCredits, _txtNameOfKazanc, _txtBtnDealDrew;
     [SerializeField] string[] _nameOfKazanc;
 
-    [SerializeField] GameObject _UI2;
     bool isAdim2 = false;
 
     List<int> _kartSayisi = new List<int>();
@@ -29,11 +28,10 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] float _sureKartAcilma = 0.2f;
 
     [Header("UI")] [SerializeField] GameObject _goUI_MENU;
-    [SerializeField] GameObject _goUI_GOREV;
+    [SerializeField] GameObject _goUI_GOREV,_goUI_CREDITS;
     private void Awake()
     {
         instance = this;
-        _UI2.SetActive(false);
     }
     private void Start()
     {
@@ -58,7 +56,7 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     void HandleReklam()
     {
-        _UI2.SetActive(true);
+        Instantiate(_goUI_CREDITS);
         AdControl.instance.ShowBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
 
@@ -92,6 +90,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     }
     void HandleOpenUI(GameObject gameObject)
     {
+        AdControl.instance.ShowBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         Instantiate(gameObject);
 
