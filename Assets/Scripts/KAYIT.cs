@@ -22,6 +22,153 @@ public class KAYIT : MonoBehaviour
     const string OYNANAN_WIN = "OYNANAN_WIN";
     const string SAYFA_NUMARASI_DAILY_AND_WEEK = "SAYFA_NUMARASI_DAILY_AND_WEEK";
 
+    const string SON_EL_ROYAL_FLUSH = "SON_EL_ROYAL_FLUSH";
+    const string SON_EL_STRAIGHT_FLUSH = "SON_EL_STRAIGHT_FLUSH";
+    const string SON_EL_FOUR_A_KIND = "SON_EL_FOUR_A_KIND";
+    const string SON_EL_FULL_HOUSE = "SON_EL_FULL_HOUSE";
+    const string SON_EL_FLUSH = "SON_EL_FLUSH";
+    const string SON_EL_STRAIGHT = "SON_EL_STRAIGHT";
+    const string SON_EL_THREE_A_KIND = "SON_EL_THREE_A_KIND";
+    const string SON_EL_TWO_PAIR = "SON_EL_TWO_PAIR";
+    const string SON_EL_JACK_OR_BETTER = "SON_EL_JACK_OR_BETTER";
+
+
+    public static void SetSON_EL_ROYAL_FLUSH(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_ROYAL_FLUSH, kartlar);
+    }
+    public static List<string> GetSON_EL_ROYAL_FLUSH()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_ROYAL_FLUSH, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+    public static void SetSON_EL_STRAIGHT_FLUSH(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_STRAIGHT_FLUSH, kartlar);
+    }
+    public static List<string> GetSON_EL_STRAIGHT_FLUSH()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_STRAIGHT_FLUSH, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+    public static void SetSON_EL_FOUR_A_KIND(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_FOUR_A_KIND, kartlar);
+    }
+    public static List<string> GetSON_EL_FOUR_A_KIND()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_FOUR_A_KIND, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+    public static void SetSON_EL_FULL_HOUSE(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_FULL_HOUSE, kartlar);
+    }
+    public static List<string> GetSON_EL_FULL_HOUSE()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_FULL_HOUSE, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+    public static void SetSON_EL_FLUSH(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_FLUSH, kartlar);
+    }
+    public static List<string> GetSON_EL_FLUSH()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_FLUSH, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+    public static void SetSON_EL_STRAIGHT(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_STRAIGHT, kartlar);
+    }
+    public static List<string> GetSSON_EL_STRAIGHTH()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_STRAIGHT, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+    public static void SetSON_EL_THREE_A_KIND(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_THREE_A_KIND, kartlar);
+    }
+    public static List<string> GetSON_EL_THREE_A_KIND()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_THREE_A_KIND, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+    public static void SetSON_EL_TWO_PAIR(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_TWO_PAIR, kartlar);
+    }
+    public static List<string> GetSON_EL_TWO_PAIR()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_TWO_PAIR, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+    public static void SetSON_EL_JACK_OR_BETTER(string kartlar)
+    {
+        PlayerPrefs.SetString(SON_EL_JACK_OR_BETTER, kartlar);
+    }
+    public static List<string> GetSON_EL_JACK_OR_BETTER()
+    {
+        List<string> list = new List<string>();
+        string kartlar = PlayerPrefs.GetString(SON_EL_JACK_OR_BETTER, "00001111222233334444");
+        list.Add(kartlar.Substring(0, 4));
+        list.Add(kartlar.Substring(4, 4));
+        list.Add(kartlar.Substring(8, 4));
+        list.Add(kartlar.Substring(12, 4));
+        list.Add(kartlar.Substring(16, 4));
+        return list;
+    }
+
     public static int GetAnaBakiye() { return PlayerPrefs.GetInt(ANA_BAKIYE, 50); }
     public static void AddToAnaBakiye(int neKadar) { PlayerPrefs.SetInt(ANA_BAKIYE, GetAnaBakiye() + neKadar); }
 
@@ -35,10 +182,10 @@ public class KAYIT : MonoBehaviour
 
     }
     public static void SetSesSeviyesi(float seviye) { PlayerPrefs.SetFloat("Ses Seviye", seviye); }
-    public static float GetSesSeviyesi() {return PlayerPrefs.GetFloat("Ses Seviye", 1f); }
+    public static float GetSesSeviyesi() { return PlayerPrefs.GetFloat("Ses Seviye", 1f); }
     public static void AddOneHand(TypeOfPokerHand type)
     {
-     
+
         switch (type)
         {
             case TypeOfPokerHand.RoyalFlush:
@@ -53,7 +200,7 @@ public class KAYIT : MonoBehaviour
             case TypeOfPokerHand.TwoPair: PlayerPrefs.SetInt(OYNANAN_TWO_PAIR, PlayerPrefs.GetInt(OYNANAN_TWO_PAIR, 0) + 1); break;
             case TypeOfPokerHand.JackOrBetter:
                 int i = PlayerPrefs.GetInt(OYNANAN_JACK_OR_BETTER, 0);
-                PlayerPrefs.SetInt(OYNANAN_JACK_OR_BETTER,  i+ 1); break;
+                PlayerPrefs.SetInt(OYNANAN_JACK_OR_BETTER, i + 1); break;
             default:
                 Debug.Log("001111");
                 break;

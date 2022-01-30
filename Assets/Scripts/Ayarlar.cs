@@ -11,11 +11,27 @@ public class Ayarlar : MonoBehaviour
     [SerializeField] GameObject _goUyari;
     [SerializeField] Image _imgSes;
     [SerializeField] Sprite[] _spts;
-    void Awake() { _goUyari.SetActive(false); }
+
+    private void Awake()
+    {
+        GetComponent<Canvas>().sortingOrder = 20;
+        _goUyari.SetActive(false);
+    }
+  
     void Start()
     {
-
+       
+        float sesSeviyesi = KAYIT.GetSesSeviyesi();
+        Debug.Log(sesSeviyesi);
+        if (sesSeviyesi == 1f) {  _imgSes.sprite = _spts[3]; }
+        else if (sesSeviyesi == 0.65f) { _imgSes.sprite = _spts[2]; }
+        else if (sesSeviyesi == 0.35f) { _imgSes.sprite = _spts[1]; }
+        else if (sesSeviyesi == 0) { _imgSes.sprite = _spts[0]; }
         _btnClose.onClick.AddListener(() => HandleExit());
+        _btnSes.onClick.AddListener(() => HandleSes());
+        _btnSil.onClick.AddListener(() => HandleDelete());
+        _btnHayir.onClick.AddListener(() => HandleHayir());
+        _btnEvet.onClick.AddListener(() =>StartCoroutine( HandleEvet()));
     }
 
     void HandleExit()
@@ -26,11 +42,11 @@ public class Ayarlar : MonoBehaviour
     void HandleSes()
     {
         float sesSeviyesi = KAYIT.GetSesSeviyesi();
-        if (sesSeviyesi > 1f) { sesSeviyesi = 0.75f; _imgSes.sprite = _spts[0]; }
-        else if (sesSeviyesi == 0.75f) { sesSeviyesi = 0.50f; _imgSes.sprite = _spts[1]; }
-        else if (sesSeviyesi == 0.50f) { sesSeviyesi = 0.25f; _imgSes.sprite = _spts[2]; }
-        else if (sesSeviyesi == 0.25f) { sesSeviyesi=0f; _imgSes.sprite = _spts[3]; }
-        else if (sesSeviyesi == 0) { sesSeviyesi = 1f; _imgSes.sprite = _spts[0]; }
+        Debug.Log(sesSeviyesi);
+        if (sesSeviyesi == 1f) { sesSeviyesi = 0.65f; _imgSes.sprite = _spts[2]; }
+        else if (sesSeviyesi == 0.65f) { sesSeviyesi = 0.35f; _imgSes.sprite = _spts[1]; }
+        else if (sesSeviyesi == 0.35f) { sesSeviyesi=0f; _imgSes.sprite = _spts[0]; }
+        else if (sesSeviyesi == 0) { sesSeviyesi = 1f; _imgSes.sprite = _spts[3]; }
         SesKutusu.instance.SetVolume(sesSeviyesi);
         KAYIT.SetSesSeviyesi(sesSeviyesi);
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
