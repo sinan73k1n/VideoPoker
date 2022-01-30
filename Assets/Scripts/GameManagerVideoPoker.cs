@@ -28,7 +28,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] float _sureKartAcilma = 0.2f;
 
     [Header("UI")] [SerializeField] GameObject _goUI_MENU;
-    [SerializeField] GameObject _goUI_GOREV,_goUI_CREDITS;
+    [SerializeField] GameObject _goUI_GOREV, _goUI_CREDITS;
     private void Awake()
     {
         instance = this;
@@ -126,6 +126,36 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     }
 
+    string GetEl()
+    {
+
+        return "" + GetKart(_karts[0]) + GetKart(_karts[1]) + GetKart(_karts[2]) + GetKart(_karts[3]) + GetKart(_karts[4]);
+    }
+
+    string GetKart(KartVideoPoker kartVideoPoker)
+    {
+        string kart = "";
+        int index = kartVideoPoker._index;
+        switch (kartVideoPoker._kartTur)
+        {
+            case KartTur.Kupa:
+                kart = "KU"; break;
+            case KartTur.Maca:
+                kart = "MA"; break;
+            case KartTur.Karo:
+                kart = "KA"; break;
+            case KartTur.Sinek:
+
+            default:
+                kart = "SI"; break;
+
+
+        }
+        return kart + (index < 10 ? "0" + index : index.ToString());
+    }
+
+
+
     void SetActiveCardHold(bool deger)
     {
         foreach (var item in _karts)
@@ -147,50 +177,86 @@ public class GameManagerVideoPoker : MonoBehaviour
             WriteWin(carpan, KAYIT.GetSeciliBahis());
             if (carpan > 0) { KAYIT.AddOneMore_WIN(); }
         }
- 
+
         switch (carpan)
         {
             case 250:
-                if (isAdim2) CountEl(TypeOfPokerHand.RoyalFlush);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_ROYAL_FLUSH(GetEl());
+                    CountEl(TypeOfPokerHand.RoyalFlush);
+                }
                 SetIsik(0);
-                SetSpriteSonuc(_nameOfKazanc[0]);break;
+                SetSpriteSonuc(_nameOfKazanc[0]); break;
             case 50:
-                if (isAdim2) CountEl(TypeOfPokerHand.StraightFlush);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_STRAIGHT_FLUSH(GetEl());
+                    CountEl(TypeOfPokerHand.StraightFlush);
+                }
                 SetIsik(1);
                 SetSpriteSonuc(_nameOfKazanc[1]);
                 break;
             case 25:
-                if (isAdim2) CountEl(TypeOfPokerHand.FourOfAKind);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_FOUR_A_KIND(GetEl());
+                    CountEl(TypeOfPokerHand.FourOfAKind);
+                }
                 SetIsik(2);
                 SetSpriteSonuc(_nameOfKazanc[2]);
                 break;
             case 9:
                 SetIsik(3);
                 SetSpriteSonuc(_nameOfKazanc[3]);
-                if (isAdim2) CountEl(TypeOfPokerHand.FullHouse);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_FULL_HOUSE(GetEl());
+                    CountEl(TypeOfPokerHand.FullHouse);
+                }
                 break;
             case 6:
-                if (isAdim2) CountEl(TypeOfPokerHand.Flush);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_FLUSH(GetEl());
+                    CountEl(TypeOfPokerHand.Flush);
+                }
                 SetIsik(4);
                 SetSpriteSonuc(_nameOfKazanc[4]);
                 break;
             case 4:
                 SetIsik(5);
                 SetSpriteSonuc(_nameOfKazanc[5]);
-                if (isAdim2) CountEl(TypeOfPokerHand.Straight);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_STRAIGHT(GetEl());
+                    CountEl(TypeOfPokerHand.Straight);
+                }
                 break;
             case 3:
-                if (isAdim2) CountEl(TypeOfPokerHand.ThreeOfAKind);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_THREE_A_KIND(GetEl());
+                    CountEl(TypeOfPokerHand.ThreeOfAKind);
+                }
                 SetIsik(6);
                 SetSpriteSonuc(_nameOfKazanc[6]);
                 break;
             case 2:
-                if (isAdim2) CountEl(TypeOfPokerHand.TwoPair);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_TWO_PAIR(GetEl());
+                    CountEl(TypeOfPokerHand.TwoPair);
+                }
                 SetIsik(7);
                 SetSpriteSonuc(_nameOfKazanc[7]);
                 break;
             case 1:
-                if (isAdim2) CountEl(TypeOfPokerHand.JackOrBetter);
+                if (isAdim2)
+                {
+                    KAYIT.SetSON_EL_JACK_OR_BETTER(GetEl());
+                    CountEl(TypeOfPokerHand.JackOrBetter);
+                }
                 SetIsik(8);
                 SetSpriteSonuc(_nameOfKazanc[8]);
                 break;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class KartDestesi : MonoBehaviour
         {
             case KartTur.Kupa:
                 return cardsKupa;
-   
+
             case KartTur.Maca:
                 return cardsMaca;
             case KartTur.Karo:
@@ -30,10 +31,10 @@ public class KartDestesi : MonoBehaviour
 
     public Sprite GetBackOfCardRandom()
     {
-        return cardsBack[Random.Range(0, cardsBack.Length)];
+        return cardsBack[UnityEngine.Random.Range(0, cardsBack.Length)];
     }
 
-    public Sprite GetKart(KartTur kartTur,int index)
+    public Sprite GetKart(KartTur kartTur, int index)
     {
         switch (kartTur)
         {
@@ -49,6 +50,26 @@ public class KartDestesi : MonoBehaviour
                 return cardsSinek[index];
         }
     }
-    
-    
+    public Sprite GetKart(string kart)
+
+    {
+        KartTur kartTur;
+        int index = Convert.ToInt32(kart.Substring(2, 2));
+        switch (kart.Substring(0, 2))
+        {
+
+            case "MA":kartTur = KartTur.Maca;break;
+            case "SI":kartTur = KartTur.Sinek;break;
+            case "KU":kartTur = KartTur.Kupa;break;
+            case "KA":
+            default:
+                kartTur = KartTur.Karo;
+                break;
+        }
+
+        return GetKart(kartTur, index-1);
+
+    }
+
+
 }

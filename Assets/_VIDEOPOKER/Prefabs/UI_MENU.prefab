@@ -644,7 +644,7 @@ MonoBehaviour:
   _btnExit: {fileID: 3837825022828287085}
   _goHow: {fileID: 8731718538407460347, guid: 4da365c1691154fe5bedfea1c408e37b, type: 3}
   _goIstatistic: {fileID: 3318039449772101822, guid: 81e6f3ff75bce48ca887511040c8978c, type: 3}
-  _goAyar: {fileID: 0}
+  _goAyar: {fileID: 5758535396364730663, guid: 80f37c86da49a41a79b168bab62b015b, type: 3}
 --- !u!1 &5456738224493163171
 GameObject:
   m_ObjectHideFlags: 0
