@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,45 @@ public class KAYIT : MonoBehaviour
     const string SON_EL_TWO_PAIR = "SON_EL_TWO_PAIR";
     const string SON_EL_JACK_OR_BETTER = "SON_EL_JACK_OR_BETTER";
 
+    const string DAILY_CREDIT = "DAILY_CREDIT";
+    const string DAILY_CREDIT_REKLAM = "DAILY_CREDIT_REKLAM";
+    const string DAILY_CREDIT_REKLAM_15DK = "DAILY_CREDIT_REKLAM_15DK";
+    const string DAILY_CREDIT_REKLAM_COUNT = "DAILY_CREDIT_REKLAM_COUNT";
+
+
+    public static void SetDAILY_CREDIT_LAST_TIME(DateTime dateTime) { PlayerPrefs.SetString(DAILY_CREDIT, dateTime.ToString()); }
+    public static DateTime GetDAILY_CREDIT_LAST_TIME()
+    {
+
+        if (PlayerPrefs.GetString(DAILY_CREDIT) == string.Empty)
+        {
+            PlayerPrefs.SetString(DAILY_CREDIT, DateTime.Now.AddDays(-1).ToString());
+        }
+        return DateTime.Parse(PlayerPrefs.GetString(DAILY_CREDIT));
+    }
+    public static void SetDAILY_CREDIT_REKLAM(DateTime dateTime) { PlayerPrefs.SetString(DAILY_CREDIT_REKLAM, dateTime.ToString()); }
+    public static DateTime GetDAILY_CREDIT_REKLAM()
+    {
+
+        if (PlayerPrefs.GetString(DAILY_CREDIT_REKLAM) == string.Empty)
+        {
+            PlayerPrefs.SetString(DAILY_CREDIT_REKLAM, DateTime.Now.AddDays(-1).ToString());
+        }
+        return DateTime.Parse(PlayerPrefs.GetString(DAILY_CREDIT_REKLAM));
+    }
+    public static void SetDAILY_CREDIT_REKLAM_15DK(DateTime dateTime) { PlayerPrefs.SetString(DAILY_CREDIT_REKLAM_15DK, dateTime.ToString()); }
+    public static DateTime GetDAILY_CREDIT_REKLAM_15DK()
+    {
+
+        if (PlayerPrefs.GetString(DAILY_CREDIT_REKLAM_15DK) == string.Empty)
+        {
+            PlayerPrefs.SetString(DAILY_CREDIT_REKLAM_15DK, DateTime.Now.AddHours(-1).ToString());
+        }
+        return DateTime.Parse(PlayerPrefs.GetString(DAILY_CREDIT_REKLAM_15DK));
+    }
+
+    public static void SetDAILY_CREDIT_REKLAM_COUNT(int count) { PlayerPrefs.SetInt(DAILY_CREDIT_REKLAM_COUNT,count); }
+    public static int GetDAILY_CREDIT_REKLAM_COUNT() {return PlayerPrefs.GetInt(DAILY_CREDIT_REKLAM_COUNT,5); }
 
     public static void SetSON_EL_ROYAL_FLUSH(string kartlar)
     {
