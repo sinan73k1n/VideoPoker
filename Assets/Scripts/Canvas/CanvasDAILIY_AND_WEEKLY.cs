@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using System;
 
 public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
 {
@@ -15,7 +15,8 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
 
     private void Awake()
     {
-        GetComponent<Canvas>().sortingOrder = 10;
+       
+
     }
     int _sayfaNumarasi;
     void Start()

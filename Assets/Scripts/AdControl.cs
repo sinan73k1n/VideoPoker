@@ -99,7 +99,8 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
             case UnityAdsShowCompletionState.SKIPPED:
                 break;
             case UnityAdsShowCompletionState.COMPLETED:
-                GameManagerVideoPoker.instance.AddCredits(50);
+                CanvasCredits.instance.ReklamComplete();
+                
                 break;
             case UnityAdsShowCompletionState.UNKNOWN:
                 break;
