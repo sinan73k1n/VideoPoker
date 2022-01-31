@@ -75,6 +75,8 @@ public class CanvasCredits : MonoBehaviour
             countAds = 5;
             KAYIT.SetDAILY_CREDIT_REKLAM_COUNT(countAds);
             KAYIT.SetDAILY_CREDIT_REKLAM(DateTime.Now);
+            isReadyForDailyAds = true;
+            _btnAds.interactable = true;
         }
 
         if (countAds==5)

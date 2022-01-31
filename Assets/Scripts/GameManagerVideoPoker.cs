@@ -16,7 +16,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] Vector3[] _trfIsikKazancTablo;
     [SerializeField] GameObject _sptRenSonuc;
     [SerializeField] GameObject _sptRenGameOver;
-    [SerializeField] Button _btnDeal, _btnBetOne, _btnReklam, _btnMenu, _btnGorev;
+    [SerializeField] Button _btnDeal, _btnBetOne, _btnReklam, _btnMenu, _btnGorev,_btnKartlar;
     [SerializeField] TMP_Text _txtWin, _txtBet, _txtCredits, _txtNameOfKazanc, _txtBtnDealDrew;
     [SerializeField] string[] _nameOfKazanc;
 
@@ -28,7 +28,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] float _sureKartAcilma = 0.2f;
 
     [Header("UI")] [SerializeField] GameObject _goUI_MENU;
-    [SerializeField] GameObject _goUI_GOREV, _goUI_CREDITS;
+    [SerializeField] GameObject _goUI_GOREV, _goUI_CREDITS,_goUI_KARTLAR;
     private void Awake()
     {
         instance = this;
@@ -50,6 +50,7 @@ public class GameManagerVideoPoker : MonoBehaviour
         _btnBetOne.onClick.AddListener(() => HandleBetOne());
         _btnReklam.onClick.AddListener(() => HandleReklam());
         _btnGorev.onClick.AddListener(() => HandleOpenUI(_goUI_GOREV));
+        _btnKartlar.onClick.AddListener(() => HandleOpenUI(_goUI_KARTLAR));
         AtaKartArkasi();
         _btnDeal.onClick.AddListener(HandleOyna);
     }
@@ -441,9 +442,9 @@ public class GameManagerVideoPoker : MonoBehaviour
         if (!_karts[3]._isHolding) _karts[3].CloseCard();
         if (!_karts[4]._isHolding) _karts[4].CloseCard();
     }
-    void AtaKartArkasi()
+  public  void AtaKartArkasi()
     {
-        Sprite kartArkasi = _desteKartOrg.GetBackOfCardRandom();
+        Sprite kartArkasi = _desteKartOrg.GetBackOfCard(KART_SATIS.GetAktifKart());
         foreach (var item in _karts)
         {
             item.SetKartArka(kartArkasi);

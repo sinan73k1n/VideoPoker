@@ -33,7 +33,7 @@ public class KartDestesi : MonoBehaviour
     {
         return cardsBack[UnityEngine.Random.Range(0, cardsBack.Length)];
     }
-
+    public Sprite GetBackOfCard(int index) { return cardsBack[index]; }
     public Sprite GetKart(KartTur kartTur, int index)
     {
         switch (kartTur)
