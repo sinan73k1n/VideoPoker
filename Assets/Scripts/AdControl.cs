@@ -41,10 +41,11 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     {
        
         Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
-        yield return new WaitForSeconds(0.0f);
+       
+        yield return new WaitForSeconds(0.3f);
         
         Advertisement.Banner.Show(placementIdBanner);
-        Advertisement.Banner.Show(placementIdBanner);
+     
      
         GameObject.Find("DEBUG").GetComponentInChildren<Text>().text = $"Advertisement.Banner.isLoaded: {Advertisement.Banner.isLoaded}";
     }
