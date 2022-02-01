@@ -7,27 +7,29 @@ using TMPro;
 public class CanvasCredits : MonoBehaviour
 {
     public static CanvasCredits instance;
+
     [SerializeField] Button _btnDaily, _btnAds, _btnBack;
     bool isReadyForDaily = true;
-   public bool isReadyForDailyAds = true;
+    public bool isReadyForDailyAds = true;
     public int countAds = 0;
     TMP_Text _txtDaily, _txtAds;
     private void Awake()
     {
         instance = this;
+
         GetComponent<Canvas>().sortingOrder = 10;
+
         countAds = KAYIT.GetDAILY_CREDIT_REKLAM_COUNT();
         isReadyForDailyAds = Kontrol15DakikalikAds();
-        Debug.Log(countAds);
         _txtDaily = _btnDaily.GetComponentInChildren<TMP_Text>();
         _txtAds = _btnAds.GetComponentInChildren<TMP_Text>();
+
+        Debug.Log(countAds);
 
     }
     void Start()
     {
-        _btnDaily.onClick.AddListener(() => HandleDaily());
-        _btnAds.onClick.AddListener(() => HandleAds());
-        _btnBack.onClick.AddListener(() => HandleBack());
+        AtaHandlesToButtons();
         CheckTheDaily();
         CheckTheDailyAds();
 
@@ -50,6 +52,14 @@ public class CanvasCredits : MonoBehaviour
         //Debug.Log(((DateTime.Parse("23:59:59") - DateTime.Now.TimeOfDay).TimeOfDay).ToString().Substring(0, 8));
 
     }
+    private void AtaHandlesToButtons()
+    {
+        _btnDaily.onClick.AddListener(() => HandleDaily());
+        _btnAds.onClick.AddListener(() => HandleAds());
+        _btnBack.onClick.AddListener(() => HandleBack());
+    }
+
+   
 
     void CheckTheDaily()
     {
@@ -68,7 +78,7 @@ public class CanvasCredits : MonoBehaviour
             isReadyForDaily = false;
         }
     }
-  public  void CheckTheDailyAds()
+    public void CheckTheDailyAds()
     {
         if (KAYIT.GetDAILY_CREDIT_REKLAM().Date < DateTime.Now.Date)
         {
@@ -79,14 +89,14 @@ public class CanvasCredits : MonoBehaviour
             _btnAds.interactable = true;
         }
 
-        if (countAds==5)
+        if (countAds == 5)
         {
             _btnAds.interactable = true;
-     
+
             _txtAds.text = $"ADS({countAds}) +50";
 
         }
-        else if (countAds>0&& isReadyForDailyAds)
+        else if (countAds > 0 && isReadyForDailyAds)
         {
             _btnAds.interactable = true;
             _txtAds.text = $"ADS({countAds}) +50";
@@ -95,7 +105,7 @@ public class CanvasCredits : MonoBehaviour
         {
             _btnAds.interactable = false;
             isReadyForDailyAds = false;
-  
+
         }
     }
 
@@ -137,18 +147,18 @@ public class CanvasCredits : MonoBehaviour
                 CheckTheDailyAds();
             }
         }
-        else if (countAds > 0 && !Kontrol15DakikalikAds()&&!isReadyForDailyAds)
+        else if (countAds > 0 && !Kontrol15DakikalikAds() && !isReadyForDailyAds)
         {
             DateTime dateTime = KAYIT.GetDAILY_CREDIT_REKLAM_15DK();
             _txtAds.text = (dateTime.TimeOfDay - DateTime.Now.TimeOfDay).ToString().Substring(0, 8);
 
-            if (_txtAds.text=="00:00:00")
+            if (_txtAds.text == "00:00:00")
             {
                 isReadyForDailyAds = true;
                 CheckTheDailyAds();
             }
         }
-        
+
     }
 
     private void HandleBack()

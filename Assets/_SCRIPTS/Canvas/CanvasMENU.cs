@@ -16,10 +16,10 @@ public class CanvasMENU : MonoBehaviour
     void Start()
     {
 
-        AtaHandle();
+        AtaHandlesToButtons();
 
     }
-    void AtaHandle()
+    void AtaHandlesToButtons()
     {
         _btnHow.onClick.AddListener(() => HandleOpen(_goHow));
         _btnIstatistic.onClick.AddListener(() => HandleOpen(_goIstatistic));
@@ -42,7 +42,6 @@ public class CanvasMENU : MonoBehaviour
     }
     IEnumerator HandleExit()
     {
-
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         yield return new WaitForSeconds(0.5f);
         Application.Quit();

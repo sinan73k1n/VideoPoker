@@ -20,20 +20,27 @@ public class Ayarlar : MonoBehaviour
   
     void Start()
     {
-       
+        Ayarla_btnSes();
+        AtaHandleToButtons();
+   
+    }
+
+    void Ayarla_btnSes()
+    {
         float sesSeviyesi = KAYIT.GetSesSeviyesi();
-        Debug.Log(sesSeviyesi);
-        if (sesSeviyesi == 1f) {  _imgSes.sprite = _spts[3]; }
+        if (sesSeviyesi == 1f) { _imgSes.sprite = _spts[3]; }
         else if (sesSeviyesi == 0.65f) { _imgSes.sprite = _spts[2]; }
         else if (sesSeviyesi == 0.35f) { _imgSes.sprite = _spts[1]; }
         else if (sesSeviyesi == 0) { _imgSes.sprite = _spts[0]; }
+    }
+    void AtaHandleToButtons()
+    {
         _btnClose.onClick.AddListener(() => HandleExit());
         _btnSes.onClick.AddListener(() => HandleSes());
         _btnSil.onClick.AddListener(() => HandleDelete());
         _btnHayir.onClick.AddListener(() => HandleHayir());
-        _btnEvet.onClick.AddListener(() =>StartCoroutine( HandleEvet()));
+        _btnEvet.onClick.AddListener(() => StartCoroutine(HandleEvet()));
     }
-
     void HandleExit()
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
