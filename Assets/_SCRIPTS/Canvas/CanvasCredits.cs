@@ -85,6 +85,7 @@ public class CanvasCredits : MonoBehaviour
             countAds = 5;
             KAYIT.SetDAILY_CREDIT_REKLAM_COUNT(countAds);
             KAYIT.SetDAILY_CREDIT_REKLAM(DateTime.Now);
+         
             isReadyForDailyAds = true;
             _btnAds.interactable = true;
         }
@@ -147,7 +148,7 @@ public class CanvasCredits : MonoBehaviour
                 CheckTheDailyAds();
             }
         }
-        else if (countAds > 0 && !Kontrol15DakikalikAds() && !isReadyForDailyAds)
+        else if (countAds > 0 && !Kontrol15DakikalikAds() && !isReadyForDailyAds&&countAds!=5)
         {
             DateTime dateTime = KAYIT.GetDAILY_CREDIT_REKLAM_15DK();
             _txtAds.text = (dateTime.TimeOfDay - DateTime.Now.TimeOfDay).ToString().Substring(0, 8);
@@ -157,6 +158,10 @@ public class CanvasCredits : MonoBehaviour
                 isReadyForDailyAds = true;
                 CheckTheDailyAds();
             }
+        }
+        else
+        {
+
         }
 
     }
@@ -175,6 +180,7 @@ public class CanvasCredits : MonoBehaviour
         KAYIT.SetDAILY_CREDIT_REKLAM_COUNT(countAds);
         isReadyForDailyAds = false;
         _btnAds.interactable = false;
+     if(!GameManagerVideoPoker.instance.isAdim2)  GameManagerVideoPoker.instance.CheckBetAndCredit();
         CheckTheDailyAds();
     }
     private void HandleAds()
