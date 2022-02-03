@@ -1,0 +1,1 @@
+ public enum GorevList { fourOfAKind, fullHouse, flush, straight, threeOfAKind, twoPair, jackOrBetter, win, game }

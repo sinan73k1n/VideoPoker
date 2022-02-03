@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class GOREV : MonoBehaviour
+public class GOREV_ : MonoBehaviour
 {
     public enum _gorev { Bet1, Bet2, Bet3, Bet4, Bet5, Hafta }
 

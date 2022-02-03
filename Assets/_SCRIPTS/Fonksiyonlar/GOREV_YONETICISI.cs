@@ -11,13 +11,56 @@ public class GOREV_YONETICISI : MonoBehaviour
     public string _sureKalanGun = "";
     public string _sureKalanHafta = "";
     string gun;
-    int[,] _GorevCount = new int[8, 6];
-    public enum gorevList { fourOfAKind, flush, straight, threeOfAKind, twoPair, jackOrBetter, win, game }
+
+    string[] _GorevName = { "FOUR OF A KIND", "FULL HOUSE", "FLUSH", "STRAIGHT", "THREE OF A KIND", "TWO PAIR", "JACK OR BETTER", "GAME WIN", "GAME" };
+
+   
+
     void Awake()
     {
         instance = this;
-        Setup();
+        //Setup();
+        SetupDeneme();
 
+    }
+    private void Start()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 6; j++)
+            {
+               Debug.Log($"_GorevCount {i} / {j} : "+ KAYIT_GOREV_YONETICISI.GetOneGorevCount(i, j));
+             
+            }
+        }
+        for (int j = 0; j < 6; j++)
+        {
+            Debug.Log($"_GorevCount {GorevList.win} {j} : " + KAYIT_GOREV_YONETICISI.GetOneGorevCount(7, j));
+        }
+
+
+        for (int i = 0; i < 3; i++)
+        {
+
+            Debug.Log($"_GorevBet 1 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(0, i));
+            Debug.Log($"_GorevBet 2 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(1, i));
+            Debug.Log($"_GorevBet 3 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(2, i));
+            Debug.Log($"_GorevBet 4 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(3, i));
+            Debug.Log($"_GorevBet 5 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(4, i));
+            Debug.Log($"_GorevBet 6 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(5, i));
+
+        }
+        for (int i = 0; i < 3; i++)
+        {
+
+            Debug.Log($"Max 1 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(0, i));
+            Debug.Log($"Max 2 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(1, i));
+            Debug.Log($"Max 3 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(2, i));
+            Debug.Log($"Max 4 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(3, i));
+            Debug.Log($"Max 5 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(4, i));
+            Debug.Log($"Max 6 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(5, i));
+
+        }
     }
 
     void Update()
@@ -39,166 +82,115 @@ public class GOREV_YONETICISI : MonoBehaviour
 
         if (IsYeniGun())
         {
-            //Yeni görevler
+            SifirlaSayimGunluk();
+            YeniGorevAta(0);
+            YeniGorevAta( 1);
+            YeniGorevAta( 2);
+            YeniGorevAta( 3);
+            YeniGorevAta( 4);
+
+
         }
+      
 
         if (IsYeniHafta())
         {
-            //Yeni görevler
+            SifirlaSayimHaftalik();
+            YeniGorevAta( 5);
+
         }
+      
+
+        int haftaGunu = Convert.ToInt32(DateTime.Now.DayOfWeek);
+        gun = 7 == haftaGunu ? "0" : (7 - haftaGunu).ToString();
+    }
+    public void SetupDeneme()
+    {
+
+       
+            SifirlaSayimGunluk();
+            YeniGorevAta(0);
+            YeniGorevAta(1);
+            YeniGorevAta(2);
+            YeniGorevAta(3);
+            YeniGorevAta(4);
+
+        SifirlaSayimHaftalik();
+            YeniGorevAta( 5);
 
         int haftaGunu = Convert.ToInt32(DateTime.Now.DayOfWeek);
         gun = 7 == haftaGunu ? "0" : (7 - haftaGunu).ToString();
     }
 
-    public void DoThis(gorevList gorev, int carpan)
+    
+   
+  
+    void SifirlaSayimGunluk()
     {
-        switch (gorev)
+        KAYIT_GOREV_YONETICISI.SifirlaGunluk(false);
+    }
+    void SifirlaSayimHaftalik()
+    {
+        KAYIT_GOREV_YONETICISI.SifirlaGunluk(true);
+    }
+    void YeniGorevAta( int hangi)
+    {
+        var _GorevNumaralari = GetNewList();
+
+        for (var i = 0; i < 3; i++)
         {
-            case gorevList.fourOfAKind:
-                FourAKindKazanmaSayisi(carpan);
-                break;
-            case gorevList.flush:
-                FlushKazanmaSayisi(carpan);
-                break;
-            case gorevList.straight:
-                StraightKazanmaSayisi(carpan);
-                break;
-            case gorevList.threeOfAKind:
-                TreeAKindKazanmaSayisi(carpan);
-                break;
-            case gorevList.twoPair:
-                TwoPairKazanmaSayisi(carpan);
-                break;
-            case gorevList.jackOrBetter:
-                JackOrBetterKazanmaSayisi(carpan);
-                break;
-            case gorevList.win:
-                OyunKazanmaSayisi(carpan);
-                break;
-            case gorevList.game:
-                OyunSayisi(carpan);
-                break;
-            default:
-                break;
+            int secilen = _GorevNumaralari[UnityEngine.Random.Range(0, _GorevNumaralari.Count)];
+   
+            KAYIT_GOREV_YONETICISI.SetGorevSecilen(secilen, hangi, i);
+            KAYIT_GOREV_YONETICISI.SetGorevSecilenMax(hangi != 5 ? GetMaxGunluk(secilen) : GetMaxHaftalik(secilen), hangi, i);
+            _GorevNumaralari.Remove(secilen);
         }
 
     }
-    void FourAKindKazanmaSayisi(int carpan)
-    {
 
-        switch (carpan)
+    int GetMaxGunluk(int hangiGorev)
+    {
+        switch (hangiGorev)
         {
-            case 1: _GorevCount[0, 0]++; break;
-            case 2: _GorevCount[0, 1]++; break;
-            case 3: _GorevCount[0, 2]++; break;
-            case 4: _GorevCount[0, 3]++; break;
-            case 5: _GorevCount[0, 4]++; break;
-            default:
-                break;
-        }
-        _GorevCount[0, 5]++;
+            case 0:
+            case 1:
+            default: return UnityEngine.Random.Range(1, 3);
+            case 2:       
+            case 3: return UnityEngine.Random.Range(1, 6);
+            case 4: return UnityEngine.Random.Range(3, 9);
+            case 5: return UnityEngine.Random.Range(5, 11);
+            case 6: return UnityEngine.Random.Range(10, 31);
+            case 7: return UnityEngine.Random.Range(20, 41);
+            case 8: return UnityEngine.Random.Range(30, 51);
 
+        }
 
     }
-    void FlushKazanmaSayisi(int carpan)
+    int GetMaxHaftalik(int hangiGorev)
     {
-        switch (carpan)
+        switch (hangiGorev)
         {
-            case 1: _GorevCount[1, 0]++; break;
-            case 2: _GorevCount[1, 1]++; break;
-            case 3: _GorevCount[1, 2]++; break;
-            case 4: _GorevCount[1, 3]++; break;
-            case 5: _GorevCount[1, 4]++; break;
-            default:
-                break;
+            case 0:
+            case 1:
+            default: return UnityEngine. Random.Range(10, 16);
+            case 2:
+            case 3: return UnityEngine.Random.Range(15, 31);
+            case 4: return UnityEngine.Random.Range(30, 51);
+            case 5: return UnityEngine.Random.Range(40, 61);
+            case 6: return UnityEngine.Random.Range(100, 301);
+            case 7: return UnityEngine.Random.Range(200, 401);
+            case 8: return UnityEngine.Random.Range(300, 501);
+            
+
         }
-        _GorevCount[1, 5]++;
+
     }
-    void StraightKazanmaSayisi(int carpan)
+
+    List<int> GetNewList()
     {
-        switch (carpan)
-        {
-            case 1: _GorevCount[2, 0]++; break;
-            case 2: _GorevCount[2, 1]++; break;
-            case 3: _GorevCount[2, 2]++; break;
-            case 4: _GorevCount[2, 3]++; break;
-            case 5: _GorevCount[2, 4]++; break;
-            default:
-                break;
-        }
-        _GorevCount[2, 5]++;
+       return new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
     }
-    void TreeAKindKazanmaSayisi(int carpan)
-    {
-        switch (carpan)
-        {
-            case 1: _GorevCount[3, 0]++; break;
-            case 2: _GorevCount[3, 1]++; break;
-            case 3: _GorevCount[3, 2]++; break;
-            case 4: _GorevCount[3, 3]++; break;
-            case 5: _GorevCount[3, 4]++; break;
-            default:
-                break;
-        }
-        _GorevCount[3, 5]++;
-    }
-    void TwoPairKazanmaSayisi(int carpan)
-    {
-        switch (carpan)
-        {
-            case 1: _GorevCount[4, 0]++; break;
-            case 2: _GorevCount[4, 1]++; break;
-            case 3: _GorevCount[4, 2]++; break;
-            case 4: _GorevCount[4, 3]++; break;
-            case 5: _GorevCount[4, 4]++; break;
-            default:
-                break;
-        }
-        _GorevCount[4, 5]++;
-    }
-    void JackOrBetterKazanmaSayisi(int carpan)
-    {
-        switch (carpan)
-        {
-            case 1: _GorevCount[5, 0]++; break;
-            case 2: _GorevCount[5, 1]++; break;
-            case 3: _GorevCount[5, 2]++; break;
-            case 4: _GorevCount[5, 3]++; break;
-            case 5: _GorevCount[5, 4]++; break;
-            default:
-                break;
-        }
-        _GorevCount[5, 5]++;
-    }
-    void OyunKazanmaSayisi(int carpan)
-    {
-        switch (carpan)
-        {
-            case 1: _GorevCount[6, 0]++; break;
-            case 2: _GorevCount[6, 1]++; break;
-            case 3: _GorevCount[6, 2]++; break;
-            case 4: _GorevCount[6, 3]++; break;
-            case 5: _GorevCount[6, 4]++; break;
-            default:
-                break;
-        }
-        _GorevCount[6, 5]++;
-    }
-    void OyunSayisi(int carpan)
-    {
-        switch (carpan)
-        {
-            case 1: _GorevCount[7, 0]++; break;
-            case 2: _GorevCount[7, 1]++; break;
-            case 3: _GorevCount[7, 2]++; break;
-            case 4: _GorevCount[7, 3]++; break;
-            case 5: _GorevCount[7, 4]++; break;
-            default:
-                break;
-        }
-        _GorevCount[7, 5]++;
-    }
+    
 
 
 
@@ -236,6 +228,49 @@ public class GOREV_YONETICISI : MonoBehaviour
             return true;
         }
         return false;
+
+
+
+
+    }
+
+    public GOREV GetGOREV(int sayfa, int kacinciGorev)
+    {
+        GOREV gorev = new GOREV();
+
+        gorev._ad = _GorevName[KAYIT_GOREV_YONETICISI.GetGorevSecilen(sayfa, kacinciGorev)];
+        // gorev._tamamlanan = KAYIT_GOREV_YONETICISI.GetGorevCount(sayfa, kacinciGorev);
+        gorev._tamamlanan = KAYIT_GOREV_YONETICISI.GetOneGorevCount(KAYIT_GOREV_YONETICISI.GetGorevSecilen(sayfa,kacinciGorev),sayfa);
+        gorev._tamamlanmasiGereken = KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(sayfa, kacinciGorev);
+        gorev._odul = Convert.ToInt32(gorev._tamamlanmasiGereken * GetCarpan(KAYIT_GOREV_YONETICISI.GetGorevSecilen(sayfa, kacinciGorev)));
+        gorev._odulAlindi = false;
+
+        
+        return gorev;
+
+    }
+    float GetCarpan(int gorevNumara)
+    {
+        switch (gorevNumara)
+        {
+
+            case 0: return 12.5f;
+            case 1: return 4.5f;
+            case 2: return 3f;
+            case 3: return 2f;
+            case 4: return 1.5f;
+            case 5: return 1f;
+            case 6: return .5f;
+            case 7: return .2f;
+            case 8:
+            default: return .1f;
+
+        }
+
+
     }
 
 }
+
+
+
