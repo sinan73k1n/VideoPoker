@@ -25,13 +25,16 @@ public class KAYIT_GOREV_YONETICISI : MonoBehaviour
     public static void SifirlaGunluk(bool veHaftalik)
     {
         int i;
+        int asa;
         if (veHaftalik)
         {
             i = 9;
+            asa = 6;
         }
         else
         {
             i = 8;
+            asa = 5;
         }
 
         for (int b = 0; b < i; b++)
@@ -42,6 +45,15 @@ public class KAYIT_GOREV_YONETICISI : MonoBehaviour
                 PlayerPrefs.SetInt(key, 0);
             }
         }
+        for (int e = 0; e < asa; e++)
+        {
+            for (int q = 0; q < 4; q++)
+            {
+                SetGorevTamamlandi(false, e, q);
+            }
+           
+        }
+
     }
 
     public static void SetGorevSecilen(int gorev, int hangiGorevBetOrWeek, int kacinciGorevSirasi) { PlayerPrefs.SetInt("B" + hangiGorevBetOrWeek + "B" + kacinciGorevSirasi, gorev); }
@@ -49,6 +61,9 @@ public class KAYIT_GOREV_YONETICISI : MonoBehaviour
 
     public static void SetGorevSecilenMax(int Max, int hangiGorevBetOrWeek, int kacinciGorevSirasi) { PlayerPrefs.SetInt("M" + hangiGorevBetOrWeek + "M" + kacinciGorevSirasi, Max); }
     public static int GetGorevSecilenMax(int hangiGorevBetOrWeek, int kacinciGorevSirasi) { return PlayerPrefs.GetInt("M" + hangiGorevBetOrWeek + "M" + kacinciGorevSirasi); }
+
+    public static void SetGorevTamamlandi(bool tamamlandi, int hangiGorevBetOrWeek, int kacinciGorevSirasi) { PlayerPrefs.SetInt("AS" + hangiGorevBetOrWeek + "B" + kacinciGorevSirasi, tamamlandi?1:0); }
+    public static bool GetGorevTamamlandi(int hangiGorevBetOrWeek, int kacinciGorevSirasi) { return PlayerPrefs.GetInt("AS" + hangiGorevBetOrWeek + "B" + kacinciGorevSirasi,0)==1; }
 
 
 

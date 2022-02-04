@@ -12,9 +12,10 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
 
     [SerializeField] TMP_Text[] _txtGorevName, _txtBtnName;
     [SerializeField] Text[] _txtGorevSayi;
-    [SerializeField] Image[] _imgsGorevSayi,_sayfaNoktalar;
+    [SerializeField] Image[] _imgsGorevSayi, _sayfaNoktalar;
     [SerializeField] TMP_Text _txtGorevHeader;
     int _sayfaNumarasi;
+    bool _btn0 = false, _btn1 = false, _btn2 = false, _btn3 = false;
     private void Awake()
     {
         _sayfaNumarasi = KAYIT.GetSayfaNumarasi_DAILY_AND_WEEK();
@@ -34,6 +35,50 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
             item.onClick.AddListener(HandleBos);
         }
     }
+    private void Update()
+    {
+        YazBTN0AD();
+        YazBTN1AD();
+        YazBTN2AD();
+        YazBTN3AD();
+    }
+
+    void YazBTN0AD()
+    {
+        if (!_btn0) return;
+        if (_sayfaNumarasi != 5)
+            _txtBtnName[0].text = GOREV_YONETICISI.instance._sureKalanGun;
+        else
+            _txtBtnName[0].text = GOREV_YONETICISI.instance._sureKalanHafta;
+
+    }
+    void YazBTN1AD()
+    {
+        if (!_btn1) return;
+        if (_sayfaNumarasi != 5)
+            _txtBtnName[1].text = GOREV_YONETICISI.instance._sureKalanGun;
+        else
+            _txtBtnName[1].text = GOREV_YONETICISI.instance._sureKalanHafta;
+
+    }
+    void YazBTN2AD()
+    {
+        if (!_btn2) return;
+        if (_sayfaNumarasi != 5)
+            _txtBtnName[2].text = GOREV_YONETICISI.instance._sureKalanGun;
+        else
+            _txtBtnName[2].text = GOREV_YONETICISI.instance._sureKalanHafta;
+
+    }
+    void YazBTN3AD()
+    {
+        if (!_btn3) return;
+        if (_sayfaNumarasi != 5)
+            _txtBtnName[3].text = GOREV_YONETICISI.instance._sureKalanGun;
+        else
+            _txtBtnName[3].text = GOREV_YONETICISI.instance._sureKalanHafta;
+
+    }
 
     void HandleBos()
     {
@@ -42,6 +87,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
 
     void HandleExit()
     {
+        GOREV_YONETICISI.instance._isOpenTable = false;
         AdControl.instance.CloseBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         Destroy(gameObject);
@@ -103,7 +149,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
                 break;
         }
     }
-    void FillImage(Image image, int count, int max)
+    void FillImage(Image image, float count, float max)
     {
         if (count != 0)
         {
@@ -121,6 +167,21 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
         GOREV gorev1 = GOREV_YONETICISI.instance.GetGOREV(sayfa, 1);
         GOREV gorev2 = GOREV_YONETICISI.instance.GetGOREV(sayfa, 2);
 
+        int odul0 = gorev0._odul * (sayfa != 5 ? (sayfa + 1) : 1);
+        int odul1 = gorev1._odul * (sayfa != 5 ? (sayfa + 1) : 1);
+        int odul2 = gorev2._odul * (sayfa != 5 ? (sayfa + 1) : 1);
+        int odul3 = sayfa == 5 ? 100 : (sayfa + 1) * 10;
+
+        _btn0 = gorev0._odulAlindi;
+        _btn1 = gorev1._odulAlindi;
+        _btn2 = gorev2._odulAlindi;
+        _btn3 = KAYIT_GOREV_YONETICISI.GetGorevTamamlandi(sayfa, 3);
+
+        _btnGorev[0].interactable = !_btn0 ? gorev0.IsGorevTamam() : !_btn0;
+        _btnGorev[1].interactable = !_btn1 ? gorev1.IsGorevTamam() : !_btn1;
+        _btnGorev[2].interactable = !_btn2 ? gorev2.IsGorevTamam() : !_btn2;
+        _btnGorev[3].interactable = !_btn3 ? (gorev0.IsGorevTamam()&& gorev1.IsGorevTamam() && gorev2.IsGorevTamam()) : !_btn3;
+
         _txtGorevName[0].text = gorev0._ad;
         _txtGorevName[1].text = gorev1._ad;
         _txtGorevName[2].text = gorev2._ad;
@@ -129,25 +190,41 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
         _txtGorevSayi[0].text = "" + gorev0._tamamlanan + "/" + gorev0._tamamlanmasiGereken;
         _txtGorevSayi[1].text = "" + gorev1._tamamlanan + "/" + gorev1._tamamlanmasiGereken;
         _txtGorevSayi[2].text = "" + gorev2._tamamlanan + "/" + gorev2._tamamlanmasiGereken;
-        _txtGorevSayi[3].text = "" + GetSayfaTamamlanma(gorev0.IsGorevTamam(),gorev1.IsGorevTamam(),gorev2.IsGorevTamam())+ "/3";
+        _txtGorevSayi[3].text = "" + GetSayfaTamamlanma(gorev0.IsGorevTamam(), gorev1.IsGorevTamam(), gorev2.IsGorevTamam()) + "/3";
 
         FillImage(_imgsGorevSayi[0], gorev0._tamamlanan, gorev0._tamamlanmasiGereken);
-        FillImage(_imgsGorevSayi[1], gorev0._tamamlanan, gorev1._tamamlanmasiGereken);
-        FillImage(_imgsGorevSayi[2], gorev0._tamamlanan, gorev2._tamamlanmasiGereken);
+        FillImage(_imgsGorevSayi[1], gorev1._tamamlanan, gorev1._tamamlanmasiGereken);
+        FillImage(_imgsGorevSayi[2], gorev2._tamamlanan, gorev2._tamamlanmasiGereken);
         FillImage(_imgsGorevSayi[3], GetSayfaTamamlanma(gorev0.IsGorevTamam(), gorev1.IsGorevTamam(), gorev2.IsGorevTamam()), 3);
 
-        _txtBtnName[0].text = $"{gorev0._odul * (sayfa != 5 ? (sayfa + 1) : 1)}$";
-        _txtBtnName[1].text = $"{gorev1._odul * (sayfa != 5 ? (sayfa + 1) : 1)}$";
-        _txtBtnName[2].text = $"{gorev2._odul * (sayfa != 5 ? (sayfa + 1) : 1)}$";
-        int sonSayfa = sayfa == 5 ? 100 : (sayfa + 1) * 10;
-        _txtBtnName[3].text = $"{sonSayfa}$";
+        _txtBtnName[0].text = $"{odul0}$";
+        _txtBtnName[1].text = $"{odul1}$";
+        _txtBtnName[2].text = $"{odul2}$";
+        _txtBtnName[3].text = $"{odul3}$";
+
+        foreach (var item in _btnGorev)
+        {
+            item.onClick.RemoveAllListeners();
+        }
+        _btnGorev[0].onClick.AddListener(() => HandleOdulAl(sayfa, 0, odul0));
+        _btnGorev[1].onClick.AddListener(() => HandleOdulAl(sayfa, 1, odul1));
+        _btnGorev[2].onClick.AddListener(() => HandleOdulAl(sayfa, 2, odul2));
+        _btnGorev[3].onClick.AddListener(() => HandleOdulAl(sayfa, 3, odul3));
 
         HeaderDegistir(sayfa);
     }
 
+    void HandleOdulAl(int sayfa, int sira, int odul)
+    {
+        KAYIT_GOREV_YONETICISI.SetGorevTamamlandi(true, sayfa, sira);
+        GameManagerVideoPoker.instance.AddCredits(odul);
+        ShowGorev(_sayfaNumarasi);
+
+    }
+
     int GetSayfaTamamlanma(params bool[] gorevler)
     {
-        int a= 0;
+        int a = 0;
         foreach (var item in gorevler)
         {
             if (item)
