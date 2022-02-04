@@ -200,6 +200,7 @@ MonoBehaviour:
   - THREE OF A KIND
   - TWO PAIR
   - JACK OR BETTER
+  isAdim2: 0
   _sureKartAcilma: 0.2
   _goUI_MENU: {fileID: 4816868089380985095, guid: 468b5051e782d4647a99be2467606aee, type: 3}
   _goUI_GOREV: {fileID: 817877089806414930, guid: 901a2449df91d43cba204df6d5fe4253, type: 3}

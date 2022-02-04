@@ -161,6 +161,15 @@ public class GOREV_YONETICISI : MonoBehaviour
         }
 
     }
+    public void YeniGorevAta(int hangiSayfa, int hangiSira, int hangiGorev)
+    {
+
+        KAYIT_GOREV_YONETICISI.SetGorevSecilen(hangiGorev, hangiSayfa, hangiSira);
+        KAYIT_GOREV_YONETICISI.SetGorevSecilenMax(hangiSayfa != 5 ? GetMaxGunluk(hangiGorev) : GetMaxHaftalik(hangiGorev), hangiSayfa, hangiSira);
+
+
+
+    }
 
     int GetMaxGunluk(int hangiGorev)
     {

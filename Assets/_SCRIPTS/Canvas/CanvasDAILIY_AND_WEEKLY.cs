@@ -7,6 +7,7 @@ using System;
 
 public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
 {
+    public static CanvasDAILIY_AND_WEEKLY instance;
     [SerializeField] Button _btnClose, _btnPrev, _btnNext;
     [SerializeField] Button[] _btnGorev;
 
@@ -14,10 +15,12 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
     [SerializeField] Text[] _txtGorevSayi;
     [SerializeField] Image[] _imgsGorevSayi, _sayfaNoktalar;
     [SerializeField] TMP_Text _txtGorevHeader;
-    int _sayfaNumarasi;
+  public  int _sayfaNumarasi;
+    public int _btnSiraNumarasi = 0;
     bool _btn0 = false, _btn1 = false, _btn2 = false, _btn3 = false;
     private void Awake()
     {
+        instance = this;
         _sayfaNumarasi = KAYIT.GetSayfaNumarasi_DAILY_AND_WEEK();
         ShowGorev(_sayfaNumarasi);
         SayfaDegistirNokta(_sayfaNumarasi);
@@ -161,7 +164,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
             image.fillAmount = 0;
         }
     }
-    void ShowGorev(int sayfa)
+ public   void ShowGorev(int sayfa)
     {
         GOREV gorev0 = GOREV_YONETICISI.instance.GetGOREV(sayfa, 0);
         GOREV gorev1 = GOREV_YONETICISI.instance.GetGOREV(sayfa, 1);
