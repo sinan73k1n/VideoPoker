@@ -91,6 +91,8 @@ public class GameManagerVideoPoker : MonoBehaviour
     }
     void HandleOpenUI(GameObject gameObject)
     {
+        GOREV_YONETICISI.instance._isOpenTable = true;
+
         AdControl.instance.ShowBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         Instantiate(gameObject);
