@@ -10,8 +10,9 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     string gameId = "4577695";
     string placementIdBanner = "Banner_Android";
     string placementIdOdul = "Rewarded_Android";
+    string placementIdOdulYeniGorev = "Rewarded_Yeni_Gorev";
     public bool testMode = true;
-
+    int _hangiYeniGorev;
     private void Awake()
     {
         instance = this;
@@ -27,6 +28,11 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
 
         Advertisement.Show(placementIdOdul, instance);
     }
+    public void ShowRewardedVideoYeniGorev(int hangi)
+    {
+        _hangiYeniGorev = hangi;
+        Advertisement.Show(placementIdOdulYeniGorev, instance);
+    }
     public void ShowBanner()
     {
         StartCoroutine(ShowBannerWhenReady());
@@ -39,20 +45,20 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
 
     IEnumerator ShowBannerWhenReady()
     {
-       
+
         Advertisement.Banner.SetPosition(BannerPosition.TOP_CENTER);
-       
+
         yield return new WaitForSeconds(0.3f);
-        
+
         Advertisement.Banner.Show(placementIdBanner);
-     
-     
+
+
         GameObject.Find("DEBUG").GetComponentInChildren<Text>().text = $"Advertisement.Banner.isLoaded: {Advertisement.Banner.isLoaded}";
     }
 
     public void OnInitializationComplete()
     {
-        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text=
+        GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
         ("OnInitializationComplete: ");
     }
 
@@ -78,6 +84,11 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     {
         GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
 ("OnUnityAdsShowFailure: " + placementId + " " + error + " message: " + message);
+
+        if(placementId== placementIdOdulYeniGorev)
+        {
+            UI_YENI_GOREV.instance.Basarili(false, _hangiYeniGorev);
+        }
     }
 
     public void OnUnityAdsShowStart(string placementId)
@@ -94,14 +105,22 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
         GameObject.Find("DEBUG").GetComponentInChildren<Text>().text =
-("OnUnityAdsShowComplete: " + placementId+showCompletionState);
+("OnUnityAdsShowComplete: " + placementId + showCompletionState);
         switch (showCompletionState)
         {
             case UnityAdsShowCompletionState.SKIPPED:
                 break;
             case UnityAdsShowCompletionState.COMPLETED:
-                CanvasCredits.instance.ReklamComplete();
-                
+                if (placementId == placementIdOdul)
+                {
+                    CanvasCredits.instance.ReklamComplete();
+                }
+                else if (placementId == placementIdOdulYeniGorev)
+                {
+                    UI_YENI_GOREV.instance.Basarili(true, _hangiYeniGorev);
+                }
+
+
                 break;
             case UnityAdsShowCompletionState.UNKNOWN:
                 break;
