@@ -33,10 +33,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
         _btnNext.onClick.AddListener(() => ChangePage(true));
         _btnPrev.onClick.AddListener(() => ChangePage(false));
         ChangeButtonActive(_sayfaNumarasi);
-        foreach (var item in _btnGorev)
-        {
-            item.onClick.AddListener(HandleBos);
-        }
+        
     }
     private void Update()
     {
@@ -83,10 +80,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
 
     }
 
-    void HandleBos()
-    {
-        SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-    }
+  
 
     void HandleExit()
     {
@@ -144,7 +138,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
                 _txtGorevHeader.text = "BET 5$";
                 break;
             case 5:
-                _txtGorevHeader.text = "WEEK";
+                _txtGorevHeader.text = "WEEKLY";
 
                 break;
             default:
@@ -219,6 +213,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
 
     void HandleOdulAl(int sayfa, int sira, int odul)
     {
+        SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         KAYIT_GOREV_YONETICISI.SetGorevTamamlandi(true, sayfa, sira);
         GameManagerVideoPoker.instance.AddCredits(odul);
         ShowGorev(_sayfaNumarasi);

@@ -12,7 +12,7 @@ public class KAYIT_GOREV_YONETICISI : MonoBehaviour
         string key = "gorev" + numaraGorev + "Sayfa" + Sayfa;
         string key2 = "gorev" + numaraGorev + "Sayfa" + 5;
         int i= PlayerPrefs.GetInt(key, 0)+1;
-        int i2= PlayerPrefs.GetInt(key, 0)+1;
+        int i2= PlayerPrefs.GetInt(key2, 0)+1;
         PlayerPrefs.SetInt(key, i);
         PlayerPrefs.SetInt(key2, i2);
 
@@ -28,18 +28,18 @@ public class KAYIT_GOREV_YONETICISI : MonoBehaviour
         int asa;
         if (veHaftalik)
         {
-            i = 9;
+            i = 6;
             asa = 6;
         }
         else
         {
-            i = 8;
+            i = 5;
             asa = 5;
         }
 
-        for (int b = 0; b < i; b++)
+        for (int b = 0; b < 9; b++)
         {
-            for (int j = 0; j < 6; j++)
+            for (int j = 0; j < i; j++)
             {
                 string key = "gorev" + b + "Sayfa" + j;
                 PlayerPrefs.SetInt(key, 0);
