@@ -24,7 +24,7 @@ public class CanvasCredits : MonoBehaviour
         _txtDaily = _btnDaily.GetComponentInChildren<TMP_Text>();
         _txtAds = _btnAds.GetComponentInChildren<TMP_Text>();
 
-        Debug.Log(countAds);
+        //Debug.Log(countAds);
 
     }
     void Start()
@@ -94,13 +94,13 @@ public class CanvasCredits : MonoBehaviour
         {
             _btnAds.interactable = true;
 
-            _txtAds.text = $"ADS({countAds}) +50";
+            _txtAds.text = $"ADS({countAds}) +25";
 
         }
         else if (countAds > 0 && isReadyForDailyAds)
         {
             _btnAds.interactable = true;
-            _txtAds.text = $"ADS({countAds}) +50";
+            _txtAds.text = $"ADS({countAds}) +25";
         }
         else
         {
@@ -174,8 +174,8 @@ public class CanvasCredits : MonoBehaviour
     }
     public void ReklamComplete()
     {
-        GameManagerVideoPoker.instance.AddCredits(50);
-        KAYIT.SetDAILY_CREDIT_REKLAM_15DK(DateTime.Now.AddSeconds(15));
+        GameManagerVideoPoker.instance.AddCredits(25);
+        KAYIT.SetDAILY_CREDIT_REKLAM_15DK(DateTime.Now.AddMinutes(15));
         countAds--;
         KAYIT.SetDAILY_CREDIT_REKLAM_COUNT(countAds);
         isReadyForDailyAds = false;

@@ -11,7 +11,6 @@ public class GOREV_YONETICISI : MonoBehaviour
     public string _sureKalanGun = "";
     public string _sureKalanHafta = "";
     string gun;
-
     string[] _GorevName = { "FOUR OF A KIND", "FULL HOUSE", "FLUSH", "STRAIGHT", "THREE OF A KIND", "TWO PAIR", "JACK OR BETTER", "GAME WIN", "GAME" };
 
 
@@ -20,7 +19,7 @@ public class GOREV_YONETICISI : MonoBehaviour
     {
         instance = this;
         Setup();
-        //SetupDeneme();
+       
 
     }
     private void Start()
@@ -35,38 +34,38 @@ public class GOREV_YONETICISI : MonoBehaviour
         {
             for (int j = 0; j < 6; j++)
             {
-                Debug.Log($"_GorevCount {i} / {j} : " + KAYIT_GOREV_YONETICISI.GetOneGorevCount(i, j));
+                DEBUG_GAME.instance.Yazdir($"{_GorevName[i]}-{j}: " + KAYIT_GOREV_YONETICISI.GetOneGorevCount(i, j)+"\n",3);
 
             }
         }
-        for (int j = 0; j < 6; j++)
-        {
-            Debug.Log($"_GorevCount {GorevList.win} {j} : " + KAYIT_GOREV_YONETICISI.GetOneGorevCount(7, j));
-        }
+        //for (int j = 0; j < 6; j++)
+        //{
+        //    Debug.Log($"_GorevCount {GorevList.win} {j} : " + KAYIT_GOREV_YONETICISI.GetOneGorevCount(7, j));
+        //}
 
 
-        for (int i = 0; i < 3; i++)
-        {
+        //for (int i = 0; i < 3; i++)
+        //{
 
-            Debug.Log($"_GorevBet 1 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(0, i));
-            Debug.Log($"_GorevBet 2 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(1, i));
-            Debug.Log($"_GorevBet 3 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(2, i));
-            Debug.Log($"_GorevBet 4 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(3, i));
-            Debug.Log($"_GorevBet 5 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(4, i));
-            Debug.Log($"_GorevBet 6 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(5, i));
+        //    Debug.Log($"_GorevBet 1 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(0, i));
+        //    Debug.Log($"_GorevBet 2 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(1, i));
+        //    Debug.Log($"_GorevBet 3 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(2, i));
+        //    Debug.Log($"_GorevBet 4 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(3, i));
+        //    Debug.Log($"_GorevBet 5 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(4, i));
+        //    Debug.Log($"_GorevBet 6 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(5, i));
 
-        }
-        for (int i = 0; i < 3; i++)
-        {
+        //}
+        //for (int i = 0; i < 3; i++)
+        //{
 
-            Debug.Log($"Max 1 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(0, i));
-            Debug.Log($"Max 2 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(1, i));
-            Debug.Log($"Max 3 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(2, i));
-            Debug.Log($"Max 4 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(3, i));
-            Debug.Log($"Max 5 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(4, i));
-            Debug.Log($"Max 6 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(5, i));
+        //    Debug.Log($"Max 1 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(0, i));
+        //    Debug.Log($"Max 2 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(1, i));
+        //    Debug.Log($"Max 3 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(2, i));
+        //    Debug.Log($"Max 4 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(3, i));
+        //    Debug.Log($"Max 5 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(4, i));
+        //    Debug.Log($"Max 6 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(5, i));
 
-        }
+        //}
     }
 
     void Update()
@@ -79,8 +78,8 @@ public class GOREV_YONETICISI : MonoBehaviour
     void GeriSayim()
     {
         if (!_isOpenTable) return;
-        _sureKalanGun = ((DateTime.Parse("23:59:59") - DateTime.Now.TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
-        _sureKalanHafta = gun + " Day " + ((DateTime.Parse("23:59:59") - DateTime.Now.TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
+        _sureKalanGun = ((DateTime.Parse("23:59:59") - TimeNow().TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
+        _sureKalanHafta = gun + " Day " + ((DateTime.Parse("23:59:59") - TimeNow().TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
 
     }
     public void Setup()
@@ -98,7 +97,6 @@ public class GOREV_YONETICISI : MonoBehaviour
             YeniGorevAta(3);
             YeniGorevAta(4);
             YeniGorevAta(5);
-            //SetupDeneme();
 
         }
 
@@ -115,28 +113,11 @@ public class GOREV_YONETICISI : MonoBehaviour
         }
 
 
-        int haftaGunu = Convert.ToInt32(DateTime.Now.DayOfWeek);
-        gun = 7 == haftaGunu ? "0" : (7 - haftaGunu).ToString();
+        int haftaGunu = Convert.ToInt32(TimeNow().DayOfWeek);
+
+        gun = 0 == haftaGunu ? "0" : (7 - haftaGunu).ToString();
     }
-    public void SetupDeneme()
-    {
-
-
-        SifirlaSayimGunluk();
-        YeniGorevAta(0);
-        YeniGorevAta(1);
-        YeniGorevAta(2);
-        YeniGorevAta(3);
-        YeniGorevAta(4);
-
-        SifirlaSayimHaftalik();
-        YeniGorevAta(5);
-
-        int haftaGunu = Convert.ToInt32(DateTime.Now.DayOfWeek);
-        gun = 7 == haftaGunu ? "0" : (7 - haftaGunu).ToString();
-    }
-
-
+    
 
 
     void SifirlaSayimGunluk()
@@ -173,7 +154,7 @@ public class GOREV_YONETICISI : MonoBehaviour
 
     int GetMaxGunluk(int hangiGorev)
     {
-        //return 2;
+       //return 1;
         switch (hangiGorev)
         {
             case 0:
@@ -192,7 +173,7 @@ public class GOREV_YONETICISI : MonoBehaviour
     }
     int GetMaxHaftalik(int hangiGorev)
     {
-        // return 2;
+         //return 1;
         switch (hangiGorev)
         {
             case 0:
@@ -223,12 +204,12 @@ public class GOREV_YONETICISI : MonoBehaviour
     {
         if (PlayerPrefs.GetString("YENIGUN") == string.Empty)
         {
-            PlayerPrefs.SetString("YENIGUN", DateTime.Now.AddDays(1).ToString());
+            PlayerPrefs.SetString("YENIGUN", TimeNow().AddDays(1).ToString());
             return true;
         }
-        else if (DateTime.Parse(PlayerPrefs.GetString("YENIGUN")).Date >= DateTime.Now.Date)
+        else if (DateTime.Parse(PlayerPrefs.GetString("YENIGUN")).Date <= TimeNow().Date)
         {
-            PlayerPrefs.SetString("YENIGUN", DateTime.Now.AddDays(1).ToString());
+            PlayerPrefs.SetString("YENIGUN", TimeNow().AddDays(1).ToString());
             return true;
         }
         return false;
@@ -239,17 +220,17 @@ public class GOREV_YONETICISI : MonoBehaviour
 
         if (PlayerPrefs.GetString("YENIHAFTA") == string.Empty)
         {
-            int i = Convert.ToInt32(DateTime.Now.DayOfWeek);
+            int i = Convert.ToInt32(TimeNow().DayOfWeek);
 
             i = 7 - i;
-            PlayerPrefs.SetString("YENIHAFTA", DateTime.Now.AddDays(i).ToString());
+            PlayerPrefs.SetString("YENIHAFTA", TimeNow().AddDays(i).ToString());
             return true;
         }
-        else if (DateTime.Parse(PlayerPrefs.GetString("YENIHAFTA")).Date <= DateTime.Now.Date)
+        else if (DateTime.Parse(PlayerPrefs.GetString("YENIHAFTA")).Date < TimeNow().Date)
         {
-            int i = Convert.ToInt32(DateTime.Now.DayOfWeek);
+            int i = Convert.ToInt32(TimeNow().DayOfWeek);
             i = 7 - i;
-            PlayerPrefs.SetString("YENIHAFTA", DateTime.Now.AddDays(i).ToString());
+            PlayerPrefs.SetString("YENIHAFTA", TimeNow().AddDays(i).ToString());
             return true;
         }
         return false;
@@ -298,6 +279,15 @@ public class GOREV_YONETICISI : MonoBehaviour
         }
 
 
+    }
+
+    DateTime TimeNow()
+    {
+        DateTime simdi= DateTime.Now;
+        //string zaman = "2/20/2022 2:00:04 PM";
+        //simdi = DateTime.Parse(zaman);
+        //DEBUG_GAME.instance.Yazdir("DateTime.Now: " + simdi, 1);
+        return simdi;
     }
 
 }
