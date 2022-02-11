@@ -173,7 +173,7 @@ public class GOREV_YONETICISI : MonoBehaviour
     }
     int GetMaxHaftalik(int hangiGorev)
     {
-         //return 1;
+       //  return 1;
         switch (hangiGorev)
         {
             case 0:
