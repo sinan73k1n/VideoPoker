@@ -17,7 +17,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] GameObject _sptRenSonuc;
     [SerializeField] GameObject _sptRenGameOver;
     [SerializeField] Button _btnDeal, _btnBetOne, _btnReklam, _btnMenu, _btnGorev,_btnKartlar;
-    [SerializeField] TMP_Text _txtWin, _txtBet, _txtCredits, _txtNameOfKazanc, _txtBtnDealDrew;
+    [SerializeField] TMP_Text _txtWin, _txtBet, _txtCredits, _txtNameOfKazanc, _txtBtnDealDrew,_txtBtnGorev;
     [SerializeField] string[] _nameOfKazanc;
 
    public bool isAdim2 = false;
@@ -53,6 +53,7 @@ public class GameManagerVideoPoker : MonoBehaviour
         _btnKartlar.onClick.AddListener(() => HandleOpenUI(_goUI_KARTLAR));
         AtaKartArkasi();
         _btnDeal.onClick.AddListener(HandleOyna);
+        ShowRewardCount();
     }
 
     void HandleReklam()
@@ -187,6 +188,7 @@ public class GameManagerVideoPoker : MonoBehaviour
             KAYIT_GOREV_YONETICISI.AddOneCountGorev(7, KAYIT.GetSeciliBahis() - 1);
                 
             }
+           
         }
 
         switch (carpan)
@@ -302,6 +304,8 @@ public class GameManagerVideoPoker : MonoBehaviour
                 SetSpriteSonuc("");
                 break;
         }
+        if(isAdim2)
+        ShowRewardCount();
 
 
     }
@@ -355,7 +359,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     }
     void CountEl(TypeOfPokerHand type)
     {
-        { KAYIT.AddOneHand(type); }
+         KAYIT.AddOneHand(type); 
     }
     void DesteOlustur()
     {
@@ -467,7 +471,11 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     }
 
-
+  public  void ShowRewardCount()
+    {
+      
+        _txtBtnGorev.text = GetAktifOdulSayisi.Hangi(true).ToString();
+    }
 
     void CloseCards()
     {

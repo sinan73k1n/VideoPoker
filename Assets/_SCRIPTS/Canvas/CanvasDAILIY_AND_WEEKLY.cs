@@ -217,6 +217,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
         KAYIT_GOREV_YONETICISI.SetGorevTamamlandi(true, sayfa, sira);
         GameManagerVideoPoker.instance.AddCredits(odul);
         ShowGorev(_sayfaNumarasi);
+        GameManagerVideoPoker.instance.ShowRewardCount();
 
     }
 
