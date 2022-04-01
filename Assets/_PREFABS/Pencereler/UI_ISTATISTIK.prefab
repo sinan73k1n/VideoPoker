@@ -4156,7 +4156,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1669052627120136876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6367,7 +6367,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: JACK OR BETTER
+  m_text: JACKS OR BETTER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 58cfac94351b445cab7d48584e25d9a7, type: 2}
   m_sharedMaterial: {fileID: -7111462364399187494, guid: 58cfac94351b445cab7d48584e25d9a7, type: 2}

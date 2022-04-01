@@ -11,7 +11,7 @@ public class GOREV_YONETICISI : MonoBehaviour
     public string _sureKalanGun = "";
     public string _sureKalanHafta = "";
     string gun;
-    string[] _GorevName = { "FOUR OF A KIND", "FULL HOUSE", "FLUSH", "STRAIGHT", "THREE OF A KIND", "TWO PAIR", "JACK OR BETTER", "GAME WIN", "GAME" };
+    string[] _GorevName = { "FOUR OF A KIND", "FULL HOUSE", "FLUSH", "STRAIGHT", "THREE OF A KIND", "TWO PAIR", "JACKS OR BETTER", "GAME WIN", "GAME" };
 
 
 
