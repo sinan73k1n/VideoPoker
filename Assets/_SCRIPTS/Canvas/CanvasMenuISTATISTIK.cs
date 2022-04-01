@@ -90,7 +90,7 @@ public class CanvasMenuISTATISTIK : MonoBehaviour
             case TypeOfPokerHand.JackOrBetter:
             default:
                 SetEl(_imgsShow, KAYIT.GetSON_EL_JACK_OR_BETTER());
-                _txtShow.text = "JACK OR BETTER";
+                _txtShow.text = "JACKS OR BETTER";
                 break;
         }
     }
