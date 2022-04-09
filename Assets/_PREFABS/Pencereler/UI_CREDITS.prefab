@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.7, y: -75.2}
+  m_AnchoredPosition: {x: 1.7, y: -77.5}
   m_SizeDelta: {x: 269.13, y: 43.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1031527806
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.5
-  m_fontSizeBase: 22.5
+  m_fontSize: 26.94
+  m_fontSizeBase: 26.94
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1354,6 +1354,7 @@ GameObject:
   - component: {fileID: 8821363056678963094}
   - component: {fileID: 8821363056678963093}
   - component: {fileID: 8821363056678963082}
+  - component: {fileID: 7725113196585099068}
   m_Layer: 5
   m_Name: UI_CREDITS
   m_TagString: Untagged
@@ -1425,7 +1426,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8821363056678963094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,8 +1471,25 @@ MonoBehaviour:
   _btnDaily: {fileID: 8821363055599322871}
   _btnAds: {fileID: 8821363055416436449}
   _btnBack: {fileID: 6796041171056155397}
+  _btnsOfSatinAlma:
+  - {fileID: 253795265}
+  - {fileID: 4160102754742429289}
+  - {fileID: 4160102756404347838}
+  - {fileID: 4160102754761373061}
   isReadyForDailyAds: 1
   countAds: 0
+--- !u!114 &7725113196585099068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821363056678963092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d744292f714422a9a69a506a4141b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8821363057142161109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,6 +1727,66 @@ PrefabInstance:
       propertyPath: m_text
       value: "          \n9.99$"
       objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: productId
+      value: com.s7software.video.poker.2000credidfor9.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7725113196585099068}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7725113196585099068}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPurchaseFailed
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPurchaseComplete
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IAPManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IAPManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
 --- !u!224 &4160102754761373060 stripped
@@ -1716,6 +1794,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4160102754903924792, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
   m_PrefabInstance: {fileID: 427873724}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4160102754761373061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4160102754903924793, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+  m_PrefabInstance: {fileID: 427873724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &447202896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1819,6 +1908,66 @@ PrefabInstance:
       propertyPath: m_text
       value: "          \n1.99$"
       objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: productId
+      value: com.s7software.video.poker.350credidfor1.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7725113196585099068}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7725113196585099068}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPurchaseFailed
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPurchaseComplete
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IAPManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IAPManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
 --- !u!224 &4160102754742429288 stripped
@@ -1826,6 +1975,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4160102754903924792, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
   m_PrefabInstance: {fileID: 447202896}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4160102754742429289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4160102754903924793, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+  m_PrefabInstance: {fileID: 447202896}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1740039047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1929,6 +2089,66 @@ PrefabInstance:
       propertyPath: m_text
       value: "          \n3.99$"
       objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: productId
+      value: com.s7software.video.poker.750credidfor3.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7725113196585099068}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7725113196585099068}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPurchaseFailed
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPurchaseComplete
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IAPManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IAPManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
 --- !u!224 &4160102756404347839 stripped
@@ -1936,6 +2156,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4160102754903924792, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
   m_PrefabInstance: {fileID: 1740039047}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4160102756404347838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4160102754903924793, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+  m_PrefabInstance: {fileID: 1740039047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2961906805155582428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2144,8 +2375,79 @@ PrefabInstance:
       propertyPath: m_Name
       value: btn150
       objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: productId
+      value: com.s7software.video.poker.150credidfor0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7725113196585099068}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7725113196585099068}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPurchaseFailed
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPurchaseComplete
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IAPManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: IAPManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202388548958639195, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+--- !u!114 &253795265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4160102754903924793, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}
+  m_PrefabInstance: {fileID: 4160102754918644728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &253795264 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4160102754903924792, guid: 5fe65d1849e8044178f64bcd2ee1bce1, type: 3}

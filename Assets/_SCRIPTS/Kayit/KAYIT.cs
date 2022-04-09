@@ -39,6 +39,10 @@ public class KAYIT : MonoBehaviour
     const string DAILY_CREDIT_REKLAM_COUNT = "DAILY_CREDIT_REKLAM_COUNT";
 
 
+    public static bool GetReklamVar() { return PlayerPrefs.GetInt("ReklamVar",1) == 1 ? true : false; }
+    public static void SetReklamVar(bool deger) { PlayerPrefs.SetInt("ReklamVar", deger ? 1 : 0); }
+
+
     public static void SetDAILY_CREDIT_LAST_TIME(DateTime dateTime) { PlayerPrefs.SetString(DAILY_CREDIT, dateTime.ToString()); }
     public static DateTime GetDAILY_CREDIT_LAST_TIME()
     {
