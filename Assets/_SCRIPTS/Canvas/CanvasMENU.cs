@@ -59,4 +59,6 @@ public class CanvasMENU : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Application.Quit();
     }
+
+    public void SetActiveAdsButton(bool deger) { _btnAds.gameObject.SetActive(deger); }
 }

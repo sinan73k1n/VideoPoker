@@ -104,13 +104,13 @@ public class CanvasCredits : MonoBehaviour
         {
             _btnAds.interactable = true;
 
-            _txtAds.text = $"ADS({countAds}) +25";
+            _txtAds.text =KAYIT.GetReklamVar()? $"ADS({countAds}) +25": $"({countAds}) +25";
 
         }
         else if (countAds > 0 && isReadyForDailyAds)
         {
             _btnAds.interactable = true;
-            _txtAds.text = $"ADS({countAds}) +25";
+            _txtAds.text = KAYIT.GetReklamVar() ? $"ADS({countAds}) +25" : $"({countAds}) +25";
         }
         else
         {
