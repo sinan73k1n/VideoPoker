@@ -68,8 +68,10 @@ public class Ayarlar : MonoBehaviour
     IEnumerator HandleEvet()
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
+
+        bool temp= KAYIT.GetReklamVar();
         PlayerPrefs.DeleteAll();
-    
+        KAYIT.SetReklamVar(temp);
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(0);
     }

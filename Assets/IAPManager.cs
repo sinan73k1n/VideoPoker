@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
-
+using UnityEngine.SceneManagement;
 
 public class IAPManager : MonoBehaviour
 {
@@ -12,10 +12,19 @@ public class IAPManager : MonoBehaviour
     string id_Credits_750 = "com.s7software.video.poker.750credidfor3.99";
     string id_Credits_2000 = "com.s7software.video.poker.2000credidfor9.99";
 
+    void HandleReklam()
+    {
+        FindObjectOfType<CanvasMENU>().SetActiveAdsButton(false);
+    }
     public void OnPurchaseComplete(Product product)
     {
         if (id_Ads == product.definition.id)
         {
+            AdControl.instance.CloseBanner();
+            KAYIT.SetReklamVar(false);
+
+            Invoke(nameof(HandleReklam), 0.4f);
+            
             Debug.Log("Reklam satın alma basarili");
 
         }
