@@ -9,10 +9,14 @@ public class CanvasCredits : MonoBehaviour
     public static CanvasCredits instance;
 
     [SerializeField] Button _btnDaily, _btnAds, _btnBack;
+    [SerializeField] Button[] _btnsOfSatinAlma;
     bool isReadyForDaily = true;
     public bool isReadyForDailyAds = true;
     public int countAds = 0;
     TMP_Text _txtDaily, _txtAds;
+
+
+
     private void Awake()
     {
         instance = this;
@@ -27,6 +31,8 @@ public class CanvasCredits : MonoBehaviour
         //Debug.Log(countAds);
 
     }
+
+
     void Start()
     {
         AtaHandlesToButtons();
@@ -57,8 +63,12 @@ public class CanvasCredits : MonoBehaviour
         _btnDaily.onClick.AddListener(() => HandleDaily());
         _btnAds.onClick.AddListener(() => HandleAds());
         _btnBack.onClick.AddListener(() => HandleBack());
+        foreach (var item in _btnsOfSatinAlma)
+        {
+            item.onClick.AddListener(HandleSatinAlma);
+        }
     }
-
+    
    
 
     void CheckTheDaily()
@@ -194,6 +204,11 @@ public class CanvasCredits : MonoBehaviour
         GameManagerVideoPoker.instance.AddCredits(50);
         KAYIT.SetDAILY_CREDIT_LAST_TIME(DateTime.Now);
         CheckTheDaily();
+    }
+
+    void HandleSatinAlma()
+    {
+        SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
     }
 
 
