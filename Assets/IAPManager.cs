@@ -25,32 +25,32 @@ public class IAPManager : MonoBehaviour
 
             Invoke(nameof(HandleReklam), 0.4f);
             
-            Debug.Log("Reklam satın alma basarili");
+           // Debug.Log("Reklam satın alma basarili");
 
         }
         else if (id_Credits_150 == product.definition.id)
         {
             GameManagerVideoPoker.instance.AddCredits(150);
-            Debug.Log("150 kredi satın alındı");
+           // Debug.Log("150 kredi satın alındı");
 
         }
         else if (id_Credits_350 == product.definition.id)
         {
             GameManagerVideoPoker.instance.AddCredits(350);
 
-            Debug.Log("350 kredi satın alındı");
+            //Debug.Log("350 kredi satın alındı");
 
         }
         else if (id_Credits_750 == product.definition.id)
         {
             GameManagerVideoPoker.instance.AddCredits(750);
-            Debug.Log("750 kredi satın alındı");
+           // Debug.Log("750 kredi satın alındı");
 
         }
         else if (id_Credits_2000 == product.definition.id)
         {
             GameManagerVideoPoker.instance.AddCredits(2000);
-            Debug.Log("2000 kredi satın alındı");
+           // Debug.Log("2000 kredi satın alındı");
         }
         else 
         {

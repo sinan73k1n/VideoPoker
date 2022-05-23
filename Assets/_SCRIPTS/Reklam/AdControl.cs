@@ -20,7 +20,7 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     void Start()
     {
         if (!KAYIT.GetReklamVar()) return;
-        Advertisement.Initialize(gameId, testMode);
+        Advertisement.Initialize(gameId, testMode,instance);
 
 
     }
