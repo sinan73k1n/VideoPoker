@@ -38,6 +38,11 @@ public class KAYIT : MonoBehaviour
     const string DAILY_CREDIT_REKLAM_15DK = "DAILY_CREDIT_REKLAM_15DK";
     const string DAILY_CREDIT_REKLAM_COUNT = "DAILY_CREDIT_REKLAM_COUNT";
 
+    const string ADS_15_MIN = "ads 15 min";
+
+    public static float GetAdsCountTime() => PlayerPrefs.GetFloat(ADS_15_MIN, 0);
+    public static void SetAdsCountTime(float v) { PlayerPrefs.SetFloat(ADS_15_MIN, v); }
+
     public static bool GetDegerlendirmeAcildi() { return PlayerPrefs.GetInt("degerlendirme acildi", 0) == 0 ? false : true; }
     public static void SetDegerlendirmeAcildi(bool ac) {  PlayerPrefs.SetInt("degerlendirme acildi", ac? 1:0); }
     public static bool GetDegerlendirmeyiAc() { return PlayerPrefs.GetInt("degerlendirmeyiAc", 0) == 0 ? false : true; }
@@ -46,7 +51,7 @@ public class KAYIT : MonoBehaviour
     {
         if (GetDegerlendirmeAcildi()) return;
         string key = "degerlendirmeye kalan adet";
-        int i = PlayerPrefs.GetInt(key, 100);
+        int i = PlayerPrefs.GetInt(key, 50);
         if (i == 0)
         {
             SetDegerlendirmeyiAc(true);
@@ -57,6 +62,8 @@ public class KAYIT : MonoBehaviour
             PlayerPrefs.SetInt(key, i);
         }
     }
+
+
 
     public static bool GetReklamVar() { return PlayerPrefs.GetInt("ReklamVar",1) == 1 ? true : false; }
     public static void SetReklamVar(bool deger) { PlayerPrefs.SetInt("ReklamVar", deger ? 1 : 0); }

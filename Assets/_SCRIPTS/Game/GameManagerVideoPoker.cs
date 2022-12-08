@@ -29,9 +29,13 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     [Header("UI")] [SerializeField] GameObject _goUI_MENU;
     [SerializeField] GameObject _goUI_GOREV, _goUI_CREDITS,_goUI_KARTLAR,_goUI_RATE_US;
+
+    float _counterADS;
+    bool _readtForADS = false;
     private void Awake()
     {
         instance = this;
+        _counterADS = KAYIT.GetAdsCountTime();
     }
     private void Start()
     {
@@ -54,6 +58,19 @@ public class GameManagerVideoPoker : MonoBehaviour
         AtaKartArkasi();
         _btnDeal.onClick.AddListener(HandleOyna);
         ShowRewardCount();
+    }
+
+    private void Update()
+    {
+        CounterADS();
+    }
+
+    private void CounterADS()
+    {
+        if (!KAYIT.GetReklamVar()) return;
+        if (_readtForADS) return;
+        if (_counterADS < 900) _counterADS += Time.deltaTime;
+        else _readtForADS = true;
     }
 
     void HandleReklam()
@@ -82,13 +99,29 @@ public class GameManagerVideoPoker : MonoBehaviour
 
   public  void CheckBetAndCredit()
     {
+
         if (KAYIT.GetSeciliBahis() <= KAYIT.GetAnaBakiye()) { _btnDeal.interactable = true; }
         else { _btnDeal.interactable = false; }
+
+        
+    }
+
+    private void OnApplicationQuit()
+    {
+        if (!KAYIT.GetReklamVar()) return;
+        KAYIT.SetAdsCountTime(_counterADS);
     }
     private void HandleOyna()
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         StartGame();
+        if (_readtForADS)
+        {
+            _readtForADS = false;
+            _counterADS = 0;
+            KAYIT.SetAdsCountTime(_counterADS);
+            AdControl.instance.ShowADS15MIN();
+        }
     }
     void HandleOpenUI(GameObject gameObject)
     {
