@@ -207,6 +207,7 @@ MonoBehaviour:
   _goUI_GOREV: {fileID: 817877089806414930, guid: 901a2449df91d43cba204df6d5fe4253, type: 3}
   _goUI_CREDITS: {fileID: 8821363056678963092, guid: 7a75dde1b68a14692bf20cf81ffe3d0b, type: 3}
   _goUI_KARTLAR: {fileID: 4308171658713440194, guid: a83031a705f4c4f8cb8e3bc80e00a00c, type: 3}
+  _goUI_RATE_US: {fileID: 708995477818566694, guid: ccacdb84798ec434b95674b1b377947f, type: 3}
 --- !u!4 &2249154
 Transform:
   m_ObjectHideFlags: 0

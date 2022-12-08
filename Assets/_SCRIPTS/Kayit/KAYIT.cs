@@ -38,6 +38,25 @@ public class KAYIT : MonoBehaviour
     const string DAILY_CREDIT_REKLAM_15DK = "DAILY_CREDIT_REKLAM_15DK";
     const string DAILY_CREDIT_REKLAM_COUNT = "DAILY_CREDIT_REKLAM_COUNT";
 
+    public static bool GetDegerlendirmeAcildi() { return PlayerPrefs.GetInt("degerlendirme acildi", 0) == 0 ? false : true; }
+    public static void SetDegerlendirmeAcildi(bool ac) {  PlayerPrefs.SetInt("degerlendirme acildi", ac? 1:0); }
+    public static bool GetDegerlendirmeyiAc() { return PlayerPrefs.GetInt("degerlendirmeyiAc", 0) == 0 ? false : true; }
+    public static void SetDegerlendirmeyiAc(bool ac) {  PlayerPrefs.SetInt("degerlendirmeyiAc",ac? 1:0); }
+    public static void SetDegerlendirmeKalanSayi()
+    {
+        if (GetDegerlendirmeAcildi()) return;
+        string key = "degerlendirmeye kalan adet";
+        int i = PlayerPrefs.GetInt(key, 100);
+        if (i == 0)
+        {
+            SetDegerlendirmeyiAc(true);
+        }
+        else
+        {
+            i--;
+            PlayerPrefs.SetInt(key, i);
+        }
+    }
 
     public static bool GetReklamVar() { return PlayerPrefs.GetInt("ReklamVar",1) == 1 ? true : false; }
     public static void SetReklamVar(bool deger) { PlayerPrefs.SetInt("ReklamVar", deger ? 1 : 0); }
@@ -236,15 +255,13 @@ public class KAYIT : MonoBehaviour
                 PlayerPrefs.SetInt(OYNANAN_ROYAL_FLUSH, PlayerPrefs.GetInt(OYNANAN_ROYAL_FLUSH, 0) + 1);
                 break;
             case TypeOfPokerHand.StraightFlush: PlayerPrefs.SetInt(OYNANAN_STRAIGHT_FLUSH, PlayerPrefs.GetInt(OYNANAN_STRAIGHT_FLUSH, 0) + 1); break;
-            case TypeOfPokerHand.FourOfAKind: PlayerPrefs.SetInt(OYNANAN_FOUR_A_KIND, PlayerPrefs.GetInt(OYNANAN_FOUR_A_KIND, 0) + 1); break;
-            case TypeOfPokerHand.FullHouse: PlayerPrefs.SetInt(OYNANAN_FULL_HOUSE, PlayerPrefs.GetInt(OYNANAN_FULL_HOUSE, 0) + 1); break;
-            case TypeOfPokerHand.Flush: PlayerPrefs.SetInt(OYNANAN_FLUSH, PlayerPrefs.GetInt(OYNANAN_FLUSH, 0) + 1); break;
-            case TypeOfPokerHand.Straight: PlayerPrefs.SetInt(OYNANAN_STRAIGHT, PlayerPrefs.GetInt(OYNANAN_STRAIGHT, 0) + 1); break;
-            case TypeOfPokerHand.ThreeOfAKind: PlayerPrefs.SetInt(OYNANAN_THREE_A_KIND, PlayerPrefs.GetInt(OYNANAN_THREE_A_KIND, 0) + 1); break;
-            case TypeOfPokerHand.TwoPair: PlayerPrefs.SetInt(OYNANAN_TWO_PAIR, PlayerPrefs.GetInt(OYNANAN_TWO_PAIR, 0) + 1); break;
-            case TypeOfPokerHand.JackOrBetter:
-                int i = PlayerPrefs.GetInt(OYNANAN_JACK_OR_BETTER, 0);
-                PlayerPrefs.SetInt(OYNANAN_JACK_OR_BETTER, i + 1); break;
+            case TypeOfPokerHand.FourOfAKind:   PlayerPrefs.SetInt(OYNANAN_FOUR_A_KIND, PlayerPrefs.GetInt(OYNANAN_FOUR_A_KIND, 0) + 1); break;
+            case TypeOfPokerHand.FullHouse:     PlayerPrefs.SetInt(OYNANAN_FULL_HOUSE, PlayerPrefs.GetInt(OYNANAN_FULL_HOUSE, 0) + 1); break;
+            case TypeOfPokerHand.Flush:         PlayerPrefs.SetInt(OYNANAN_FLUSH, PlayerPrefs.GetInt(OYNANAN_FLUSH, 0) + 1); break;
+            case TypeOfPokerHand.Straight:      PlayerPrefs.SetInt(OYNANAN_STRAIGHT, PlayerPrefs.GetInt(OYNANAN_STRAIGHT, 0) + 1); break;
+            case TypeOfPokerHand.ThreeOfAKind:  PlayerPrefs.SetInt(OYNANAN_THREE_A_KIND, PlayerPrefs.GetInt(OYNANAN_THREE_A_KIND, 0) + 1); break;
+            case TypeOfPokerHand.TwoPair:       PlayerPrefs.SetInt(OYNANAN_TWO_PAIR, PlayerPrefs.GetInt(OYNANAN_TWO_PAIR, 0) + 1); break;
+            case TypeOfPokerHand.JackOrBetter:  PlayerPrefs.SetInt(OYNANAN_JACK_OR_BETTER, PlayerPrefs.GetInt(OYNANAN_JACK_OR_BETTER, 0) + 1); break;
             default:
                 Debug.Log("001111");
                 break;

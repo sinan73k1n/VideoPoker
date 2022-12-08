@@ -28,7 +28,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     [SerializeField] float _sureKartAcilma = 0.2f;
 
     [Header("UI")] [SerializeField] GameObject _goUI_MENU;
-    [SerializeField] GameObject _goUI_GOREV, _goUI_CREDITS,_goUI_KARTLAR;
+    [SerializeField] GameObject _goUI_GOREV, _goUI_CREDITS,_goUI_KARTLAR,_goUI_RATE_US;
     private void Awake()
     {
         instance = this;
@@ -64,7 +64,7 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     }
 
-    void WriteCreditAndBet()
+  public  void WriteCreditAndBet()
     {
         _txtBet.text = "" + KAYIT.GetSeciliBahis() + "$";
         _txtCredits.text = "" + KAYIT.GetAnaBakiye();
@@ -99,7 +99,13 @@ public class GameManagerVideoPoker : MonoBehaviour
         Instantiate(gameObject);
 
     }
-
+    void RATE()
+    {
+        if (KAYIT.GetDegerlendirmeAcildi()) return;
+        KAYIT.SetDegerlendirmeKalanSayi();
+        if (KAYIT.GetDegerlendirmeyiAc()) { Instantiate(_goUI_RATE_US); }
+      
+    }
     void StartGame()
     {
         if (!isAdim2)
@@ -126,7 +132,7 @@ public class GameManagerVideoPoker : MonoBehaviour
 
             CloseCards();
             KartDagit();
-
+           
 
 
         }
@@ -290,7 +296,7 @@ public class GameManagerVideoPoker : MonoBehaviour
                 if (isAdim2)
                 {
                     KAYIT.SetSON_EL_JACK_OR_BETTER(GetEl());
-      
+                    CountEl(TypeOfPokerHand.JackOrBetter);
                     KAYIT_GOREV_YONETICISI.AddOneCountGorev(6, bahisMiktar);
 
 
@@ -460,6 +466,7 @@ public class GameManagerVideoPoker : MonoBehaviour
         if (isAdim2)
         {
             _sptRenGameOver.SetActive(true);
+            RATE();
             CloseAllHold();
             SetActiveCardHold(false);
 
