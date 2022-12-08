@@ -9,6 +9,7 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     public static AdControl instance;
     string gameId = "4577695";
     string placementIdBanner = "Banner_Android";
+    string placementIdGecis = "Interstitial_Android";
     string placementIdOdul = "Rewarded_Android";
     string placementIdOdulYeniGorev = "Rewarded_Yeni_Gorev";
     bool testMode = false;
@@ -24,6 +25,16 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
 
 
     }
+
+    public void ShowADS15MIN()
+    {
+        if (!KAYIT.GetReklamVar())
+        {
+            
+            return;
+        }
+        Advertisement.Show(placementIdOdul, instance);
+    }
     public void ShowRewardedVideo()
     {
         if (!KAYIT.GetReklamVar())
@@ -31,7 +42,7 @@ public class AdControl : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
             CanvasCredits.instance.ReklamComplete();
             return;
         }
-        Advertisement.Show(placementIdOdul, instance);
+        Advertisement.Show(placementIdGecis, instance);
     }
     public void ShowRewardedVideoYeniGorev(int hangi)
     {
