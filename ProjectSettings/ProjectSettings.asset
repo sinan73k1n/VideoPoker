@@ -679,7 +679,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    7: ENABLE_UNITY_SERVICES_CORE_VERBOSE_LOGGING
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
