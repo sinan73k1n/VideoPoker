@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 using UnityEngine.SceneManagement;
-using Unity.Services.Core;
-using Unity.Services.Core.Environments;
+
 
 public class IAPManager : MonoBehaviour
 {
@@ -15,33 +14,33 @@ public class IAPManager : MonoBehaviour
     string id_Credits_2000 = "com.s7software.video.poker.2000credidfor9.99";
 
 
-    async void Start()
-    {
-        try
-        {
-            var options = new InitializationOptions().
-                SetEnvironmentName(id_Ads);
-            var _id_Credits_150 = new InitializationOptions().
-                SetEnvironmentName(id_Credits_150);
-            var _id_Credits_350 = new InitializationOptions().
-                SetEnvironmentName(id_Credits_350);
-            var _id_Credits_750 = new InitializationOptions().
-                SetEnvironmentName(id_Credits_750);
-            var _id_Credits_2000 = new InitializationOptions().
-                SetEnvironmentName(id_Credits_2000);
+    //async void Start()
+    //{
+    //    try
+    //    {
+    //        var options = new InitializationOptions().
+    //            SetEnvironmentName(id_Ads);
+    //        var _id_Credits_150 = new InitializationOptions().
+    //            SetEnvironmentName(id_Credits_150);
+    //        var _id_Credits_350 = new InitializationOptions().
+    //            SetEnvironmentName(id_Credits_350);
+    //        var _id_Credits_750 = new InitializationOptions().
+    //            SetEnvironmentName(id_Credits_750);
+    //        var _id_Credits_2000 = new InitializationOptions().
+    //            SetEnvironmentName(id_Credits_2000);
 
 
-            await UnityServices.InitializeAsync(options);
-            await UnityServices.InitializeAsync(_id_Credits_350);
-            await UnityServices.InitializeAsync(_id_Credits_150);
-            await UnityServices.InitializeAsync(_id_Credits_750);
-            await UnityServices.InitializeAsync(_id_Credits_2000);
-        }
-        catch (System.Exception ex)
-        {
-            Debug.Log(ex.ToString()) ;
-        }
-    }
+    //        await UnityServices.InitializeAsync(options);
+    //        await UnityServices.InitializeAsync(_id_Credits_350);
+    //        await UnityServices.InitializeAsync(_id_Credits_150);
+    //        await UnityServices.InitializeAsync(_id_Credits_750);
+    //        await UnityServices.InitializeAsync(_id_Credits_2000);
+    //    }
+    //    catch (System.Exception ex)
+    //    {
+    //        Debug.Log(ex.ToString());
+    //    }
+    //}
    public void HandleReklam()
     {
         FindObjectOfType<CanvasMENU>().SetActiveAdsButton(false);
