@@ -34,7 +34,6 @@ public class UI_YENI_GOREV : MonoBehaviour
     void HandleGorev(int hangi)
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-        AdControl.instance.ShowRewardedVideoYeniGorev(hangi);
     }
 
     public void Basarili(bool basarili,int hangiGorev)

@@ -8,12 +8,12 @@ public class CanvasCredits : MonoBehaviour
 {
     public static CanvasCredits instance;
 
-    [SerializeField] Button _btnDaily, _btnAds, _btnBack;
-    [SerializeField] Button[] _btnsOfSatinAlma;
+    [SerializeField] Button _btnDaily, _btnBack;
     bool isReadyForDaily = true;
     public bool isReadyForDailyAds = true;
     public int countAds = 0;
-    TMP_Text _txtDaily, _txtAds;
+    TMP_Text _txtDaily;
+   // TMP_Text  _txtAds;
 
 
 
@@ -26,7 +26,6 @@ public class CanvasCredits : MonoBehaviour
         countAds = KAYIT.GetDAILY_CREDIT_REKLAM_COUNT();
         isReadyForDailyAds = Kontrol15DakikalikAds();
         _txtDaily = _btnDaily.GetComponentInChildren<TMP_Text>();
-        _txtAds = _btnAds.GetComponentInChildren<TMP_Text>();
 
         //Debug.Log(countAds);
 
@@ -61,12 +60,7 @@ public class CanvasCredits : MonoBehaviour
     private void AtaHandlesToButtons()
     {
         _btnDaily.onClick.AddListener(() => HandleDaily());
-        _btnAds.onClick.AddListener(() => HandleAds());
         _btnBack.onClick.AddListener(() => HandleBack());
-        foreach (var item in _btnsOfSatinAlma)
-        {
-            item.onClick.AddListener(HandleSatinAlma);
-        }
     }
     
    
@@ -97,24 +91,20 @@ public class CanvasCredits : MonoBehaviour
             KAYIT.SetDAILY_CREDIT_REKLAM(DateTime.Now);
          
             isReadyForDailyAds = true;
-            _btnAds.interactable = true;
         }
 
         if (countAds == 5)
         {
-            _btnAds.interactable = true;
 
-            _txtAds.text =KAYIT.GetReklamVar()? $"ADS({countAds}) +25": $"({countAds}) +25";
+          //  _txtAds.text =KAYIT.GetReklamVar()? $"ADS({countAds}) +25": $"({countAds}) +25";
 
         }
         else if (countAds > 0 && isReadyForDailyAds)
         {
-            _btnAds.interactable = true;
-            _txtAds.text = KAYIT.GetReklamVar() ? $"ADS({countAds}) +25" : $"({countAds}) +25";
+          //  _txtAds.text = KAYIT.GetReklamVar() ? $"ADS({countAds}) +25" : $"({countAds}) +25";
         }
         else
         {
-            _btnAds.interactable = false;
             isReadyForDailyAds = false;
 
         }
@@ -152,7 +142,7 @@ public class CanvasCredits : MonoBehaviour
 
         if (countAds <= 0)
         {
-            _txtAds.text = ((DateTime.Parse("23:59:59") - DateTime.Now.TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
+          //  _txtAds.text = ((DateTime.Parse("23:59:59") - DateTime.Now.TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
             if (KontrolGunlukAds())
             {
                 CheckTheDailyAds();
@@ -161,13 +151,13 @@ public class CanvasCredits : MonoBehaviour
         else if (countAds > 0 && !Kontrol15DakikalikAds() && !isReadyForDailyAds&&countAds!=5)
         {
             DateTime dateTime = KAYIT.GetDAILY_CREDIT_REKLAM_15DK();
-            _txtAds.text = (dateTime.TimeOfDay - DateTime.Now.TimeOfDay).ToString().Substring(0, 8);
+          //  _txtAds.text = (dateTime.TimeOfDay - DateTime.Now.TimeOfDay).ToString().Substring(0, 8);
 
-            if (_txtAds.text == "00:00:00")
-            {
-                isReadyForDailyAds = true;
-                CheckTheDailyAds();
-            }
+            //if (_txtAds.text == "00:00:00")
+            //{
+            //    isReadyForDailyAds = true;
+            //    CheckTheDailyAds();
+            //}
         }
         else
         {
@@ -179,7 +169,6 @@ public class CanvasCredits : MonoBehaviour
     private void HandleBack()
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-        AdControl.instance.CloseBanner();
         Destroy(gameObject);
     }
     public void ReklamComplete()
@@ -189,14 +178,12 @@ public class CanvasCredits : MonoBehaviour
         countAds--;
         KAYIT.SetDAILY_CREDIT_REKLAM_COUNT(countAds);
         isReadyForDailyAds = false;
-        _btnAds.interactable = false;
      if(!GameManagerVideoPoker.instance.isAdim2)  GameManagerVideoPoker.instance.CheckBetAndCredit();
         CheckTheDailyAds();
     }
     private void HandleAds()
     {
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-        AdControl.instance.ShowRewardedVideo();
     }
     private void HandleDaily()
     {
@@ -206,10 +193,7 @@ public class CanvasCredits : MonoBehaviour
         CheckTheDaily();
     }
 
-    void HandleSatinAlma()
-    {
-        SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
-    }
+
 
 
 }
