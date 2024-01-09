@@ -178,7 +178,6 @@ public class UI_KARTLAR : MonoBehaviour
     }
     private void HandleClose()
     {
-        AdControl.instance.CloseBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         Destroy(gameObject);
     }

@@ -76,7 +76,6 @@ public class GameManagerVideoPoker : MonoBehaviour
     void HandleReklam()
     {
         Instantiate(_goUI_CREDITS);
-        AdControl.instance.ShowBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
 
     }
@@ -120,14 +119,12 @@ public class GameManagerVideoPoker : MonoBehaviour
             _readtForADS = false;
             _counterADS = 0;
             KAYIT.SetAdsCountTime(_counterADS);
-            AdControl.instance.ShowADS15MIN();
         }
     }
     void HandleOpenUI(GameObject gameObject)
     {
         GOREV_YONETICISI.instance._isOpenTable = true;
 
-        AdControl.instance.ShowBanner();
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         Instantiate(gameObject);
 
