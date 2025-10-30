@@ -60,7 +60,7 @@ TextureImporter:
       213: -741728239229050205
     second: btnKirmizi.2
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -77,10 +77,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -119,6 +121,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -130,6 +134,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -142,6 +147,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -154,6 +160,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -568,9 +575,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      btnKirmizi.0: -7128065726027147869
+      btnKirmizi.1: -5952494881379712405
+      btnKirmizi.2: -741728239229050205
+      btnKirmizi_.0: 3665092019333274746
+      btnKirmizi_.1: 8481264264687883539
+      btnKirmizi_.2: 2625334430670619811
+      btnMavi.0: -8580344876419378126
+      btnMavi.1: 6810701690496044734
+      btnMavi.2: -9119059691018349164
+      btnMavi_.0: -2578278897647730792
+      btnMavi_.1: 2132910723605546387
+      btnMavi_.2: 2503285352424872267
+      btnSari.0: -5030660665673531659
+      btnSari.1: -7558865138099223516
+      btnSari.2: -763154268947809355
+      btnSari_.0: 2258332206690528061
+      btnSari_.1: -801781696840906461
+      btnSari_.2: -7027270905797946126
+      imgBahis: -3489573479793869590
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

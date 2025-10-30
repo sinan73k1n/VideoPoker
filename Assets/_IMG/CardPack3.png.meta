@@ -225,7 +225,7 @@ TextureImporter:
       213: -5414594423363026703
     second: CardPack3_73
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -242,10 +242,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -284,6 +286,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -295,6 +299,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -307,6 +312,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -319,6 +325,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1888,9 +1895,83 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      CardPack3_0: -4838543185104267206
+      CardPack3_1: -3449965858479848701
+      CardPack3_10: 8472818985417856801
+      CardPack3_11: 8802711880859293388
+      CardPack3_12: 9122970306451455960
+      CardPack3_13: 1319411927210434657
+      CardPack3_14: 1365420250481621226
+      CardPack3_15: -2428220249693851109
+      CardPack3_16: -7800910932666547067
+      CardPack3_17: -9141337073350454691
+      CardPack3_18: 4602716539900275044
+      CardPack3_19: -1273474611186921176
+      CardPack3_2: -7065072626373998134
+      CardPack3_20: 8667472036664513615
+      CardPack3_21: -6570644644713442234
+      CardPack3_22: -2370887495407751347
+      CardPack3_23: -6953852353207794888
+      CardPack3_24: -131767639307997966
+      CardPack3_25: 6487082188316192992
+      CardPack3_26: 7740023452999736321
+      CardPack3_27: -5890687899605611939
+      CardPack3_28: -5258707401734555472
+      CardPack3_29: -5938889595506229962
+      CardPack3_3: -3040289140905350981
+      CardPack3_30: -7439609544723183088
+      CardPack3_31: 8072877494708553201
+      CardPack3_32: -373428020919853554
+      CardPack3_33: 2259685859579896160
+      CardPack3_34: -5422755007950565632
+      CardPack3_35: -960470999435257547
+      CardPack3_36: -1201341079950342873
+      CardPack3_37: 3972654147903974162
+      CardPack3_38: 2297895122181752899
+      CardPack3_39: 3596540944834888672
+      CardPack3_4: -1985103393871200002
+      CardPack3_40: -6759493544500192144
+      CardPack3_41: 4646947199150940009
+      CardPack3_42: 7414329123553005649
+      CardPack3_43: 5879750602416710196
+      CardPack3_44: 8976985642390054254
+      CardPack3_45: -8195490932388722091
+      CardPack3_46: 878099182103949779
+      CardPack3_47: 5697569532488632360
+      CardPack3_48: -7056210948655893503
+      CardPack3_49: -3974848538888808903
+      CardPack3_5: 2723328432420628670
+      CardPack3_50: 8748147485384592717
+      CardPack3_51: 665702403439919203
+      CardPack3_52: -9108648586860490184
+      CardPack3_53: -2494100595461242791
+      CardPack3_54: -1488283152630225616
+      CardPack3_55: 2478253370084390110
+      CardPack3_56: -1877241667555943728
+      CardPack3_57: 611561281068289931
+      CardPack3_58: 6785707911351498325
+      CardPack3_59: -7608393166706003270
+      CardPack3_6: -3616968844971570760
+      CardPack3_60: 7023098639361394459
+      CardPack3_61: 1823475663873098348
+      CardPack3_62: 4082458165555510384
+      CardPack3_63: 240173297403508756
+      CardPack3_64: -5030209250527805644
+      CardPack3_65: -1280817070378823175
+      CardPack3_66: 7186025379738626401
+      CardPack3_67: -672698867829429871
+      CardPack3_68: -9193934565778587160
+      CardPack3_69: -8408788429449530887
+      CardPack3_7: 8621284408570590876
+      CardPack3_70: 2533570889222183804
+      CardPack3_71: -7618958796486816665
+      CardPack3_72: 5478886772470948845
+      CardPack3_73: -5414594423363026703
+      CardPack3_8: -1582971679246508172
+      CardPack3_9: -8368487140787199156
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
