@@ -351,8 +351,13 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     public void AtaKartArkasi()
     {
-        Sprite kartArkasi = _desteKartOrg.GetBackOfCard(KART_SATIS.GetAktifKart());
+        int activeIndex = KART_SATIS.GetAktifKart();
+        bool isPremium = activeIndex >= 14;
+        Sprite kartArkasi = _desteKartOrg.GetBackOfCard(activeIndex);
         foreach (var item in _karts)
+        {
             item.SetKartArka(kartArkasi);
+            item.SetShimmer(isPremium);
+        }
     }
 }

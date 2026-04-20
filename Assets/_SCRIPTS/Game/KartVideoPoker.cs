@@ -14,9 +14,13 @@ public class KartVideoPoker : MonoBehaviour
     Sprite _sptOn, _sptArka;
     SpriteRenderer _sptRen;
     [SerializeField] TMP_Text _txtPro;
+    [SerializeField] Material _shimmerMaterial;
+    Material _defaultMaterial;
+
     void Awake()
     {
         _sptRen = GetComponent<SpriteRenderer>();
+        _defaultMaterial = _sptRen.sharedMaterial;
         _txtPro.enabled = _isHolding;
         _myBtn.onClick.AddListener(HandleHold);
     }
@@ -54,5 +58,11 @@ public class KartVideoPoker : MonoBehaviour
     public void SetActiveHold(bool deger)
     {
         _myBtn.interactable = deger;
+    }
+
+    public void SetShimmer(bool enable)
+    {
+        if (_shimmerMaterial == null) return;
+        _sptRen.material = enable ? _shimmerMaterial : _defaultMaterial;
     }
 }
