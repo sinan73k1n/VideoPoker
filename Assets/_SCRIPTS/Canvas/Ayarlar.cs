@@ -49,7 +49,6 @@ public class Ayarlar : MonoBehaviour
     void HandleSes()
     {
         float sesSeviyesi = KAYIT.GetSesSeviyesi();
-        Debug.Log(sesSeviyesi);
         if (sesSeviyesi == 1f) { sesSeviyesi = 0.65f; _imgSes.sprite = _spts[2]; }
         else if (sesSeviyesi == 0.65f) { sesSeviyesi = 0.35f; _imgSes.sprite = _spts[1]; }
         else if (sesSeviyesi == 0.35f) { sesSeviyesi=0f; _imgSes.sprite = _spts[0]; }

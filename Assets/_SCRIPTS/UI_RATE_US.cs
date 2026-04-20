@@ -21,11 +21,11 @@ public class UI_RATE_US : MonoBehaviour
     void HandleAta()
     {
         
-            _btnsYildiz[0].onClick.AddListener(() => HandleBtn(0));
-            _btnsYildiz[1].onClick.AddListener(() => HandleBtn(1));
-            _btnsYildiz[2].onClick.AddListener(() => HandleBtn(2));
-            _btnsYildiz[3].onClick.AddListener(() => HandleBtn(3));
-            _btnsYildiz[4].onClick.AddListener(() => HandleBtn(4));
+        for (int i = 0; i < _btnsYildiz.Length; i++)
+        {
+            int idx = i;
+            _btnsYildiz[i].onClick.AddListener(() => HandleBtn(idx));
+        }
 
 
         _btnClose.onClick.AddListener(HandleClose);   

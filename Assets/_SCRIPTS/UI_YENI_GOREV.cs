@@ -21,15 +21,11 @@ public class UI_YENI_GOREV : MonoBehaviour
     private void Start()
     {
         _btnsClose.onClick.AddListener(HandleClose);
-        _btnsGorev[0].onClick.AddListener(()=>HandleGorev(0));
-        _btnsGorev[1].onClick.AddListener(()=>HandleGorev(1));
-        _btnsGorev[2].onClick.AddListener(()=>HandleGorev(2));
-        _btnsGorev[3].onClick.AddListener(()=>HandleGorev(3));
-        _btnsGorev[4].onClick.AddListener(()=>HandleGorev(4));
-        _btnsGorev[5].onClick.AddListener(()=>HandleGorev(5));
-        _btnsGorev[6].onClick.AddListener(()=>HandleGorev(6));
-        _btnsGorev[7].onClick.AddListener(()=>HandleGorev(7));
-        _btnsGorev[8].onClick.AddListener(()=>HandleGorev(8));
+        for (int i = 0; i < _btnsGorev.Length; i++)
+        {
+            int idx = i;
+            _btnsGorev[i].onClick.AddListener(() => HandleGorev(idx));
+        }
     }
     void HandleGorev(int hangi)
     {
