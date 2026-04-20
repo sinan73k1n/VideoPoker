@@ -22,51 +22,6 @@ public class GOREV_YONETICISI : MonoBehaviour
        
 
     }
-    private void Start()
-    {
-        //DEBUG_YAZDIR();
-
-    }
-
-    private void DEBUG_YAZDIR()
-    {
-        for (int i = 0; i < 9; i++)
-        {
-            for (int j = 0; j < 6; j++)
-            {
-                DEBUG_GAME.instance.Yazdir($"{_GorevName[i]}-{j}: " + KAYIT_GOREV_YONETICISI.GetOneGorevCount(i, j)+"\n",3);
-
-            }
-        }
-        //for (int j = 0; j < 6; j++)
-        //{
-        //    Debug.Log($"_GorevCount {GorevList.win} {j} : " + KAYIT_GOREV_YONETICISI.GetOneGorevCount(7, j));
-        //}
-
-
-        //for (int i = 0; i < 3; i++)
-        //{
-
-        //    Debug.Log($"_GorevBet 1 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(0, i));
-        //    Debug.Log($"_GorevBet 2 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(1, i));
-        //    Debug.Log($"_GorevBet 3 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(2, i));
-        //    Debug.Log($"_GorevBet 4 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(3, i));
-        //    Debug.Log($"_GorevBet 5 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(4, i));
-        //    Debug.Log($"_GorevBet 6 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilen(5, i));
-
-        //}
-        //for (int i = 0; i < 3; i++)
-        //{
-
-        //    Debug.Log($"Max 1 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(0, i));
-        //    Debug.Log($"Max 2 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(1, i));
-        //    Debug.Log($"Max 3 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(2, i));
-        //    Debug.Log($"Max 4 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(3, i));
-        //    Debug.Log($"Max 5 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(4, i));
-        //    Debug.Log($"Max 6 {i}:" + KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(5, i));
-
-        //}
-    }
 
     void Update()
     {
