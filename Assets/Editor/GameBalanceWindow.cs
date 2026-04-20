@@ -9,6 +9,21 @@ public class GameBalanceWindow : EditorWindow
 
     Vector2 _scroll;
     int _creditAmount = 100;
+    IntVariable _creditsAsset;
+
+    void OnEnable()
+    {
+        var guids = UnityEditor.AssetDatabase.FindAssets("t:IntVariable");
+        foreach (var g in guids)
+        {
+            var path = UnityEditor.AssetDatabase.GUIDToAssetPath(g);
+            if (path.Contains("Credits"))
+            {
+                _creditsAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<IntVariable>(path);
+                break;
+            }
+        }
+    }
 
     void OnGUI()
     {

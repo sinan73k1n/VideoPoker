@@ -10,6 +10,7 @@ public class GameManagerVideoPoker : MonoBehaviour
 
     [SerializeField] KartVideoPoker[] _karts;
     [SerializeField] KartDestesi _desteKartOrg;
+    [SerializeField] IntVariable _credits;
     [SerializeField] GameObject _isikKazanc;
     [SerializeField] GameObject _isikKazanTablo;
     [SerializeField] Vector3[] _trfIsikKazanc;
@@ -36,6 +37,11 @@ public class GameManagerVideoPoker : MonoBehaviour
     {
         instance = this;
         _counterADS = KAYIT.GetAdsCountTime();
+        if (_credits != null)
+        {
+            _credits.Value = KAYIT.GetAnaBakiye();
+            _credits.OnValueChanged += v => _txtCredits.text = v.ToString();
+        }
     }
 
     private void Start()
@@ -81,7 +87,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     public void WriteCreditAndBet()
     {
         _txtBet.text = "" + KAYIT.GetSeciliBahis() + "$";
-        _txtCredits.text = "" + KAYIT.GetAnaBakiye();
+        SetCredits(KAYIT.GetAnaBakiye());
     }
 
     void HandleBetOne()
@@ -140,7 +146,7 @@ public class GameManagerVideoPoker : MonoBehaviour
             _btnBetOne.interactable = false;
             _sptRenGameOver.SetActive(false);
             KAYIT.AddToAnaBakiye(-KAYIT.GetSeciliBahis());
-            _txtCredits.text = "" + KAYIT.GetAnaBakiye();
+            SetCredits(KAYIT.GetAnaBakiye());
             CloseCards();
             DesteOlustur();
             KartDagit();
@@ -224,10 +230,17 @@ public class GameManagerVideoPoker : MonoBehaviour
         SesKutusu.instance.Play(NameOfAudioClip.Coin1);
     }
 
-    public void AddCredits(int credits)
+    // Tüm kredi değişiklikleri bu metod üzerinden geçer
+    void SetCredits(int newValue)
     {
-        KAYIT.AddToAnaBakiye(credits);
-        _txtCredits.text = "" + KAYIT.GetAnaBakiye();
+        if (_credits != null) _credits.Value = newValue;
+        else _txtCredits.text = newValue.ToString();
+    }
+
+    public void AddCredits(int amount)
+    {
+        KAYIT.AddToAnaBakiye(amount);
+        SetCredits(KAYIT.GetAnaBakiye());
         if (isAdim2)
             _btnDeal.interactable = KAYIT.GetSeciliBahis() <= KAYIT.GetAnaBakiye();
     }
@@ -238,7 +251,7 @@ public class GameManagerVideoPoker : MonoBehaviour
         if (kazanc == 1250) kazanc = 4000;
         KAYIT.AddToAnaBakiye(kazanc);
         _txtWin.text = "WIN " + kazanc;
-        _txtCredits.text = "" + KAYIT.GetAnaBakiye();
+        SetCredits(KAYIT.GetAnaBakiye());
     }
 
     void SetSeciliBahisOnTable(int bahis)
