@@ -1,4 +1,3 @@
-using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,164 +6,117 @@ public class GOREV_YONETICISI : MonoBehaviour
 {
     public static GOREV_YONETICISI instance;
 
-    public bool _isOpenTable = false;
-    public string _sureKalanGun = "";
+    public bool   _isOpenTable  = false;
+    public string _sureKalanGun  = "";
     public string _sureKalanHafta = "";
-    string gun;
-    string[] _GorevName = { "FOUR OF A KIND", "FULL HOUSE", "FLUSH", "STRAIGHT", "THREE OF A KIND", "TWO PAIR", "JACKS OR BETTER", "GAME WIN", "GAME" };
+    string _gun;
 
+    const string YENI_GUN   = "YENIGUN";
+    const string YENI_HAFTA = "YENIHAFTA";
 
+    static readonly string[] _GorevName   = { "FOUR OF A KIND", "FULL HOUSE", "FLUSH", "STRAIGHT", "THREE OF A KIND", "TWO PAIR", "JACKS OR BETTER", "GAME WIN", "GAME" };
+    static readonly float[]  _GorevCarpan = { 12.5f, 4.5f, 3f, 2f, 1.5f, 1f, 0.5f, 0.2f, 0.1f };
 
     void Awake()
     {
         instance = this;
         Setup();
-       
-
     }
 
     void Update()
     {
-
         GeriSayim();
-
     }
 
     void GeriSayim()
     {
         if (!_isOpenTable) return;
-        _sureKalanGun = ((DateTime.Parse("23:59:59") - TimeNow().TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
-        _sureKalanHafta = gun + " Day " + ((DateTime.Parse("23:59:59") - TimeNow().TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
-
+        string kalan    = ((DateTime.Parse("23:59:59") - DateTime.Now.TimeOfDay).TimeOfDay).ToString().Substring(0, 8);
+        _sureKalanGun   = kalan;
+        _sureKalanHafta = _gun + " Day " + kalan;
     }
+
     public void Setup()
     {
-
-
-
-
         if (IsYeniHafta())
         {
-            SifirlaSayimHaftalik();
-            YeniGorevAta(0);
-            YeniGorevAta(1);
-            YeniGorevAta(2);
-            YeniGorevAta(3);
-            YeniGorevAta(4);
-            YeniGorevAta(5);
-
+            KAYIT_GOREV_YONETICISI.SifirlaGunluk(true);
+            for (int i = 0; i < 6; i++) YeniGorevAta(i);
         }
-
         else if (IsYeniGun())
         {
-            SifirlaSayimGunluk();
-            YeniGorevAta(0);
-            YeniGorevAta(1);
-            YeniGorevAta(2);
-            YeniGorevAta(3);
-            YeniGorevAta(4);
-
-
+            KAYIT_GOREV_YONETICISI.SifirlaGunluk(false);
+            for (int i = 0; i < 5; i++) YeniGorevAta(i);
         }
 
-
-        int haftaGunu = Convert.ToInt32(TimeNow().DayOfWeek);
-
-        gun = 0 == haftaGunu ? "0" : (7 - haftaGunu).ToString();
+        int haftaGunu = Convert.ToInt32(DateTime.Now.DayOfWeek);
+        _gun = haftaGunu == 0 ? "0" : (7 - haftaGunu).ToString();
     }
-    
 
-
-    void SifirlaSayimGunluk()
-    {
-        KAYIT_GOREV_YONETICISI.SifirlaGunluk(false);
-    }
-    void SifirlaSayimHaftalik()
-    {
-        KAYIT_GOREV_YONETICISI.SifirlaGunluk(true);
-    }
     void YeniGorevAta(int hangi)
     {
-        var _GorevNumaralari = GetNewList();
-
-        for (var i = 0; i < 3; i++)
+        var gorevNumaralari = GetNewList();
+        for (int i = 0; i < 3; i++)
         {
-            int secilen = _GorevNumaralari[UnityEngine.Random.Range(0, _GorevNumaralari.Count)];
-
+            int secilen = gorevNumaralari[UnityEngine.Random.Range(0, gorevNumaralari.Count)];
             KAYIT_GOREV_YONETICISI.SetGorevSecilen(secilen, hangi, i);
             KAYIT_GOREV_YONETICISI.SetGorevSecilenMax(hangi != 5 ? GetMaxGunluk(secilen) : GetMaxHaftalik(secilen), hangi, i);
-            _GorevNumaralari.Remove(secilen);
+            gorevNumaralari.Remove(secilen);
         }
-
     }
+
     public void YeniGorevAta(int hangiSayfa, int hangiSira, int hangiGorev)
     {
-
         KAYIT_GOREV_YONETICISI.SetGorevSecilen(hangiGorev, hangiSayfa, hangiSira);
         KAYIT_GOREV_YONETICISI.SetGorevSecilenMax(hangiSayfa != 5 ? GetMaxGunluk(hangiGorev) : GetMaxHaftalik(hangiGorev), hangiSayfa, hangiSira);
-
-
-
     }
 
     int GetMaxGunluk(int hangiGorev)
     {
-       //return 1;
         switch (hangiGorev)
         {
             case 0:
             case 1:
-            default: return UnityEngine.Random.Range(1, 3);
+            default: return UnityEngine.Random.Range(1,  3);
             case 2:
-            case 3: return UnityEngine.Random.Range(1, 6);
-            case 4: return UnityEngine.Random.Range(3, 9);
-            case 5: return UnityEngine.Random.Range(5, 11);
-            case 6: return UnityEngine.Random.Range(10, 31);
-            case 7: return UnityEngine.Random.Range(20, 41);
-            case 8: return UnityEngine.Random.Range(30, 51);
-
+            case 3:  return UnityEngine.Random.Range(1,  6);
+            case 4:  return UnityEngine.Random.Range(3,  9);
+            case 5:  return UnityEngine.Random.Range(5,  11);
+            case 6:  return UnityEngine.Random.Range(10, 31);
+            case 7:  return UnityEngine.Random.Range(20, 41);
+            case 8:  return UnityEngine.Random.Range(30, 51);
         }
-
     }
+
     int GetMaxHaftalik(int hangiGorev)
     {
-       //  return 1;
         switch (hangiGorev)
         {
             case 0:
             case 1:
-            default: return UnityEngine.Random.Range(10, 16);
+            default: return UnityEngine.Random.Range(10,  16);
             case 2:
-            case 3: return UnityEngine.Random.Range(15, 31);
-            case 4: return UnityEngine.Random.Range(30, 51);
-            case 5: return UnityEngine.Random.Range(40, 61);
-            case 6: return UnityEngine.Random.Range(100, 301);
-            case 7: return UnityEngine.Random.Range(200, 401);
-            case 8: return UnityEngine.Random.Range(300, 501);
-
-
+            case 3:  return UnityEngine.Random.Range(15,  31);
+            case 4:  return UnityEngine.Random.Range(30,  51);
+            case 5:  return UnityEngine.Random.Range(40,  61);
+            case 6:  return UnityEngine.Random.Range(100, 301);
+            case 7:  return UnityEngine.Random.Range(200, 401);
+            case 8:  return UnityEngine.Random.Range(300, 501);
         }
-
     }
 
-    List<int> GetNewList()
-    {
-        return new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
-    }
-
-
-
+    List<int> GetNewList() => new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
 
     bool IsYeniGun()
     {
-        if (PlayerPrefs.GetString("YENIGUN") == string.Empty)
+        if (PlayerPrefs.GetString(YENI_GUN) == string.Empty)
         {
-            PlayerPrefs.SetString("YENIGUN", TimeNow().AddDays(1).ToString());
+            PlayerPrefs.SetString(YENI_GUN, DateTime.Now.AddDays(1).ToString());
             return true;
         }
-        else if (DateTime.Parse(PlayerPrefs.GetString("YENIGUN")).Date <= TimeNow().Date)
+        if (DateTime.Parse(PlayerPrefs.GetString(YENI_GUN)).Date <= DateTime.Now.Date)
         {
-            PlayerPrefs.SetString("YENIGUN", TimeNow().AddDays(1).ToString());
+            PlayerPrefs.SetString(YENI_GUN, DateTime.Now.AddDays(1).ToString());
             return true;
         }
         return false;
@@ -172,80 +124,34 @@ public class GOREV_YONETICISI : MonoBehaviour
 
     bool IsYeniHafta()
     {
-
-        if (PlayerPrefs.GetString("YENIHAFTA") == string.Empty)
+        if (PlayerPrefs.GetString(YENI_HAFTA) == string.Empty)
         {
-            int i = Convert.ToInt32(TimeNow().DayOfWeek);
-
-            i = 7 - i;
-            PlayerPrefs.SetString("YENIHAFTA", TimeNow().AddDays(i).ToString());
+            int gun = Convert.ToInt32(DateTime.Now.DayOfWeek);
+            PlayerPrefs.SetString(YENI_HAFTA, DateTime.Now.AddDays(7 - gun).ToString());
             return true;
         }
-        else if (DateTime.Parse(PlayerPrefs.GetString("YENIHAFTA")).Date < TimeNow().Date)
+        if (DateTime.Parse(PlayerPrefs.GetString(YENI_HAFTA)).Date < DateTime.Now.Date)
         {
-            int i = Convert.ToInt32(TimeNow().DayOfWeek);
-            i = 7 - i;
-            PlayerPrefs.SetString("YENIHAFTA", TimeNow().AddDays(i).ToString());
+            int gun = Convert.ToInt32(DateTime.Now.DayOfWeek);
+            PlayerPrefs.SetString(YENI_HAFTA, DateTime.Now.AddDays(7 - gun).ToString());
             return true;
         }
         return false;
-
-
-
-
     }
 
     public GOREV GetGOREV(int sayfa, int kacinciGorev)
     {
-        GOREV gorev = new GOREV();
-        int tamamlanan = KAYIT_GOREV_YONETICISI.GetOneGorevCount(KAYIT_GOREV_YONETICISI.GetGorevSecilen(sayfa, kacinciGorev), sayfa);
-        int tamamlanmasiGereken = KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(sayfa, kacinciGorev);
+        int gorevNo    = KAYIT_GOREV_YONETICISI.GetGorevSecilen(sayfa, kacinciGorev);
+        int tamamlanan = KAYIT_GOREV_YONETICISI.GetOneGorevCount(gorevNo, sayfa);
+        int hedef      = KAYIT_GOREV_YONETICISI.GetGorevSecilenMax(sayfa, kacinciGorev);
 
-        if (tamamlanan > tamamlanmasiGereken)
+        return new GOREV
         {
-            tamamlanan = tamamlanmasiGereken;
-        }
-
-        gorev._ad = _GorevName[KAYIT_GOREV_YONETICISI.GetGorevSecilen(sayfa, kacinciGorev)];
-        gorev._tamamlanan = tamamlanan;
-        gorev._tamamlanmasiGereken = tamamlanmasiGereken;
-        gorev._odul = Convert.ToInt32(gorev._tamamlanmasiGereken * GetCarpan(KAYIT_GOREV_YONETICISI.GetGorevSecilen(sayfa, kacinciGorev)));
-        gorev._odulAlindi = KAYIT_GOREV_YONETICISI.GetGorevTamamlandi(sayfa, kacinciGorev);
-
-        return gorev;
-
+            _ad                  = _GorevName[gorevNo],
+            _tamamlanan          = tamamlanan > hedef ? hedef : tamamlanan,
+            _tamamlanmasiGereken = hedef,
+            _odul                = Convert.ToInt32(hedef * _GorevCarpan[gorevNo]),
+            _odulAlindi          = KAYIT_GOREV_YONETICISI.GetGorevTamamlandi(sayfa, kacinciGorev)
+        };
     }
-    float GetCarpan(int gorevNumara)
-    {
-        switch (gorevNumara)
-        {
-
-            case 0: return 12.5f;
-            case 1: return 4.5f;
-            case 2: return 3f;
-            case 3: return 2f;
-            case 4: return 1.5f;
-            case 5: return 1f;
-            case 6: return .5f;
-            case 7: return .2f;
-            case 8:
-            default: return .1f;
-
-        }
-
-
-    }
-
-    DateTime TimeNow()
-    {
-        DateTime simdi= DateTime.Now;
-        //string zaman = "2/20/2022 2:00:04 PM";
-        //simdi = DateTime.Parse(zaman);
-        //DEBUG_GAME.instance.Yazdir("DateTime.Now: " + simdi, 1);
-        return simdi;
-    }
-
 }
-
-
-
