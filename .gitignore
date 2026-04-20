@@ -58,3 +58,9 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+.DS_Store
+.claude/skills/unity-shader-graph-artist.md
+.claude/skills/unity-multiplayer-engineer.md
+.claude/skills/unity-editor-tool-developer.md
+.claude/skills/unity-architect.md
+.DS_Store
