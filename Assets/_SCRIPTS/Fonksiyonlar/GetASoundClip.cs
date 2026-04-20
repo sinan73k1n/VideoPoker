@@ -1,8 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+using UnityEngine;
 
-public class GetASoundClip : MonoBehaviour
+public static class GetASoundClip
 {
-   
-    public static AudioClip Hangi(NameOfAudioClip name) { return Resources.Load<AudioClip>("Sound/" + name.ToString()); }
+    public static AudioClip Hangi(NameOfAudioClip name) => Resources.Load<AudioClip>("Sound/" + name.ToString());
 }

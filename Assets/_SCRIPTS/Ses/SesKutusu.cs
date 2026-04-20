@@ -1,20 +1,37 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SesKutusu : MonoBehaviour
 {
     public static SesKutusu instance;
-    AudioSource audioSource;
-    private void Awake()
+    AudioSource _audioSource;
+    readonly Dictionary<NameOfAudioClip, AudioClip> _cache = new();
+
+    void Awake()
     {
         instance = this;
-        audioSource = GetComponent<AudioSource>();
-        audioSource.volume = KAYIT.GetSesSeviyesi();
-    }
-    public void Play(NameOfAudioClip name) { audioSource.PlayOneShot(GetASoundClip.Hangi(name)); }
-    public void PlayIfDontPlay(NameOfAudioClip name) { if(!audioSource.isPlaying) audioSource.PlayOneShot(GetASoundClip.Hangi(name)); }
-    public void Stop() { audioSource.Stop(); }
-    public void SetVolume (float volume) { audioSource.volume = volume; }
-}
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.volume = KAYIT.GetSesSeviyesi();
 
+        foreach (NameOfAudioClip clip in Enum.GetValues(typeof(NameOfAudioClip)))
+        {
+            AudioClip loaded = GetASoundClip.Hangi(clip);
+            if (loaded != null) _cache[clip] = loaded;
+        }
+    }
+
+    public void Play(NameOfAudioClip name)
+    {
+        if (_cache.TryGetValue(name, out AudioClip clip)) _audioSource.PlayOneShot(clip);
+    }
+
+    public void PlayIfDontPlay(NameOfAudioClip name)
+    {
+        if (!_audioSource.isPlaying) Play(name);
+    }
+
+    public void Stop() => _audioSource.Stop();
+
+    public void SetVolume(float volume) => _audioSource.volume = volume;
+}
