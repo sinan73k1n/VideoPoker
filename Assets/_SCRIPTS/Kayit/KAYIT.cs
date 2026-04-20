@@ -39,19 +39,23 @@ public class KAYIT : MonoBehaviour
     const string DAILY_CREDIT_REKLAM_COUNT = "DAILY_CREDIT_REKLAM_COUNT";
 
     const string ADS_15_MIN = "ads 15 min";
+    const string DEGERLENDIRME_ACILDI = "degerlendirme acildi";
+    const string DEGERLENDIRMEYI_AC = "degerlendirmeyiAc";
+    const string DEGERLENDIRME_KALAN = "degerlendirmeye kalan adet";
+    const string REKLAM_VAR = "ReklamVar";
+    const string SES_SEVIYE = "Ses Seviye";
 
     public static float GetAdsCountTime() => PlayerPrefs.GetFloat(ADS_15_MIN, 0);
     public static void SetAdsCountTime(float v) { PlayerPrefs.SetFloat(ADS_15_MIN, v); }
 
-    public static bool GetDegerlendirmeAcildi() { return PlayerPrefs.GetInt("degerlendirme acildi", 0) == 0 ? false : true; }
-    public static void SetDegerlendirmeAcildi(bool ac) {  PlayerPrefs.SetInt("degerlendirme acildi", ac? 1:0); }
-    public static bool GetDegerlendirmeyiAc() { return PlayerPrefs.GetInt("degerlendirmeyiAc", 0) == 0 ? false : true; }
-    public static void SetDegerlendirmeyiAc(bool ac) {  PlayerPrefs.SetInt("degerlendirmeyiAc",ac? 1:0); }
+    public static bool GetDegerlendirmeAcildi() { return PlayerPrefs.GetInt(DEGERLENDIRME_ACILDI, 0) == 1; }
+    public static void SetDegerlendirmeAcildi(bool ac) { PlayerPrefs.SetInt(DEGERLENDIRME_ACILDI, ac ? 1 : 0); }
+    public static bool GetDegerlendirmeyiAc() { return PlayerPrefs.GetInt(DEGERLENDIRMEYI_AC, 0) == 1; }
+    public static void SetDegerlendirmeyiAc(bool ac) { PlayerPrefs.SetInt(DEGERLENDIRMEYI_AC, ac ? 1 : 0); }
     public static void SetDegerlendirmeKalanSayi()
     {
         if (GetDegerlendirmeAcildi()) return;
-        string key = "degerlendirmeye kalan adet";
-        int i = PlayerPrefs.GetInt(key, 50);
+        int i = PlayerPrefs.GetInt(DEGERLENDIRME_KALAN, 50);
         if (i == 0)
         {
             SetDegerlendirmeyiAc(true);
@@ -59,14 +63,12 @@ public class KAYIT : MonoBehaviour
         else
         {
             i--;
-            PlayerPrefs.SetInt(key, i);
+            PlayerPrefs.SetInt(DEGERLENDIRME_KALAN, i);
         }
     }
 
-
-
-    public static bool GetReklamVar() { return PlayerPrefs.GetInt("ReklamVar",1) == 1 ? true : false; }
-    public static void SetReklamVar(bool deger) { PlayerPrefs.SetInt("ReklamVar", deger ? 1 : 0); }
+    public static bool GetReklamVar() { return PlayerPrefs.GetInt(REKLAM_VAR, 1) == 1; }
+    public static void SetReklamVar(bool deger) { PlayerPrefs.SetInt(REKLAM_VAR, deger ? 1 : 0); }
 
 
     public static void SetDAILY_CREDIT_LAST_TIME(DateTime dateTime) { PlayerPrefs.SetString(DAILY_CREDIT, dateTime.ToString()); }
@@ -251,8 +253,8 @@ public class KAYIT : MonoBehaviour
         PlayerPrefs.SetInt(SECILI_BAHIS, bahis);
 
     }
-    public static void SetSesSeviyesi(float seviye) { PlayerPrefs.SetFloat("Ses Seviye", seviye); }
-    public static float GetSesSeviyesi() { return PlayerPrefs.GetFloat("Ses Seviye", 1f); }
+    public static void SetSesSeviyesi(float seviye) { PlayerPrefs.SetFloat(SES_SEVIYE, seviye); }
+    public static float GetSesSeviyesi() { return PlayerPrefs.GetFloat(SES_SEVIYE, 1f); }
     public static void AddOneHand(TypeOfPokerHand type)
     {
 
