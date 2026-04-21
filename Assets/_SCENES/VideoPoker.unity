@@ -205,7 +205,7 @@ MonoBehaviour:
   _sureKartAcilma: 0.2
   _goUI_MENU: {fileID: 4816868089380985095, guid: 468b5051e782d4647a99be2467606aee, type: 3}
   _goUI_GOREV: {fileID: 817877089806414930, guid: 901a2449df91d43cba204df6d5fe4253, type: 3}
-  _goUI_CREDITS: {fileID: 8821363056678963092, guid: 7a75dde1b68a14692bf20cf81ffe3d0b, type: 3}
+  _goUI_CREDITS: {fileID: 8821363056678963092, guid: 75c41f21492344570b8c62ed3cbe36cd, type: 3}
   _goUI_KARTLAR: {fileID: 4308171658713440194, guid: a83031a705f4c4f8cb8e3bc80e00a00c, type: 3}
   _goUI_RATE_US: {fileID: 708995477818566694, guid: ccacdb84798ec434b95674b1b377947f, type: 3}
 --- !u!4 &2249154
@@ -2387,6 +2387,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abd5fa0412334adab6f19569f214635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &563791736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 563791738}
+  - component: {fileID: 563791737}
+  m_Layer: 0
+  m_Name: IAPManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &563791737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563791736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967dba1948c034dd7a584ab6febc5b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &563791738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563791736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587627086
 GameObject:
   m_ObjectHideFlags: 0
@@ -6915,3 +6959,4 @@ SceneRoots:
   - {fileID: 2249154}
   - {fileID: 360009948}
   - {fileID: 948661011}
+  - {fileID: 563791738}
