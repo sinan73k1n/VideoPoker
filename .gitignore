@@ -64,3 +64,13 @@ crashlytics-build.properties
 .claude/skills/unity-editor-tool-developer.md
 .claude/skills/unity-architect.md
 .DS_Store
+
+# ⛔ Editör oturum durumu — Unity bunu makineye özel üretir. Depoya girince
+# yerel yolları ve BAŞKA proje adlarını taşıyor (herkese açık depoda görüldü).
+/[Uu]serSettings/
+
+# Editör çökme dökümleri ve kişisel editör ayarları
+mono_crash.*.json
+/.vscode/
+/.vsconfig
+ignore.conf
