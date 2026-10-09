@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#v10.3.0",
     "com.unity.purchasing": "4.12.2",
     "com.unity.services.core": "1.12.5",
     "com.unity.2d.animation": "9.2.2",
