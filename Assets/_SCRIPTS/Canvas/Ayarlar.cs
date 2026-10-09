@@ -69,7 +69,9 @@ public class Ayarlar : MonoBehaviour
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
 
         bool temp= KAYIT.GetReklamVar();
+        var tempBalans=KAYIT.GetAnaBakiye();
         PlayerPrefs.DeleteAll();
+        KAYIT.SetAnaBakiye(tempBalans);
         KAYIT.SetReklamVar(temp);
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(0);

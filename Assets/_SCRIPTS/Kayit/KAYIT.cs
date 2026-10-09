@@ -242,6 +242,7 @@ public class KAYIT : MonoBehaviour
     }
 
     public static int GetAnaBakiye() { return PlayerPrefs.GetInt(ANA_BAKIYE, 50); }
+    public static void SetAnaBakiye(int bakiye){PlayerPrefs.SetInt(ANA_BAKIYE,bakiye);}
     public static void AddToAnaBakiye(int neKadar) { PlayerPrefs.SetInt(ANA_BAKIYE, GetAnaBakiye() + neKadar); }
 
     public static int GetSeciliBahis() { return PlayerPrefs.GetInt(SECILI_BAHIS, 1); }
