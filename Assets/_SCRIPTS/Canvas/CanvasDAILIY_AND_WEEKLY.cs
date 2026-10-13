@@ -141,6 +141,7 @@ public class CanvasDAILIY_AND_WEEKLY : MonoBehaviour
         SesKutusu.instance.Play(NameOfAudioClip.VideoPokerTusaBas);
         KAYIT_GOREV_YONETICISI.SetGorevTamamlandi(true, sayfa, sira);
         GameManagerVideoPoker.instance.AddCredits(odul);
+        OYUN_OLAYLARI.GorevOdulAlindiBildir();
         ShowGorev(_sayfaNumarasi);
         GameManagerVideoPoker.instance.ShowRewardCount();
     }

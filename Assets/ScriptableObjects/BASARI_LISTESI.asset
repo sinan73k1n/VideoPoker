@@ -1,0 +1,510 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d64085d972a497da82d56ae0b00073, type: 3}
+  m_Name: BASARI_LISTESI
+  m_EditorClassIdentifier: 
+  basarilar:
+  - id: el_10
+    ad: "HANDS PLAYED \xD710"
+    aciklama: Play 10 hands.
+    ikon: {fileID: 0}
+    sayac: 0
+    hedef: 10
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: el_100
+    ad: "HANDS PLAYED \xD7100"
+    aciklama: Play 100 hands.
+    ikon: {fileID: 0}
+    sayac: 0
+    hedef: 100
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: el_1000
+    ad: "HANDS PLAYED \xD71,000"
+    aciklama: Play 1,000 hands.
+    ikon: {fileID: 0}
+    sayac: 0
+    hedef: 1000
+    kademe: 2
+    puan: 25
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: el_10000
+    ad: "HANDS PLAYED \xD710,000"
+    aciklama: Play 10,000 hands.
+    ikon: {fileID: 0}
+    sayac: 0
+    hedef: 10000
+    kademe: 3
+    puan: 50
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: job_50
+    ad: "JACKS OR BETTER \xD750"
+    aciklama: Get Jacks or Better 50 times.
+    ikon: {fileID: 0}
+    sayac: 9
+    hedef: 50
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: job_500
+    ad: "JACKS OR BETTER \xD7500"
+    aciklama: Get Jacks or Better 500 times.
+    ikon: {fileID: 0}
+    sayac: 9
+    hedef: 500
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: job_5000
+    ad: "JACKS OR BETTER \xD75,000"
+    aciklama: Get Jacks or Better 5,000 times.
+    ikon: {fileID: 0}
+    sayac: 9
+    hedef: 5000
+    kademe: 2
+    puan: 25
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: ikiper_25
+    ad: "TWO PAIR \xD725"
+    aciklama: Get Two Pair 25 times.
+    ikon: {fileID: 0}
+    sayac: 8
+    hedef: 25
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: ikiper_250
+    ad: "TWO PAIR \xD7250"
+    aciklama: Get Two Pair 250 times.
+    ikon: {fileID: 0}
+    sayac: 8
+    hedef: 250
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: ikiper_2500
+    ad: "TWO PAIR \xD72,500"
+    aciklama: Get Two Pair 2,500 times.
+    ikon: {fileID: 0}
+    sayac: 8
+    hedef: 2500
+    kademe: 2
+    puan: 25
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: uclu_10
+    ad: "THREE OF A KIND \xD710"
+    aciklama: Get Three of a Kind 10 times.
+    ikon: {fileID: 0}
+    sayac: 7
+    hedef: 10
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: uclu_100
+    ad: "THREE OF A KIND \xD7100"
+    aciklama: Get Three of a Kind 100 times.
+    ikon: {fileID: 0}
+    sayac: 7
+    hedef: 100
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: uclu_1000
+    ad: "THREE OF A KIND \xD71,000"
+    aciklama: Get Three of a Kind 1,000 times.
+    ikon: {fileID: 0}
+    sayac: 7
+    hedef: 1000
+    kademe: 2
+    puan: 25
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kenta_5
+    ad: "STRAIGHT \xD75"
+    aciklama: Get a Straight 5 times.
+    ikon: {fileID: 0}
+    sayac: 6
+    hedef: 5
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kenta_50
+    ad: "STRAIGHT \xD750"
+    aciklama: Get a Straight 50 times.
+    ikon: {fileID: 0}
+    sayac: 6
+    hedef: 50
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kenta_500
+    ad: "STRAIGHT \xD7500"
+    aciklama: Get a Straight 500 times.
+    ikon: {fileID: 0}
+    sayac: 6
+    hedef: 500
+    kademe: 2
+    puan: 25
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: flos_5
+    ad: "FLUSH \xD75"
+    aciklama: Get a Flush 5 times.
+    ikon: {fileID: 0}
+    sayac: 5
+    hedef: 5
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: flos_50
+    ad: "FLUSH \xD750"
+    aciklama: Get a Flush 50 times.
+    ikon: {fileID: 0}
+    sayac: 5
+    hedef: 50
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: flos_500
+    ad: "FLUSH \xD7500"
+    aciklama: Get a Flush 500 times.
+    ikon: {fileID: 0}
+    sayac: 5
+    hedef: 500
+    kademe: 2
+    puan: 25
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: fulev_5
+    ad: "FULL HOUSE \xD75"
+    aciklama: Get a Full House 5 times.
+    ikon: {fileID: 0}
+    sayac: 4
+    hedef: 5
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: fulev_50
+    ad: "FULL HOUSE \xD750"
+    aciklama: Get a Full House 50 times.
+    ikon: {fileID: 0}
+    sayac: 4
+    hedef: 50
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: fulev_500
+    ad: "FULL HOUSE \xD7500"
+    aciklama: Get a Full House 500 times.
+    ikon: {fileID: 0}
+    sayac: 4
+    hedef: 500
+    kademe: 2
+    puan: 25
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kare_1
+    ad: "FOUR OF A KIND \xD71"
+    aciklama: Get Four of a Kind 1 times.
+    ikon: {fileID: 0}
+    sayac: 3
+    hedef: 1
+    kademe: 0
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kare_10
+    ad: "FOUR OF A KIND \xD710"
+    aciklama: Get Four of a Kind 10 times.
+    ikon: {fileID: 0}
+    sayac: 3
+    hedef: 10
+    kademe: 1
+    puan: 20
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kare_100
+    ad: "FOUR OF A KIND \xD7100"
+    aciklama: Get Four of a Kind 100 times.
+    ikon: {fileID: 0}
+    sayac: 3
+    hedef: 100
+    kademe: 2
+    puan: 50
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: renkkenta_1
+    ad: "STRAIGHT FLUSH \xD71"
+    aciklama: Get a Straight Flush 1 times.
+    ikon: {fileID: 0}
+    sayac: 2
+    hedef: 1
+    kademe: 0
+    puan: 20
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: renkkenta_5
+    ad: "STRAIGHT FLUSH \xD75"
+    aciklama: Get a Straight Flush 5 times.
+    ikon: {fileID: 0}
+    sayac: 2
+    hedef: 5
+    kademe: 1
+    puan: 40
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: renkkenta_25
+    ad: "STRAIGHT FLUSH \xD725"
+    aciklama: Get a Straight Flush 25 times.
+    ikon: {fileID: 0}
+    sayac: 2
+    hedef: 25
+    kademe: 2
+    puan: 100
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: royal_1
+    ad: "ROYAL FLUSH \xD71"
+    aciklama: Get a Royal Flush 1 times.
+    ikon: {fileID: 0}
+    sayac: 1
+    hedef: 1
+    kademe: 0
+    puan: 30
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: royal_3
+    ad: "ROYAL FLUSH \xD73"
+    aciklama: Get a Royal Flush 3 times.
+    ikon: {fileID: 0}
+    sayac: 1
+    hedef: 3
+    kademe: 1
+    puan: 60
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: royal_10
+    ad: "ROYAL FLUSH \xD710"
+    aciklama: Get a Royal Flush 10 times.
+    ikon: {fileID: 0}
+    sayac: 1
+    hedef: 10
+    kademe: 2
+    puan: 150
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kazanc_1000
+    ad: "TOTAL WINNINGS \xD71,000"
+    aciklama: Win 1,000 credits from hands.
+    ikon: {fileID: 0}
+    sayac: 10
+    hedef: 1000
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kazanc_10000
+    ad: "TOTAL WINNINGS \xD710,000"
+    aciklama: Win 10,000 credits from hands.
+    ikon: {fileID: 0}
+    sayac: 10
+    hedef: 10000
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kazanc_100000
+    ad: "TOTAL WINNINGS \xD7100,000"
+    aciklama: Win 100,000 credits from hands.
+    ikon: {fileID: 0}
+    sayac: 10
+    hedef: 100000
+    kademe: 2
+    puan: 25
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kazanc_1000000
+    ad: "TOTAL WINNINGS \xD71,000,000"
+    aciklama: Win 1,000,000 credits from hands.
+    ikon: {fileID: 0}
+    sayac: 10
+    hedef: 1000000
+    kademe: 3
+    puan: 50
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: seri_5
+    ad: "HOT STREAK \xD75"
+    aciklama: Win 5 hands in a row.
+    ikon: {fileID: 0}
+    sayac: 11
+    hedef: 5
+    kademe: 0
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: seri_10
+    ad: "HOT STREAK \xD710"
+    aciklama: Win 10 hands in a row.
+    ikon: {fileID: 0}
+    sayac: 11
+    hedef: 10
+    kademe: 1
+    puan: 20
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: gorev_10
+    ad: "MISSION REWARDS \xD710"
+    aciklama: Collect 10 mission rewards.
+    ikon: {fileID: 0}
+    sayac: 12
+    hedef: 10
+    kademe: 0
+    puan: 5
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: gorev_100
+    ad: "MISSION REWARDS \xD7100"
+    aciklama: Collect 100 mission rewards.
+    ikon: {fileID: 0}
+    sayac: 12
+    hedef: 100
+    kademe: 1
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kart_1
+    ad: "CARD COLLECTOR \xD71"
+    aciklama: Unlock 1 card backs.
+    ikon: {fileID: 0}
+    sayac: 13
+    hedef: 1
+    kademe: 0
+    puan: 10
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kart_5
+    ad: "CARD COLLECTOR \xD75"
+    aciklama: Unlock 5 card backs.
+    ikon: {fileID: 0}
+    sayac: 13
+    hedef: 5
+    kademe: 1
+    puan: 20
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: kart_20
+    ad: "CARD COLLECTOR \xD720"
+    aciklama: Unlock 20 card backs.
+    ikon: {fileID: 0}
+    sayac: 13
+    hedef: 20
+    kademe: 2
+    puan: 50
+    gizli: 0
+    androidId: 
+    iosId: 
+  - id: ozel_max_royal
+    ad: JACKPOT
+    aciklama: Hit a Royal Flush at max bet (4,000 credits).
+    ikon: {fileID: 0}
+    sayac: 14
+    hedef: 1
+    kademe: 4
+    puan: 150
+    gizli: 1
+    androidId: 
+    iosId: 
+  - id: ozel_hazir_royal
+    ad: BORN ROYAL
+    aciklama: Get a Royal Flush dealt on the first hand.
+    ikon: {fileID: 0}
+    sayac: 15
+    hedef: 1
+    kademe: 4
+    puan: 150
+    gizli: 1
+    androidId: 
+    iosId: 
+  - id: ozel_dort_as
+    ad: FOUR ACES
+    aciklama: Get Four of a Kind with Aces.
+    ikon: {fileID: 0}
+    sayac: 16
+    hedef: 1
+    kademe: 4
+    puan: 25
+    gizli: 1
+    androidId: 
+    iosId: 

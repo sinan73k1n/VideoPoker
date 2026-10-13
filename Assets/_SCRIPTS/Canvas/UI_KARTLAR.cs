@@ -71,6 +71,7 @@ public class UI_KARTLAR : MonoBehaviour
         KAYIT.AddToAnaBakiye(-fiyat);
         GuncelPara();
         KART_SATIS.SetSold(index);
+        OYUN_OLAYLARI.KartArkasiAcildiBildir();
         AtaHandle();
     }
 

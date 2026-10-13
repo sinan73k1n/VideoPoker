@@ -10,6 +10,12 @@ public class GameBalanceWindow : EditorWindow
     Vector2 _scroll;
     int _creditAmount = 100;
     IntVariable _creditsAsset;
+    BASARI_LISTESI _basariListesi;
+
+    static readonly string[] _sahteElAdlari = { "Royal Flush", "Straight Flush", "Four of a Kind", "Full House", "Flush", "Straight", "Three of a Kind", "Two Pair", "Jacks or Better", "Kayıp" };
+    static readonly int[]    _sahteElCarpan = { 250, 50, 25, 9, 6, 4, 3, 2, 1, 0 };
+    int  _sahteEl, _sahteBahis = 1;
+    bool _sahteHazir, _sahteDortAs;
 
     void OnEnable()
     {
@@ -32,6 +38,8 @@ public class GameBalanceWindow : EditorWindow
         DrawCredits();
         EditorGUILayout.Space(8);
         DrawHandStats();
+        EditorGUILayout.Space(8);
+        DrawBasarilar();
         EditorGUILayout.Space(8);
         DrawDangerZone();
 
@@ -102,6 +110,67 @@ public class GameBalanceWindow : EditorWindow
             float pct = (wins / (float)games) * 100f;
             EditorGUILayout.LabelField("Win Rate", pct.ToString("F1") + "%");
         }
+
+        EditorGUI.indentLevel--;
+    }
+
+    void DrawBasarilar()
+    {
+        EditorGUILayout.LabelField("ACHIEVEMENTS", EditorStyles.boldLabel);
+        EditorGUI.indentLevel++;
+
+        if (_basariListesi == null)
+            _basariListesi = AssetDatabase.LoadAssetAtPath<BASARI_LISTESI>("Assets/ScriptableObjects/BASARI_LISTESI.asset");
+
+        EditorGUILayout.LabelField("Toplam Kazanç", KAYIT_BASARI.GetToplamKazanc().ToString());
+        EditorGUILayout.LabelField("Toplam Bahis",  KAYIT_BASARI.GetToplamBahis().ToString());
+        EditorGUILayout.LabelField("Seri / En iyi", $"{KAYIT_BASARI.GetSeri()} / {KAYIT_BASARI.GetSeriEnIyi()}");
+        EditorGUILayout.LabelField("Görev ödülü",   KAYIT_BASARI.GetGorevOdulSayisi().ToString());
+        EditorGUILayout.LabelField("Kart arkası",   KAYIT_BASARI.GetAcilanKartArkasi().ToString());
+
+        if (_basariListesi == null)
+        {
+            EditorGUILayout.HelpBox("BASARI_LISTESI.asset yok → Video Poker/Basari Listesi Uret", MessageType.Info);
+        }
+        else
+        {
+            int acik = 0;
+            foreach (var b in _basariListesi.basarilar) if (KAYIT_BASARI.GetAcik(b.id)) acik++;
+            EditorGUILayout.LabelField("Açık", $"{acik}/{_basariListesi.basarilar.Count}  ·  {_basariListesi.ToplamPuan()} puan");
+
+            if (GUILayout.Button("Sıfırla: Başarılar (sayaçlar kalır)") &&
+                EditorUtility.DisplayDialog("Emin misin?", "Açılmış bütün başarılar kilitlenecek.", "Sıfırla", "İptal"))
+            {
+                foreach (var b in _basariListesi.basarilar) KAYIT_BASARI.Kilitle(b.id);
+                foreach (BASARI_SAYAC s in System.Enum.GetValues(typeof(BASARI_SAYAC))) PlayerPrefs.DeleteKey("BASARI_OZEL_" + s);
+                PlayerPrefs.DeleteKey("BASARI_ILK_TARAMA");
+                PlayerPrefs.Save();
+            }
+        }
+
+        EditorGUILayout.Space(4);
+        _sahteEl     = EditorGUILayout.Popup("Sahte el", _sahteEl, _sahteElAdlari);
+        _sahteBahis  = EditorGUILayout.IntSlider("Bahis", _sahteBahis, 1, 5);
+        _sahteHazir  = EditorGUILayout.Toggle("İlk dağıtımda hazırdı", _sahteHazir);
+        _sahteDortAs = EditorGUILayout.Toggle("Kare = dört As", _sahteDortAs);
+
+        GUI.enabled = Application.isPlaying;
+        if (GUILayout.Button("Sahte El Gönder (Play mode)"))
+        {
+            int carpan = _sahteElCarpan[_sahteEl];
+            int kazanc = carpan * _sahteBahis;
+            if (kazanc == 1250) kazanc = 4000;
+            if (carpan > 0) KAYIT.AddOneHand((TypeOfPokerHand)_sahteEl);
+            OYUN_OLAYLARI.ElBittiBildir(new EL_SONUCU
+            {
+                carpan           = carpan,
+                bahis            = _sahteBahis,
+                kazanc           = kazanc,
+                kartlar          = _sahteDortAs ? "KU01MA01SI01KA01KU05" : "",
+                ilkDagitimCarpan = _sahteHazir ? carpan : 0
+            });
+        }
+        GUI.enabled = true;
 
         EditorGUI.indentLevel--;
     }

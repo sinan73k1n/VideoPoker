@@ -33,6 +33,9 @@ public class GameManagerVideoPoker : MonoBehaviour
     float _counterADS;
     bool _readtForADS = false;
 
+    int _sonKazanc;          // son WriteWin sonucu (OYUN_OLAYLARI için)
+    int _ilkDagitimCarpan;   // DEAL anındaki el
+
     private void Awake()
     {
         instance = this;
@@ -151,6 +154,7 @@ public class GameManagerVideoPoker : MonoBehaviour
             DesteOlustur();
             KartDagit();
             KAYIT.AddOneMore_GAME();
+            OYUN_OLAYLARI.ElBasladiBildir(KAYIT.GetSeciliBahis());
         }
         else
         {
@@ -249,6 +253,7 @@ public class GameManagerVideoPoker : MonoBehaviour
     {
         int kazanc = bahis * carpan;
         if (kazanc == 1250) kazanc = 4000;
+        _sonKazanc = kazanc;
         KAYIT.AddToAnaBakiye(kazanc);
         _txtWin.text = "WIN " + kazanc;
         SetCredits(KAYIT.GetAnaBakiye());
@@ -320,8 +325,19 @@ public class GameManagerVideoPoker : MonoBehaviour
             }
         }
 
-        KazancYeriGoster(PokerHandEvaluator.Evaluate(_karts));
+        int carpan = PokerHandEvaluator.Evaluate(_karts);
+        KazancYeriGoster(carpan);
         SetActiveCardHold(true);
+
+        if (!isAdim2) _ilkDagitimCarpan = carpan;
+        else OYUN_OLAYLARI.ElBittiBildir(new EL_SONUCU
+        {
+            carpan           = carpan,
+            bahis            = KAYIT.GetSeciliBahis(),
+            kazanc           = _sonKazanc,
+            kartlar          = PokerHandEvaluator.GetEl(_karts),
+            ilkDagitimCarpan = _ilkDagitimCarpan
+        });
 
         if (isAdim2)
         {
