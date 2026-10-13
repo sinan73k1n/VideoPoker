@@ -24,6 +24,7 @@ public static class BASARI_LISTESI_URETICI
         }
 
         liste.basarilar = Varsayilan();
+        VirgulDenetle(liste.basarilar);
         EditorUtility.SetDirty(liste);
         AssetDatabase.SaveAssets();
         Debug.Log($"[BASARI] {liste.basarilar.Count} başarı, toplam {liste.ToplamPuan()} puan → {YOL}");
@@ -44,8 +45,8 @@ public static class BASARI_LISTESI_URETICI
                 l.Add(new BASARI_TANIM
                 {
                     id       = $"{on}_{h}",
-                    ad       = $"{ad} ×{UI_BASARILAR.Sayi(h)}",
-                    aciklama = string.Format(fiil, UI_BASARILAR.Sayi(h)),
+                    ad       = $"{ad} ×{Kisa(h)}",
+                    aciklama = string.Format(fiil, Kisa(h)),
                     sayac    = sayac,
                     hedef    = h,
                     kademe   = K[i],
@@ -69,11 +70,27 @@ public static class BASARI_LISTESI_URETICI
         Seri("gorev",    BASARI_SAYAC.GorevOdulu,    "MISSION REWARDS", "Collect {0} mission rewards.",    1, 10, 100);
         Seri("kart",     BASARI_SAYAC.KartArkasi,    "CARD COLLECTOR",  "Unlock {0} card backs.",          2, 1, 5, 20);
 
-        l.Add(Gizli("ozel_max_royal",  BASARI_SAYAC.OzelMaxBahisRoyal,   "JACKPOT",        "Hit a Royal Flush at max bet (4,000 credits).", 150));
+        l.Add(Gizli("ozel_max_royal",  BASARI_SAYAC.OzelMaxBahisRoyal,   "JACKPOT",        "Hit a Royal Flush at max bet (4K credits).", 150));
         l.Add(Gizli("ozel_hazir_royal",BASARI_SAYAC.OzelIlkDagitimRoyal, "BORN ROYAL",     "Get a Royal Flush dealt on the first hand.",    150));
         l.Add(Gizli("ozel_dort_as",    BASARI_SAYAC.OzelDortAs,          "FOUR ACES",      "Get Four of a Kind with Aces.",                  25));
 
         return l;
+    }
+
+    // Play Console içe aktarma adda/açıklamada VİRGÜL kabul etmez (CSV) → binlik ayraç yerine K/M.
+    static string Kisa(int h)
+    {
+        var c = System.Globalization.CultureInfo.InvariantCulture;
+        if (h >= 1000000) return (h / 1000000f).ToString("0.#", c) + "M";
+        if (h >= 1000)    return (h / 1000f).ToString("0.#", c) + "K";
+        return h.ToString(c);
+    }
+
+    static void VirgulDenetle(List<BASARI_TANIM> l)
+    {
+        foreach (var b in l)
+            if (b.ad.Contains(",") || b.aciklama.Contains(","))
+                Debug.LogError($"[BASARI] '{b.id}' adında/açıklamasında virgül var — Play Console içe aktarması reddeder.");
     }
 
     static BASARI_TANIM Gizli(string id, BASARI_SAYAC sayac, string ad, string aciklama, int puan) => new BASARI_TANIM

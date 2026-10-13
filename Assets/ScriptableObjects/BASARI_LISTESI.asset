@@ -36,8 +36,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: el_1000
-    ad: "HANDS PLAYED \xD71,000"
-    aciklama: Play 1,000 hands.
+    ad: "HANDS PLAYED \xD71K"
+    aciklama: Play 1K hands.
     ikon: {fileID: 0}
     sayac: 0
     hedef: 1000
@@ -47,8 +47,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: el_10000
-    ad: "HANDS PLAYED \xD710,000"
-    aciklama: Play 10,000 hands.
+    ad: "HANDS PLAYED \xD710K"
+    aciklama: Play 10K hands.
     ikon: {fileID: 0}
     sayac: 0
     hedef: 10000
@@ -80,8 +80,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: job_5000
-    ad: "JACKS OR BETTER \xD75,000"
-    aciklama: Get Jacks or Better 5,000 times.
+    ad: "JACKS OR BETTER \xD75K"
+    aciklama: Get Jacks or Better 5K times.
     ikon: {fileID: 0}
     sayac: 9
     hedef: 5000
@@ -113,8 +113,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: ikiper_2500
-    ad: "TWO PAIR \xD72,500"
-    aciklama: Get Two Pair 2,500 times.
+    ad: "TWO PAIR \xD72.5K"
+    aciklama: Get Two Pair 2.5K times.
     ikon: {fileID: 0}
     sayac: 8
     hedef: 2500
@@ -146,8 +146,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: uclu_1000
-    ad: "THREE OF A KIND \xD71,000"
-    aciklama: Get Three of a Kind 1,000 times.
+    ad: "THREE OF A KIND \xD71K"
+    aciklama: Get Three of a Kind 1K times.
     ikon: {fileID: 0}
     sayac: 7
     hedef: 1000
@@ -355,8 +355,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: kazanc_1000
-    ad: "TOTAL WINNINGS \xD71,000"
-    aciklama: Win 1,000 credits from hands.
+    ad: "TOTAL WINNINGS \xD71K"
+    aciklama: Win 1K credits from hands.
     ikon: {fileID: 0}
     sayac: 10
     hedef: 1000
@@ -366,8 +366,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: kazanc_10000
-    ad: "TOTAL WINNINGS \xD710,000"
-    aciklama: Win 10,000 credits from hands.
+    ad: "TOTAL WINNINGS \xD710K"
+    aciklama: Win 10K credits from hands.
     ikon: {fileID: 0}
     sayac: 10
     hedef: 10000
@@ -377,8 +377,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: kazanc_100000
-    ad: "TOTAL WINNINGS \xD7100,000"
-    aciklama: Win 100,000 credits from hands.
+    ad: "TOTAL WINNINGS \xD7100K"
+    aciklama: Win 100K credits from hands.
     ikon: {fileID: 0}
     sayac: 10
     hedef: 100000
@@ -388,8 +388,8 @@ MonoBehaviour:
     androidId: 
     iosId: 
   - id: kazanc_1000000
-    ad: "TOTAL WINNINGS \xD71,000,000"
-    aciklama: Win 1,000,000 credits from hands.
+    ad: "TOTAL WINNINGS \xD71M"
+    aciklama: Win 1M credits from hands.
     ikon: {fileID: 0}
     sayac: 10
     hedef: 1000000
@@ -477,7 +477,7 @@ MonoBehaviour:
     iosId: 
   - id: ozel_max_royal
     ad: JACKPOT
-    aciklama: Hit a Royal Flush at max bet (4,000 credits).
+    aciklama: Hit a Royal Flush at max bet (4K credits).
     ikon: {fileID: 0}
     sayac: 14
     hedef: 1
