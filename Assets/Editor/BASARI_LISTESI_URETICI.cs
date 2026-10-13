@@ -14,7 +14,7 @@ public static class BASARI_LISTESI_URETICI
     {
         var liste = AssetDatabase.LoadAssetAtPath<BASARI_LISTESI>(YOL);
         if (liste != null && !Application.isBatchMode &&
-            !EditorUtility.DisplayDialog("Başarı listesi var", "Mevcut liste varsayılanla EZİLECEK (androidId'ler dahil).", "Ez", "İptal"))
+            !EditorUtility.DisplayDialog("Başarı listesi var", "Ad/açıklama/puan varsayılana döner. İkon ve androidId/iosId id'ye göre KORUNUR.", "Yeniden üret", "İptal"))
             return;
 
         if (liste == null)
@@ -23,11 +23,24 @@ public static class BASARI_LISTESI_URETICI
             AssetDatabase.CreateAsset(liste, YOL);
         }
 
-        liste.basarilar = Varsayilan();
+        liste.basarilar = Koru(liste.basarilar, Varsayilan());
         VirgulDenetle(liste.basarilar);
         EditorUtility.SetDirty(liste);
         AssetDatabase.SaveAssets();
         Debug.Log($"[BASARI] {liste.basarilar.Count} başarı, toplam {liste.ToplamPuan()} puan → {YOL}");
+    }
+
+    // Elle/araçla girilen alanlar (ikon, platform kimlikleri) id eşleşmesiyle yeni listeye taşınır.
+    public static List<BASARI_TANIM> Koru(List<BASARI_TANIM> eski, List<BASARI_TANIM> yeni)
+    {
+        if (eski == null) return yeni;
+        foreach (var y in yeni)
+        {
+            var e = eski.Find(x => x != null && x.id == y.id);
+            if (e == null) continue;
+            y.ikon = e.ikon; y.androidId = e.androidId; y.iosId = e.iosId;
+        }
+        return yeni;
     }
 
     static List<BASARI_TANIM> Varsayilan()
@@ -46,7 +59,7 @@ public static class BASARI_LISTESI_URETICI
                 {
                     id       = $"{on}_{h}",
                     ad       = $"{ad} ×{Kisa(h)}",
-                    aciklama = string.Format(fiil, Kisa(h)),
+                    aciklama = Tekil(string.Format(fiil, Kisa(h))),
                     sayac    = sayac,
                     hedef    = h,
                     kademe   = K[i],
@@ -85,6 +98,9 @@ public static class BASARI_LISTESI_URETICI
         if (h >= 1000)    return (h / 1000f).ToString("0.#", c) + "K";
         return h.ToString(c);
     }
+
+    // Hedef 1 olunca "1 times" / "1 card backs" gibi bozuk İngilizce çıkmasın.
+    static string Tekil(string a) => a.Replace(" 1 times.", " once.").Replace("Unlock 1 card backs.", "Unlock a card back.");
 
     static void VirgulDenetle(List<BASARI_TANIM> l)
     {

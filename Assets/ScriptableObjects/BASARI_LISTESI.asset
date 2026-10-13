@@ -16,7 +16,7 @@ MonoBehaviour:
   - id: el_10
     ad: "HANDS PLAYED \xD710"
     aciklama: Play 10 hands.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: e924b09329b2a48bf8f2a3653a5ab048, type: 3}
     sayac: 0
     hedef: 10
     kademe: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
   - id: el_100
     ad: "HANDS PLAYED \xD7100"
     aciklama: Play 100 hands.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: a38bae01eaa5440cbb1c389b76a0800b, type: 3}
     sayac: 0
     hedef: 100
     kademe: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   - id: el_1000
     ad: "HANDS PLAYED \xD71K"
     aciklama: Play 1K hands.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 30e0f849d87ed4457b6c8e2bc7ef09e7, type: 3}
     sayac: 0
     hedef: 1000
     kademe: 2
@@ -49,7 +49,7 @@ MonoBehaviour:
   - id: el_10000
     ad: "HANDS PLAYED \xD710K"
     aciklama: Play 10K hands.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 67766c94445ff4d9283ba57ff04ca8c7, type: 3}
     sayac: 0
     hedef: 10000
     kademe: 3
@@ -60,7 +60,7 @@ MonoBehaviour:
   - id: job_50
     ad: "JACKS OR BETTER \xD750"
     aciklama: Get Jacks or Better 50 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: d859a50563250496c8322d4b814fa4a5, type: 3}
     sayac: 9
     hedef: 50
     kademe: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   - id: job_500
     ad: "JACKS OR BETTER \xD7500"
     aciklama: Get Jacks or Better 500 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: c6e4dbacd09044289a476c452662dcc4, type: 3}
     sayac: 9
     hedef: 500
     kademe: 1
@@ -82,7 +82,7 @@ MonoBehaviour:
   - id: job_5000
     ad: "JACKS OR BETTER \xD75K"
     aciklama: Get Jacks or Better 5K times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 3cea7d4c41bc64f2186364fd55db7228, type: 3}
     sayac: 9
     hedef: 5000
     kademe: 2
@@ -93,7 +93,7 @@ MonoBehaviour:
   - id: ikiper_25
     ad: "TWO PAIR \xD725"
     aciklama: Get Two Pair 25 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 5674030ce0e574b8e8740c0b9b0a65ff, type: 3}
     sayac: 8
     hedef: 25
     kademe: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   - id: ikiper_250
     ad: "TWO PAIR \xD7250"
     aciklama: Get Two Pair 250 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 2e8bea367b7c4454983b621fa47485cd, type: 3}
     sayac: 8
     hedef: 250
     kademe: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
   - id: ikiper_2500
     ad: "TWO PAIR \xD72.5K"
     aciklama: Get Two Pair 2.5K times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 57a0ae7587fa34c57a05717c09ff4aa8, type: 3}
     sayac: 8
     hedef: 2500
     kademe: 2
@@ -126,7 +126,7 @@ MonoBehaviour:
   - id: uclu_10
     ad: "THREE OF A KIND \xD710"
     aciklama: Get Three of a Kind 10 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 1bb2c457d89d24470b5a921ca1b38339, type: 3}
     sayac: 7
     hedef: 10
     kademe: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   - id: uclu_100
     ad: "THREE OF A KIND \xD7100"
     aciklama: Get Three of a Kind 100 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 8e78c549507ec48dfb9922d45d256bbc, type: 3}
     sayac: 7
     hedef: 100
     kademe: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   - id: uclu_1000
     ad: "THREE OF A KIND \xD71K"
     aciklama: Get Three of a Kind 1K times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 1a7eec2a6966b4238a2107e4d1e4e1cc, type: 3}
     sayac: 7
     hedef: 1000
     kademe: 2
@@ -159,7 +159,7 @@ MonoBehaviour:
   - id: kenta_5
     ad: "STRAIGHT \xD75"
     aciklama: Get a Straight 5 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 28c25cf72eae149049c1ffc71530531b, type: 3}
     sayac: 6
     hedef: 5
     kademe: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   - id: kenta_50
     ad: "STRAIGHT \xD750"
     aciklama: Get a Straight 50 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 3158d190817624bccbf0818ef7857e23, type: 3}
     sayac: 6
     hedef: 50
     kademe: 1
@@ -181,7 +181,7 @@ MonoBehaviour:
   - id: kenta_500
     ad: "STRAIGHT \xD7500"
     aciklama: Get a Straight 500 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: cc1a2302bd2b04611b77951d48fe0285, type: 3}
     sayac: 6
     hedef: 500
     kademe: 2
@@ -192,7 +192,7 @@ MonoBehaviour:
   - id: flos_5
     ad: "FLUSH \xD75"
     aciklama: Get a Flush 5 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 7d05b5db62cbb4b1e8e4b95aaf3cf579, type: 3}
     sayac: 5
     hedef: 5
     kademe: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   - id: flos_50
     ad: "FLUSH \xD750"
     aciklama: Get a Flush 50 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 0ae3a1a7e0f9440ac8a727b67828fb43, type: 3}
     sayac: 5
     hedef: 50
     kademe: 1
@@ -214,7 +214,7 @@ MonoBehaviour:
   - id: flos_500
     ad: "FLUSH \xD7500"
     aciklama: Get a Flush 500 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: e1309202f4c5548f49afbe659127fb06, type: 3}
     sayac: 5
     hedef: 500
     kademe: 2
@@ -225,7 +225,7 @@ MonoBehaviour:
   - id: fulev_5
     ad: "FULL HOUSE \xD75"
     aciklama: Get a Full House 5 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: bd334714f315043b39cb3fa754ae5e7d, type: 3}
     sayac: 4
     hedef: 5
     kademe: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   - id: fulev_50
     ad: "FULL HOUSE \xD750"
     aciklama: Get a Full House 50 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 8c3adef49530349b19357f8cba6a2b9a, type: 3}
     sayac: 4
     hedef: 50
     kademe: 1
@@ -247,7 +247,7 @@ MonoBehaviour:
   - id: fulev_500
     ad: "FULL HOUSE \xD7500"
     aciklama: Get a Full House 500 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 5ba48bb8998294b8ab2ca24aea481eba, type: 3}
     sayac: 4
     hedef: 500
     kademe: 2
@@ -257,8 +257,8 @@ MonoBehaviour:
     iosId: 
   - id: kare_1
     ad: "FOUR OF A KIND \xD71"
-    aciklama: Get Four of a Kind 1 times.
-    ikon: {fileID: 0}
+    aciklama: Get Four of a Kind once.
+    ikon: {fileID: 21300000, guid: d33b8835b1ce64d828387e43f4a35dba, type: 3}
     sayac: 3
     hedef: 1
     kademe: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   - id: kare_10
     ad: "FOUR OF A KIND \xD710"
     aciklama: Get Four of a Kind 10 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 056751f2f0dca4f64ba2e49343608e51, type: 3}
     sayac: 3
     hedef: 10
     kademe: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
   - id: kare_100
     ad: "FOUR OF A KIND \xD7100"
     aciklama: Get Four of a Kind 100 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: c7f3990c7e9954f3fa8c2a7a9a3dd7d9, type: 3}
     sayac: 3
     hedef: 100
     kademe: 2
@@ -290,8 +290,8 @@ MonoBehaviour:
     iosId: 
   - id: renkkenta_1
     ad: "STRAIGHT FLUSH \xD71"
-    aciklama: Get a Straight Flush 1 times.
-    ikon: {fileID: 0}
+    aciklama: Get a Straight Flush once.
+    ikon: {fileID: 21300000, guid: 4d7d65f43fce845dfad1e264783e73a4, type: 3}
     sayac: 2
     hedef: 1
     kademe: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   - id: renkkenta_5
     ad: "STRAIGHT FLUSH \xD75"
     aciklama: Get a Straight Flush 5 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 656ab69abbc4c4e8a8db5a5a7a81646a, type: 3}
     sayac: 2
     hedef: 5
     kademe: 1
@@ -313,7 +313,7 @@ MonoBehaviour:
   - id: renkkenta_25
     ad: "STRAIGHT FLUSH \xD725"
     aciklama: Get a Straight Flush 25 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 9f02ec60a8c664c96a54015a3c00902a, type: 3}
     sayac: 2
     hedef: 25
     kademe: 2
@@ -323,8 +323,8 @@ MonoBehaviour:
     iosId: 
   - id: royal_1
     ad: "ROYAL FLUSH \xD71"
-    aciklama: Get a Royal Flush 1 times.
-    ikon: {fileID: 0}
+    aciklama: Get a Royal Flush once.
+    ikon: {fileID: 21300000, guid: ea055659ec7ef40e4ac5c1e5ccce207e, type: 3}
     sayac: 1
     hedef: 1
     kademe: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   - id: royal_3
     ad: "ROYAL FLUSH \xD73"
     aciklama: Get a Royal Flush 3 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 1e5f2271ce5234ae781464e7b9f9a5a8, type: 3}
     sayac: 1
     hedef: 3
     kademe: 1
@@ -346,7 +346,7 @@ MonoBehaviour:
   - id: royal_10
     ad: "ROYAL FLUSH \xD710"
     aciklama: Get a Royal Flush 10 times.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 26cfdd1743cca48d1b3e87f97d7e900d, type: 3}
     sayac: 1
     hedef: 10
     kademe: 2
@@ -357,7 +357,7 @@ MonoBehaviour:
   - id: kazanc_1000
     ad: "TOTAL WINNINGS \xD71K"
     aciklama: Win 1K credits from hands.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: bd57557c00bd544d68250bfa7f6ede4d, type: 3}
     sayac: 10
     hedef: 1000
     kademe: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   - id: kazanc_10000
     ad: "TOTAL WINNINGS \xD710K"
     aciklama: Win 10K credits from hands.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 396c07d41df0b40a0a5c6fda28f542da, type: 3}
     sayac: 10
     hedef: 10000
     kademe: 1
@@ -379,7 +379,7 @@ MonoBehaviour:
   - id: kazanc_100000
     ad: "TOTAL WINNINGS \xD7100K"
     aciklama: Win 100K credits from hands.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 02a337420de4a4c78b6ceb3be9ab3b4d, type: 3}
     sayac: 10
     hedef: 100000
     kademe: 2
@@ -390,7 +390,7 @@ MonoBehaviour:
   - id: kazanc_1000000
     ad: "TOTAL WINNINGS \xD71M"
     aciklama: Win 1M credits from hands.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 6e6424363c0a64b7e90ee1404aacdd02, type: 3}
     sayac: 10
     hedef: 1000000
     kademe: 3
@@ -401,7 +401,7 @@ MonoBehaviour:
   - id: seri_5
     ad: "HOT STREAK \xD75"
     aciklama: Win 5 hands in a row.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 7944d0786a43b4c9fb64421293d7c1e5, type: 3}
     sayac: 11
     hedef: 5
     kademe: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
   - id: seri_10
     ad: "HOT STREAK \xD710"
     aciklama: Win 10 hands in a row.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 19cc90a37da6140419c6c9f5d12d4012, type: 3}
     sayac: 11
     hedef: 10
     kademe: 1
@@ -423,7 +423,7 @@ MonoBehaviour:
   - id: gorev_10
     ad: "MISSION REWARDS \xD710"
     aciklama: Collect 10 mission rewards.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 90d51125d6fea40d8a8515f63783a114, type: 3}
     sayac: 12
     hedef: 10
     kademe: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
   - id: gorev_100
     ad: "MISSION REWARDS \xD7100"
     aciklama: Collect 100 mission rewards.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 14132fe298e9545b391f0650074cff47, type: 3}
     sayac: 12
     hedef: 100
     kademe: 1
@@ -444,8 +444,8 @@ MonoBehaviour:
     iosId: 
   - id: kart_1
     ad: "CARD COLLECTOR \xD71"
-    aciklama: Unlock 1 card backs.
-    ikon: {fileID: 0}
+    aciklama: Unlock a card back.
+    ikon: {fileID: 21300000, guid: 9acb2cf59fe934313afcb340da748f1f, type: 3}
     sayac: 13
     hedef: 1
     kademe: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   - id: kart_5
     ad: "CARD COLLECTOR \xD75"
     aciklama: Unlock 5 card backs.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: eb386880ee8eb43c68e93caee55c079c, type: 3}
     sayac: 13
     hedef: 5
     kademe: 1
@@ -467,7 +467,7 @@ MonoBehaviour:
   - id: kart_20
     ad: "CARD COLLECTOR \xD720"
     aciklama: Unlock 20 card backs.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 524a7c45868cb47f78fcf8e821939132, type: 3}
     sayac: 13
     hedef: 20
     kademe: 2
@@ -478,7 +478,7 @@ MonoBehaviour:
   - id: ozel_max_royal
     ad: JACKPOT
     aciklama: Hit a Royal Flush at max bet (4K credits).
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: 2d01f691ccfaa4633bdad01accbc945e, type: 3}
     sayac: 14
     hedef: 1
     kademe: 4
@@ -489,7 +489,7 @@ MonoBehaviour:
   - id: ozel_hazir_royal
     ad: BORN ROYAL
     aciklama: Get a Royal Flush dealt on the first hand.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: c7893a9d568b148f9801e5a4fc7d7958, type: 3}
     sayac: 15
     hedef: 1
     kademe: 4
@@ -500,7 +500,7 @@ MonoBehaviour:
   - id: ozel_dort_as
     ad: FOUR ACES
     aciklama: Get Four of a Kind with Aces.
-    ikon: {fileID: 0}
+    ikon: {fileID: 21300000, guid: a5a7caa269f8545ef86674fc41329f6c, type: 3}
     sayac: 16
     hedef: 1
     kademe: 4
