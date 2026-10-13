@@ -27,6 +27,10 @@ public class BASARI_TANIM
     public bool          gizli;
     public string        androidId;     // Play Console'daki başarı kimliği (CgkI...)
     public string        iosId;         // App Store Connect kimliği (ileride)
+
+    // Play Games'te ilerlemeli (adım sayan) başarı mı? Play adım sınırı 10.000 → üstü tek seferde açılır.
+    // ⛔ Play'de yayınlandıktan sonra tip değişmez: bu kural ile içe aktarılan CSV aynı kalmalı.
+    public bool PlayArtimli => hedef > 1 && hedef <= 10000;
 }
 
 // Android ve iOS için TEK liste; platform kimlikleri her satırda.

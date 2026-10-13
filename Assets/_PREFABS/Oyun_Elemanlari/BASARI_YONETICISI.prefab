@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6597938886957055843}
   - component: {fileID: 1265954713825623238}
+  - component: {fileID: 5982064742486133363}
   m_Layer: 0
   m_Name: BASARI_YONETICISI
   m_TagString: Untagged
@@ -46,3 +47,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _liste: {fileID: 11400000, guid: ea30ebad739554e0fa291be719cc1f4e, type: 2}
   _uiYeniBasari: {fileID: 4770783315920096296, guid: cfa4cb60654a945b8884b3a7aac91d55, type: 3}
+--- !u!114 &5982064742486133363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5269729499872987350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7717275af3a2e42ccaf539748a682165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
